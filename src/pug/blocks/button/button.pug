@@ -1,0 +1,10 @@
+mixin button(text,cl,submit,link,id)
+    if submit
+        button.button(type="submit" class= cl value="submit")= text
+    else if link
+        a.button(class= cl href= link)= text
+    else if id
+        a.button(href="javascript:;" class= cl data-fancybox="" data-src= id)= text
+    
+    else
+        .button(class= cl)= text

@@ -1,0 +1,102 @@
+.button {
+
+    
+    display: inline-flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: @bk;
+    height: 45px;
+    padding: 0 24px;
+    line-height: 110%;
+    .rem(14);
+    font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    @media @300 {
+        .rem(12);
+    }
+
+
+    &_blue{
+        color: @bl_middle;
+        border: 2px solid @bl_middle;
+
+        &:hover,&:focus{
+            color: @red;
+            border-color: @red;
+            transition: all 0.2s;
+        }
+        &:active{
+            color: @button_3_pressed;
+            border-color: @button_3_pressed;
+            transition: all 0.2s;
+        }
+    }
+    &_red{
+        color: @wt;
+        background-color: @red;
+        box-shadow: @button_2_box;
+        &:hover,&:focus{
+            background-color: @bl_middle;
+            box-shadow: @button_2_box_hover;
+            transition: all 0.2s;
+        }
+        &:active{
+            background-color: @button_2_pressed;
+            box-shadow: none;
+            transition: all 0.2s;
+        }
+    }
+    &_trans{
+        color: @red;
+        background-color: @button_3;
+        &:hover,&:focus{
+            color: @wt;
+            background-color: @red;
+            transition: all 0.2s;
+        }
+        &:active{
+            color: @wt;
+            background-color: @button_3_pressed;
+            transition: all 0.2s;
+        }
+    }
+    &_smoke{
+        color: @wt;
+        border: 2px solid @button_4;
+        background-color: @button_4;
+        &:hover,&:focus{
+            border: 2px solid @button_4_hover;
+            background-color: @button_4_hover;
+            transition: all 0.2s;
+        }
+        &:active{
+            border: 2px solid @button_4_hover;
+            color: @button_4_hover;
+            background-color: transparent;
+            transition: all 0.2s;
+        }
+    }
+
+    &_white{
+        color: @wt;
+        border: 2px solid @wt;
+        &:hover,&:focus{
+            border: 2px solid @red;
+            color: @wt;
+            background-color: @red;
+            transition: all 0.2s;
+        }
+        &:active{
+            border: 2px solid @button_3_pressed;
+            color: @wt;
+            background-color: @button_3_pressed;
+            transition: all 0.2s;
+        }
+    }
+
+}
