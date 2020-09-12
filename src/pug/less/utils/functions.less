@@ -1,0 +1,15 @@
+// REM
+
+.rem(@sizeValue) {
+  @baseValue: 16;
+  @remValue: 1 - 0.0625*(@baseValue - @sizeValue);
+  @pxValue: (@sizeValue);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+.mb(@sizeValue) {
+  @baseValue: 16;
+  @remValue: 1 - 0.0625*(@baseValue - @sizeValue);
+  margin-bottom: ~"@{remValue}rem";
+}
