@@ -1,0 +1,14 @@
+mixin news(cl,image,title,text,date,comments,link)
+    .news(class= cl)
+        .news__image.lazy(data-src= image)
+        .news__content
+            .news__title= title
+            if text
+                .news__text= text
+            if link
+                +button(link,'button_trans button_icon','','','','press')
+            if date
+                .news__options
+                    .news__date= date
+                    .news__comments= comments
+                +button('Подробнее','button_trans','','/','')

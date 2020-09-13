@@ -1,0 +1,8 @@
+mixin team(img,name,position,caption)
+    .team
+        img(data-src= img, alt="").team__image.lazy
+        .team__profile
+            .team__name= name
+            .team__position= position
+        .team__caption= caption
+            a(href="/").team__link  Подробнее

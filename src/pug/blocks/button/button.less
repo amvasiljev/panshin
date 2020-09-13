@@ -99,4 +99,23 @@
         }
     }
 
+    &_icon{
+        color: @bk;
+        font-weight: 600;
+        height: 42px;
+        justify-content: space-between;
+        padding: 0 16px;
+        flex-direction: row-reverse;
+        svg{
+            margin-right: 10px;
+        }
+        &:hover,&:focus{
+           svg{
+               path{
+                   stroke: @wt;
+               }
+           }
+        }
+    }
+
 }

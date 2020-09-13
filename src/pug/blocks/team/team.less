@@ -1,0 +1,99 @@
+.team {
+    width: 100%;
+    width: 100%;
+    max-width: 760px;
+    padding: 40px 40px 40px 30px;
+    border-radius: 10px;
+    border: 2px solid @border;
+
+    @media @320{
+        display: flex;
+        flex-flow: wrap;
+        padding: 20px;
+    }
+
+    &__profile {
+        width: calc(100% - 120px);
+        padding: 0 0 0 30px;
+        float: right;
+        margin-bottom: 14px;
+        @media @320{
+            height: 80px;
+            width: calc(100% - 80px);
+            padding: 0 0 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__name {
+        font-style: normal;
+        font-weight: 600;
+        .rem(18);
+        color: @bk;
+        line-height: 150%;
+        @media @320{
+            .rem(16);
+        }
+    }
+
+    &__position {
+        font-style: normal;
+        font-weight: normal;
+        .rem(14);
+        color: @bk;
+        line-height: 150%;
+        @media @320{
+            .rem(12);
+        }
+    }
+
+
+    &__image {
+        width: 120px;
+        height: 120px;
+        float: left;
+        @media @320{
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__caption {
+        width: calc(100% - 120px);
+        float: right;
+        padding: 0 0 0 30px;
+        font-style: normal;
+        font-weight: normal;
+        .rem(16);
+        line-height: 160%;
+        color: @bk_light_07;
+        @media @320{
+            float: none;
+            width: 100%;
+            .rem(14);
+            padding: 0;
+        }
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        .rem(16);
+        line-height: 160%;
+        color: @red;
+        display: inline;
+        @media @320{
+            .rem(14);
+        }
+        &:hover,
+                &:active,
+                &:focus {
+                    color: @bl_middle;
+                }
+    }
+}
