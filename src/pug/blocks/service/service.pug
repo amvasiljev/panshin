@@ -1,0 +1,6 @@
+mixin service(name,cl,folder,text)
+    .service
+        .service__image
+            svg.service__icon(class= cl)
+                use(xlink:href="/assets/img/" + folder + "/sprite.svg#" + name)
+        .service__text= text
