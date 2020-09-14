@@ -1,0 +1,26 @@
+mixin social(sidebar)
+
+    if sidebar
+        .social.social_sidebar
+            .social__title Мы в социальных сетях
+            a(href="/").social__item.social__item_facebook
+                .social__icon.lazy(data-src="/assets/img/social/facebook.svg")
+                .social__link Лайкайте нас на Facebook
+            a(href="/").social__item.social__item_vk
+                .social__icon.lazy(data-src="/assets/img/social/vk.svg")
+                .social__link Получайте обновления
+            a(href="/").social__item.social__item_youtube
+                .social__icon.lazy(data-src="/assets/img/social/youtube.svg")
+                .social__link Мы на YouTube
+    else
+        .social
+            a(href="/").social__item
+                    .social__icon.lazy(data-src="/assets/img/social/telegram.svg")
+            a(href="/").social__item
+                    .social__icon.lazy(data-src="/assets/img/social/facebook.svg")
+            a(href="/").social__item
+                    .social__icon.lazy(data-src="/assets/img/social/vk.svg")
+            a(href="/").social__item
+                    .social__icon.lazy(data-src="/assets/img/social/twitter.svg")
+            a(href="/").social__item
+                    .social__icon.lazy(data-src="/assets/img/social/linkedin.svg")
