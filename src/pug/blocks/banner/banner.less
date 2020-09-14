@@ -1,0 +1,75 @@
+.banner {
+    height: 232px;
+    width: 100%;
+    max-width: 360px;
+    
+    display: flex;
+    
+    align-items: flex-end;
+    
+    position: relative;
+
+   &__cover{
+    padding: 0 43px 42px 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 190px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    @media @320{
+        padding: 0 30px 42px 0;
+    }
+   }
+
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        .rem(24);
+        width: 192px;
+        margin-right: -32px;
+        margin-bottom: 12px;
+        line-height: 110%;
+        color: @wt;
+    }
+
+    &__button {
+        width: 220px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: @bl;
+        color: @wt;
+        font-style: normal;
+        font-weight: 600;
+        .rem(20);
+        text-transform: uppercase;
+        -webkit-transform: skew(-25deg);
+        -moz-transform: skew(-25deg);
+        -o-transform: skew(-25deg);
+        padding: 0 20px 0 0;
+
+       
+    }
+
+    &__text {
+
+        -webkit-transform: skew(25deg);
+        -moz-transform: skew(25deg);
+        -o-transform: skew(25deg);
+    }
+
+    &__image {
+        height: 232px;
+        width: 196px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
