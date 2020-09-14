@@ -1,0 +1,8 @@
+mixin tariff(cl,name,content,price)
+    .tariff(class= cl)
+        .tariff__inner
+            .tariff__name= name
+            .tariff__content!= content
+            .tariff__price!=price
+            .tariff__link
+                +button('Выбрать тариф','button_red','','/')

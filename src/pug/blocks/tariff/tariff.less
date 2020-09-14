@@ -1,0 +1,117 @@
+.tariff {
+    width: calc(25% - 20px);
+    // padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    @media @320{
+        width: 100%;
+        max-width: 414px;
+    }
+
+    &_active {
+        .tariff__name {
+            background-color: @bl_middle;
+        }
+
+        .tariff__content {
+            padding: 40px 20px 30px;
+            flex: 0 0 187px;
+
+            @media @320{
+                flex: unset;
+                padding: 30px 20px;
+            }
+
+            li {
+                &:before {
+                    background-image: url(/assets/img/marker_ul.svg);
+                }
+            }
+        }
+        .tariff__link{
+            padding: 0 0 10px 0;
+            @media @320{
+                padding: 0;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        border-radius: 10px;
+        box-shadow: @box_tariff;
+        padding: 0 0 30px 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 315px;
+        width: 100%;
+    }
+
+    &__name {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 600;
+        .rem(20);
+        color: @wt;
+        background-color: @bl_light;
+        line-height: 24px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    &__content {
+        padding: 30px 20px;
+        flex: 0 0 177px;
+        @media @320{
+            flex: unset;
+        }
+
+        li {
+            font-style: normal;
+            font-weight: 500;
+            .rem(14);
+            line-height: 17px;
+            color: @bk_light;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                display: block;
+                height: 18px;
+                width: 18px;
+                background-image: url(/assets/img/marker_ul_noactive.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: 500;
+        .rem(16);
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 27px;
+
+        span {
+            .rem(24);
+            line-height: 29px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+    }
+
+}
