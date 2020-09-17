@@ -6,6 +6,8 @@ include ../blocks/client/client
 include ../blocks/digit/digit
 include ../blocks/footer/footer
 include ../blocks/header/header
+include ../blocks/nav/nav
+include ../blocks/navfooter/navfooter
 include ../blocks/news/news
 
 
@@ -31,8 +33,9 @@ html(lang="ru")
 
     body(class=pageClass)
         //- +header()
+        //- +nav()
         block content
         
-        //- +footer()
+        +footer()
 
         include ../includes/scripts

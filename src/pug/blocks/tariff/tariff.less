@@ -4,9 +4,19 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    @media @320{
+
+    @media @320 {
         width: 100%;
         max-width: 414px;
+    }
+
+    &_landing {
+        width: calc(33% - 20px);
+
+        .tariff__content{
+            padding: 20px;
+            flex: unset;
+        }
     }
 
     &_active {
@@ -18,7 +28,7 @@
             padding: 40px 20px 30px;
             flex: 0 0 187px;
 
-            @media @320{
+            @media @320 {
                 flex: unset;
                 padding: 30px 20px;
             }
@@ -29,9 +39,11 @@
                 }
             }
         }
-        .tariff__link{
+
+        .tariff__link {
             padding: 0 0 10px 0;
-            @media @320{
+
+            @media @320 {
                 padding: 0;
             }
         }
@@ -66,7 +78,14 @@
     &__content {
         padding: 30px 20px;
         flex: 0 0 177px;
-        @media @320{
+
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        .rem(14);
+        line-height: 150%;
+
+        @media @320 {
             flex: unset;
         }
 
@@ -93,6 +112,8 @@
                 background-position: center center;
             }
         }
+
+
     }
 
     &__price {

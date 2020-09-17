@@ -1,4 +1,35 @@
 mixin footer()
     footer.footer
         .footer__inner
-            p asdfasfd
+            .footer__box
+                +navfooter('srv1')
+                +navfooter('','srv2')
+            .footer__box
+                +navfooter('','','srv3')
+            .footer__box
+                +navfooter('','','','srv4')
+                +navfooter('','','','','srv5')
+            .footer__box
+                .footer__group
+                    .footer__logo.lazy(data-src="/assets/img/logo_footer.svg")
+                    .footer__copyright © 2010 - 2020 Паньшин Групп Комплексный интернет-маркетинг: продвижение, маркетинг и PR вашего бизнеса!
+
+                .footer__group
+                    .footer__phones
+                        .footer__phone
+                            span Москва:
+                            a(href="tel:+74957263543")  +7 (495) 726-35-43 
+                        .footer__phone
+                            span Краснодар:
+                            a(href="tel:+78612388581")  +7 (861) 238-85-81 
+                        .footer__phone
+                            span Кемерово:
+                            a(href="tel:+73842765606")  +7 (384) 276-56-06 
+                        .footer__phone
+                            span Харьков:
+                            a(href="tel:+380577285986")  +38 (057) 728-59-86
+                        
+                    a(href="/").footer__policy Соглашение об обработке персональных данных
+            
+                
+                

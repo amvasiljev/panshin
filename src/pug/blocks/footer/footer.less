@@ -1,6 +1,124 @@
 .footer {
-  
-    p{
-        .rem(50);
+    width: 100%;
+    background-color: @footer;
+
+    &__inner {
+        max-width: 1160px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        padding: 60px 0 16px 0;
+        @media @1024{
+            padding: 60px 40px 0;
+        }
+        @media @768{
+            padding: 60px 35px 30px;
+        }
+        @media @320{
+            padding: 30px 15px;
+        }
+    }
+
+    &__box {
+        &:nth-child(1){
+            width: 303px;
+            
+        }
+        &:nth-child(2) {
+            padding: 0 0 0 60px;
+            width: 300px;
+            
+        }
+
+        &:nth-child(3) {
+            padding: 0 0 0 40px;
+            width: 200px;
+            
+        }
+
+        &:nth-child(4) {
+            width: 260px;
+            
+            @media @1024{
+                display: flex;
+                width: 100%;
+                padding: 0 0 25px 0;
+            }
+            
+        }
+        @media @768{
+            width: 50% !important;
+            padding: 0 !important;
+        }
+        @media @320{
+            width: 100% !important;
+            padding: 0 !important;
+        }
+
+    }
+    &__group{
+        max-width: 260px;
+        @media @1024{
+            &:first-child{
+                margin-right: 60px;
+            }
+        }
+    }
+
+    &__logo {
+        width: 222px;
+        height: 57px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        margin-bottom: 27px;
+    }
+
+    &__copyright {
+        font-style: normal;
+        font-weight: normal;
+        .rem(14);
+        line-height: 130%;
+        color: @wt_07;
+        margin-bottom: 26px;
+    }
+
+    &__phones {
+        margin-bottom: 25px;
+    }
+
+    &__phone {
+        font-style: normal;
+        font-weight: normal;
+        .rem(14);
+        line-height: 100%;
+        color: @wt_07;
+        margin-bottom: 14px;
+
+        a {
+            color: @wt;
+            font-weight: 500;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: @wt;
+            }
+        }
+    }
+
+    &__policy {
+        color: @wt;
+        font-style: normal;
+        font-weight: normal;
+        .rem(14);
+        line-height: 130%;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: @wt;
+        }
     }
 }

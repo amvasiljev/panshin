@@ -14,6 +14,46 @@ $(document).on('blur', 'input[type="text"]', function () {
 
 // inputs
 
+
+$('.header__cities_arrow').on('click', function () {
+  $('.header__cities a').eq(0).trigger('click')
+})
+
+cityChoice()
+
+
+function cityChoice() {
+  $('.header__cities').on('click', 'a', function (e) {
+    e.preventDefault()
+    $('.header__city').not($(this)).toggleClass('header__city_active')
+    var currentCity = $('.header__city_active').attr('href')
+  
+    if (!$(this).attr('data-key')) {
+      $('.header__city').attr('data-key', 'key').prependTo($('.header__cities'))
+  
+      $('.header__cities').addClass('header__cities_open')
+      $('.header__cities_arrow').addClass('header__cities_arrow_rotate')
+    } else {
+      $('.header__cities').removeClass('header__cities_open')
+      $('.header__cities_arrow').removeClass('header__cities_arrow_rotate')
+      $('.header__city').removeAttr('data-key')
+      $(this).prependTo($('.header__cities'))
+      $('.header__phones a').each(function () {
+        if ($(this).attr('data-city') == currentCity) {
+          $(this).addClass('header__phone_active')
+        } else {
+          $(this).removeClass('header__phone_active')
+        }
+      })
+    }
+  })
+}
+
+
+
+
+
+
 //mobile menu
 
 var burger = $('.burger');
