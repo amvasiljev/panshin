@@ -12,13 +12,19 @@
         justify-content: flex-start;
         align-items: center;
 
-        @media @768 {}
+        @media @1024 {
+            padding: 0 40px;
+        }
+
+        @media @768 {
+            padding: 0 35px;
+            height: 100px;
+        }
 
         @media @320 {
-            //   height: 160px;
-            //   padding: 30px 20px 50px;
-            //   flex: 1 0 30px;
-            //   flex-direction: column;
+            height: 160px;
+            padding: 12px 15px;
+
         }
     }
 
@@ -27,6 +33,20 @@
         background-position: 0 0;
         height: 91px;
         width: 261px;
+        background-size: contain;
+
+        @media @768 {
+            width: 200px;
+            height: 69px;
+
+        }
+
+        @media @320 {
+            width: 200px;
+            height: 69px;
+            order: 1;
+            flex: 1;
+        }
     }
 
     &__links {
@@ -37,6 +57,29 @@
         height: 50px;
         margin-left: 140px;
         width: 300px;
+
+        @media @1024 {
+            margin-left: 100px;
+        }
+
+        @media @768 {
+            display: none;
+        }
+
+        @media @320 {
+            display: none;
+        }
+
+        &_mobile {
+            @media @768,@320 {
+                display: block;
+                width: 200px;
+                height: unset;
+                
+                margin: 0;
+                padding: 0 0 0 20px;
+            }
+        }
     }
 
     &__link {
@@ -44,6 +87,13 @@
         font-style: normal;
         font-weight: normal;
         .rem(14);
+
+        @media @768,@320{
+            margin-right: 0;
+            
+            margin-bottom: 20px;
+            display: block;
+        }
 
         color: @bk;
 
@@ -62,14 +112,33 @@
         height: 100%;
         justify-content: space-between;
         padding: 15px 0 18px;
+
+        @media @768 {
+            padding-right: 30px;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        @media @320 {
+            flex-direction: row;
+            align-items: center;
+            order: 3;
+            width: 100%;
+            flex: unset;
+            height: unset;
+            padding: 0;
+        }
     }
 
     &__callback {
-        
-        
+
+        @media @768 {
+            padding: 0 15px 0 0;
+        }
     }
 
-    &__cities{
+    &__cities {
         position: absolute;
         top: 0;
         right: 0;
@@ -84,35 +153,41 @@
         background-color: @wt;
         border-radius: 5px;
 
-
-        &_open{
-            border-color: @border;
-            padding-bottom: 5px;
-            
+        @media @320{
+            right: unset;
+            left: 0;
+            padding: 0 20px 0 0;
         }
 
-        &_wrapper{
+        &_open {
+            border-color: @border;
+            padding-bottom: 5px;
+
+        }
+
+        &_wrapper {
             position: relative;
             min-height: 20px;
         }
 
         &_arrow {
             position: absolute;
-            top: 6px;
+            top: 0;
             right: 3px;
             content: '';
             display: block;
             width: 12px;
-            height: 7px;
-            
+            // height: 7px;
+
             transition: all 0.2s;
 
-            &_rotate{
+            &_rotate {
                 transform: rotate(180deg);
                 transition: all 0.2s;
             }
         }
     }
+
     &__city {
         display: none;
         flex-direction: column;
@@ -121,12 +196,15 @@
         font-weight: 500;
         .rem(14);
         color: @bl_middle;
-        
-        
+
+        @media @320{
+            align-items: flex-start;
+        }
 
         &_active {
             display: flex;
-            &:not(:first-child){
+
+            &:not(:first-child) {
                 margin-top: 7px;
             }
         }
@@ -139,14 +217,25 @@
         .rem(28);
         color: @bk;
         line-height: 34px;
+
         &:hover,
         &:active,
         &:focus {
             color: @bk_light;
         }
 
-        &_active{
+        &_active {
             display: block;
+        }
+
+        @media @768 {
+            .rem(24);
+        }
+        @media @320{
+            .rem(18);
+        }
+        @media @300{
+            .rem(14);
         }
     }
 }

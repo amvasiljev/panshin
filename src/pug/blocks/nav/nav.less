@@ -3,6 +3,7 @@
     background-image: @nav;
     position: relative;
 
+
     @media @768 {
         display: none;
     }
@@ -16,7 +17,7 @@
         display: none;
         position: absolute;
         width: 100%;
-        
+
         top: 60px;
         left: 0;
         background-color: @popup;
@@ -35,7 +36,7 @@
         position: relative;
 
         @media @1024 {
-            padding: 0 20px;
+            padding: 0 40px;
         }
     }
 
@@ -50,6 +51,8 @@
         &:before {
             display: none;
         }
+
+        
 
         &_group {
             // position: relative;
@@ -77,32 +80,52 @@
         display: flex;
         flex-flow: wrap;
         align-items: flex-start;
-        // width: 1170px;
-        // padding: 40px 30px;
         justify-content: flex-start;
         display: none;
 
 
         @media @768,
         @320 {
-            padding: 0 0 0 20px;
-            background: @bk;
+            padding: 17px 0;
+           box-shadow: unset;
             margin: 0;
+            position: unset;
+           
         }
 
         >ul {
             width: 40%;
             background-color: transparent;
             padding: 30px 45px 30px 50px;
-            &:nth-child(1),&:nth-child(3){
+
+            @media @768,@320{
+                width: 100%;
+                padding: 0;
+                margin-bottom: 10px;
+            }
+
+            &:nth-child(1),
+            &:nth-child(3) {
                 border-right: 1px solid @line;
+                @media @768,@320{
+                    border: none;
+                }
             }
-           
-            &:nth-child(3),&:nth-child(4){
+
+            &:nth-child(3),
+            &:nth-child(4) {
                 border-top: 1px solid @line;
+                @media @768,@320{
+                    border: none;
+                }
             }
-            &:nth-child(2),&:nth-child(4){
+
+            &:nth-child(2),
+            &:nth-child(4) {
                 width: 60%;
+                @media @768,@320{
+                    width: 100%;
+                }
             }
 
         }
@@ -125,14 +148,13 @@
             line-height: 200%;
             text-transform: inherit;
             opacity: 1;
-            // margin-bottom: 16px;
             color: @bl;
 
-                &:hover,
-                &:active,
-                &:focus {
-                    color: @red;
-                }
+            &:hover,
+            &:active,
+            &:focus {
+                color: @red;
+            }
 
             &_important {
                 font-style: normal;
@@ -140,10 +162,15 @@
                 .rem(16);
                 line-height: 220%;
                 color: @bk;
+
                 &:hover,
                 &:active,
                 &:focus {
                     color: @bk_light;
+                }
+
+                @media @768,@320{
+                    .rem(14);
                 }
             }
 
@@ -155,16 +182,8 @@
 
             @media @768,
             @320 {
-                padding: 0;
-                margin-bottom: 12px;
-                .rem(16);
-                opacity: 0.5;
-
-                &:hover,
-                &:focus,
-                &:active {
-                    opacity: 1;
-                }
+              min-height: 30px;
+              justify-content: flex-start;
             }
 
             &_group {
@@ -178,23 +197,6 @@
             }
         }
 
-        @media @768,
-        @320 {
-            position: unset;
-            width: 100%;
-
-
-            li {
-                background-image: none;
-
-                a {
-                    text-transform: unset;
-                    min-height: 35px;
-                    padding-left: 20px;
-
-                }
-            }
-        }
     }
 
 
@@ -213,6 +215,11 @@
         align-items: center;
         height: 100%;
 
+        svg {
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            margin-right: 7px;
+        }
         // @media @ff {
         //     height: 60px;
 
@@ -222,23 +229,15 @@
         &:active,
         &:focus {
             svg {
-                path {
-                    fill: @wt;
-                    fill-opacity: 1;
-                    opacity: 1;
-                }
-
-                g {
-                    opacity: 1;
-                }
-
+                opacity: 1;
+                transition: opacity 0.3s;
             }
-            
+
         }
 
-        &_group{
+        &_group {
 
-            &:before { 
+            &:before {
                 content: '';
                 position: absolute;
                 left: 50%;
@@ -248,90 +247,88 @@
                 height: 14px;
                 border: 7px solid transparent;
                 border-bottom: 7px solid transparent;
-                
+
                 background-color: transparent;
                 transition: all linear 0.3s;
             }
 
-            // &:hover,
-            // &:active,
-            // &:focus {
-    
-                
-                
-            // }
-
+         
         }
-        &_hover{
-            &:before { 
-                  
+
+        &_hover {
+            &:before {
                 border-bottom: 7px solid @wt;
-              
-               
+
             }
         }
-        &_active {
 
+        &_active {
             position: relative;
 
             svg {
-                path {
-                    fill: @wt;
-                    fill-opacity: 1;
-                    opacity: 1;
-                }
-
+                opacity: 1;
+                transition: opacity 0.3s;
             }
-
-            
         }
 
-        svg {
-            margin-right: 7px;
-        }
+      
 
         &_mobile {
-            color: @wt;
+            color: @bl;
             font-style: normal;
             font-weight: 500;
             .rem(16);
-            line-height: 110%;
-            min-height: 50px;
+            min-height: 75px;
             height: unset;
-            opacity: 0.5;
+            padding: 0 20px 0 33px;
+            justify-content: flex-end;
 
             &:hover,
             &:active,
             &:focus {
-                opacity: 1;
+                color: @red;
             }
 
+            svg {
+                opacity: 1;
+                transition: opacity 0.3s;
+                fill: @red;
+                margin-right: 15px;
+                path {
+                    fill: @red !important;
+                   
+                }
+                .recolor{
+                    stroke: @red !important;
+                }
+            
+               
+            }
 
         }
 
         &_mobile&_group {
             position: relative;
-
+            
             &:after {
                 content: '';
                 display: block;
-                width: 17px;
-                height: 17px;
+                width: 11px;
+                height: 11px;
                 position: absolute;
-                top: 17px;
-                right: 0;
+                top: 33px;
+                right: 20px;
                 background-image: url('/assets/img/down_mobile.svg');
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain;
-                opacity: 0.3;
-                transition: all 0.3s
+                
             }
         }
 
         &_active&_mobile {
-            color: @wt;
-            opacity: 1;
+            // color: @wt;
+            // opacity: 1;
 
             &:before {
                 display: none;
@@ -346,10 +343,8 @@
             }
 
             &:after {
-                transform: rotate(180deg);
-                opacity: 1;
-                transition: all 0.3s;
-
+                background-image: url('/assets/img/up_mobile.svg');
+               
             }
         }
     }
@@ -365,8 +360,8 @@
         display: none;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        padding: 60px 20px 20px;
+        
+        padding: 60px 0 20px;
 
         overflow-y: scroll;
 

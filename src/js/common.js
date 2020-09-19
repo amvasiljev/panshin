@@ -93,8 +93,8 @@ mobileNav.append(closeButton);
 mobileNav.append(mobileItems);
 mobileNav.find('.nav__link').addClass('nav__link_mobile');
 
+var mobileLinks = $('.header__links').clone().appendTo(mobileWrapper).addClass('header__links_mobile');
 
-var headerCallback = $('.header__callback').clone().appendTo(mobileWrapper).addClass('header__callback_mobile');
 
 
 burger.on('click', function () {
@@ -126,8 +126,8 @@ mobileFake.on('click', function () {
 
 $('.nav_mobile .nav__link_group').on('click', function (e) {
   e.preventDefault()
-  var $this = $(this).next('ul');
-  $(this).parent().parent().find('ul').not($this).slideUp()
+  var $this = $(this).next('.nav_level2');
+  $(this).parent().parent().find('.nav_level2').not($this).slideUp()
   $this.slideToggle()
 
   $(this).toggleClass('nav__link_open')
@@ -137,6 +137,14 @@ $('.nav_mobile .nav__link_group').on('click', function (e) {
 
 
 //mobile menu
+
+
+$('.nav__link_mobile svg path').each(function(){
+  if($(this).attr('stroke')){
+    $(this).addClass('recolor')
+  }
+})
+
 
 
 // slider 
