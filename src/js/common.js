@@ -50,46 +50,90 @@ function cityChoice() {
 }
 
 
+$('.nav__item_group').hover(
+  function () {
+    $(this).find('.nav__link_group').addClass('nav__link_hover')
+    $(this).find('.nav_level2').dequeue().stop(true, true).fadeIn(300).css('display', 'flex')
+    
+  },
+  function () {
+    $(this).find('.nav__link_group').removeClass('nav__link_hover')
+    $(this).find('.nav_level2').dequeue().stop(true, true).fadeOut(300)
+   
+  }
+)
 
+var windowHeight = $(window).innerHeight()
+
+
+$('.nav__inner').hover(
+  function(){
+    $('.nav__hover').dequeue().stop(true, true).fadeIn(300).css('height',windowHeight - 200)
+  }
+  ,
+  function(){
+    $('.nav__hover').dequeue().stop(true, true).fadeOut(300);
+  }
+)
 
 
 
 //mobile menu
 
+var mobileNav = $('<div>').addClass('nav_mobile');
+var mobileItems = $('.nav__inner').html();
+var mobileWrapper = $('<div>').addClass('nav_outer').prependTo('body');
 var burger = $('.burger');
-var mobileMenu = $('.nav').clone().html();
-var closeMenu = $('<div>').addClass('nav__close');
-var auth = $('.auth').clone().addClass('auth_mobile').removeClass('auth').append(closeMenu);
-var contacts = $('.header__contacts').clone().addClass('header__contacts_mobile').removeClass('header__contacts')
+var closeButton = $('<div>').addClass('nav_close');
+var mobileFake = $('<div>').addClass('nav__fake').prependTo('body');
 
-auth.find('.auth__reg').addClass('auth__reg_mobile')
-auth.find('.auth__log').addClass('auth__log_mobile')
 
-contacts.find('.email').addClass('email_mobile')
-contacts.find('.email__text').addClass('email__text_mobile')
-contacts.find('.email__link').addClass('email__link_mobile')
-contacts.find('.phone__text').addClass('phone__text_mobile')
-contacts.find('.phone__link').addClass('phone__link_mobile')
+mobileWrapper.append(mobileNav);
+mobileNav.append(closeButton);
+mobileNav.append(mobileItems);
+mobileNav.find('.nav__link').addClass('nav__link_mobile');
+
+
+var headerCallback = $('.header__callback').clone().appendTo(mobileWrapper).addClass('header__callback_mobile');
+
 
 burger.on('click', function () {
-  if ($('.nav_mobile').length) {
-    $('.nav_mobile').fadeIn(300);
-  } else {
-    $('<div>').addClass('nav_mobile').prependTo('body').append(mobileMenu);
-    $('.nav_mobile').prepend(auth).append(contacts).find('.nav__item').addClass('nav__item_mobile')
-  }
-  $('body').addClass('stop_scrolling ')
+  mobileWrapper.animate({
+    right: 0
+  }, 300).addClass('nav_active');
+  $('body').addClass('stop_scrolling');
+  $(this).attr('data-key', '');
+  mobileFake.show();
 })
 
-closeMenu.on('click', function () {
-  $('.nav_mobile').fadeOut(300);
-  $('body').removeClass('stop_scrolling ')
+closeButton.on('click', function () {
+  mobileWrapper.animate({
+    right: '-287px'
+  }, 500).removeClass('nav_active');
+
+  $(this).attr('data-key', 'key');
+  mobileFake.hide();
+  setTimeout(function () {
+    $('body').removeClass('stop_scrolling');
+  }, 300)
 })
 
 
-$(document).on('click', '.nav__item', function () {
-  closeMenu.trigger('click');
+mobileFake.on('click', function () {
+  closeButton.trigger('click')
 })
+
+
+$('.nav_mobile .nav__link_group').on('click', function (e) {
+  e.preventDefault()
+  var $this = $(this).next('ul');
+  $(this).parent().parent().find('ul').not($this).slideUp()
+  $this.slideToggle()
+
+  $(this).toggleClass('nav__link_open')
+  $(this).parent().parent().find('.nav__link_group').not($(this)).removeClass('nav__link_open')
+})
+
 
 
 //mobile menu
