@@ -1,17 +1,15 @@
 .section {
 
-    &__form{
-        width: 400px;
-        flex: 0 0 400px;
-        height: 420px;
-        border-radius: 10px;
-        background-image: @section_blue;
-    }
+
     &_slider{
         height: 500px;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
+
+        @media @320{
+            height: unset;
+        }
     }
     &__inner {
         max-width: 1160px;
@@ -19,12 +17,27 @@
         margin: 0 auto;
         padding: 80px 0;
 
+        @media @1024{
+            padding: 80px 35px;
+        }
+        @media @768{
+            padding: 80px 35px;
+        }
+
+
         &_slider{
             height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
+
+            @media @320{
+                flex-direction: column;
+                height: unset;
+                justify-content: flex-start;
+                padding: 40px 15px;
+            }
         }
     }
 
@@ -236,23 +249,40 @@
 
     &__arrows{
         position: absolute;
+        left: 0;
+        
         width: 100%;
         display: flex;
         justify-content: space-between; 
+        @media @320{
+           bottom:0;
+           z-index: 100;
+           margin-bottom: 10px;
+        }
     }
 
 
     &__dots{
         position: absolute;
+        left: 0;
         bottom: 0;
         width: 100%;
         display: flex;
         justify-content: center;
         padding: 0 0 31px 0;
 
+        @media @320{
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
         .slick-dots{
             bottom: 0;
             position: unset;
+
+            @media @320{
+                width: unset;
+            }
 
             li{
                 margin: 0 2px;

@@ -19,6 +19,10 @@
 
 
 @import 'blocks/news/news';
+
+@import 'blocks/order/order';
+
+
 @import 'blocks/section/section';
 @import 'blocks/service/service';
 @import 'blocks/slide/slide';
@@ -31,7 +35,7 @@
 
 
 * {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 // html,
@@ -43,12 +47,30 @@
 //   min-height: 100%;
 // }
 
+
+
 .stop_scrolling {
   height: 100%;
   overflow: hidden;
   position: fixed;
 }
 
-// .input_focus{
-//   box-shadow: @boxF1;
-// }
+
+.required {
+  color: @red;
+  font-style: normal;
+  font-weight: 500;
+  .rem(14);
+  line-height: 17px;
+  margin-left: 3px;
+}
+
+.input_focus{
+  border: 2px solid @bl_light;
+  transition: all 0.2s;
+}
+.input_error{
+  border: 2px solid @red;
+  color: @red;
+  transition: all 0.2s;
+}

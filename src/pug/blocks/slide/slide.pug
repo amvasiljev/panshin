@@ -1,22 +1,22 @@
 mixin slide(title,text,box,list)
     .slide
-        .slide__title= title
+        .slide__title!= title
         if text
             .slide__text= text
         else if box
             .slide__box
                 .slide__item
-                    .slide_icon
-                    .slide_caption Лиды
+                    .slide__icon.lazy(data-src="/assets/img/banners/icon_1.svg")
+                    .slide__caption Лиды
                 .slide__item
-                    .slide_icon
-                    .slide_caption Клиенты
+                    .slide__icon.lazy(data-src="/assets/img/banners/icon_2.svg")
+                    .slide__caption Клиенты
                 .slide__item
-                    .slide_icon
-                    .slide_caption Продажи
+                    .slide__icon.lazy(data-src="/assets/img/banners/icon_3.svg")
+                    .slide__caption Продажи
         else if list
             ul
-                li lorem impsum
-                li lorem impsum
-                li lorem impsum
-                li lorem impsum
+                li Продвинем ваш сайт в топ-10 Яндекса и Google
+                li На 60% увеличим посещаемость
+                li В 2,5 раза — количество звонков и заявок
+                li В среднем за 4 месяца.

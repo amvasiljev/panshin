@@ -1,0 +1,148 @@
+.order {
+    width: 400px;
+    flex: 0 0 400px;
+    height: 420px;
+    border-radius: 10px;
+    background-image: @form;
+    padding: 48px 40px;
+
+    @media @768 {
+        width: 340px;
+        flex: 0 0 340px;
+        padding: 40px 15px;
+        height: 400px;
+    }
+
+    @media @320 {
+        width: 100%;
+        max-width: 340px;
+        padding: 40px 15px;
+        height: 400px;
+        flex: unset;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        width: 100%;
+
+        @media @320 {
+            max-width: unset;
+            width: 100%;
+            align-items: center;
+        }
+    }
+
+    &__label {
+        color: @bk;
+        font-style: normal;
+        font-weight: 500;
+        .rem(14);
+        line-height: 17px;
+        margin-bottom: 7px;
+        width: 100%;
+
+        &_consent {
+            display: block;
+            font-style: normal;
+            font-weight: normal;
+            .rem(12);
+            color: @bk_light;
+            line-height: 15px;
+            margin-bottom: 17px;
+        }
+    }
+
+    &__doc {
+        .rem(12);
+        padding-left: 5px;
+        margin: 10px 0;
+        color: @bl_middle;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 15px;
+        text-align: center;
+        text-decoration: underline;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: @red;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 20px;
+        background-color: @wt;
+        border: 1px solid @wt;
+        color: @bk;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        .rem(14);
+        line-height: 17px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+        -webkit-text-size-adjust: 100%;
+
+        @media @320{
+            .rem(16);
+        }
+
+        &::placeholder {
+            color: @placeholder;
+            opacity: 0.5;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        &:nth-of-type(2) {
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__checkbox:checked {
+        display: none;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &_center {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__checkbox:checked+label {
+
+        background-image: url('/assets/img/checked.png');
+        background-repeat: no-repeat;
+        background-position: 0 0px;
+        background-size: 24px;
+        padding-left: 34px;
+
+        cursor: pointer;
+
+    }
+
+    &__checkbox+label {
+
+        background-image: url('/assets/img/checkbox.png');
+        background-repeat: no-repeat;
+        background-position: 0 0px;
+        background-size: 24px;
+        padding-left: 34px;
+
+        cursor: pointer;
+
+    }
+
+}

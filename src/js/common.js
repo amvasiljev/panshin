@@ -5,12 +5,27 @@ $(function () {
 
 
 // inputs
-$(document).on('focus', 'input[type="text"]', function () {
+$(document).on('focus', 'input', function () {
   $(this).addClass('input_focus');
 })
-$(document).on('blur', 'input[type="text"]', function () {
-  $(this).removeClass('input_focus');
+$(document).on('blur', 'input', function () {
+  if (!$(this).val()) {
+    $(this).removeClass('input_focus');
+  }
 })
+
+
+
+$('input').each(function(){
+  if($(this).attr('required')){
+    $(this).prev('label').append($('<span class="required">*</span>'))
+  }
+})
+
+
+$('.order__input_phone').mask('+7 (000) 000-00-00', {
+  placeholder: "+7 (___) ___-__-__"
+});
 
 // inputs
 
@@ -163,6 +178,10 @@ $('.slider_main').slick({
   dots: true,
   appendDots: $('.section__dots')
 })
+
+if($('.slider_main').slick("getSlick").slideCount == 1){
+  $('.section__dots').hide()
+}
 
 
 // slider 

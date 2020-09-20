@@ -2,6 +2,18 @@
 
     &_main{
         width: calc(100% - 400px);
+
+        @media @768{
+            width: calc(100% - 340px);
+        }
+        @media @320{
+            width: 100%;
+            margin-bottom: 10px !important;
+        }
+        .slick-track{
+            display: flex;
+            align-items: center;
+        }
     }
 
 
@@ -18,12 +30,30 @@
         &_prev{
             &_main{
                 margin-left: -20px;
+                @media @1024{
+                    margin-left: 5px;
+                }
+                @media @768{
+                    margin-left: 5px;
+                }
+                @media @320{
+                    margin-left: 50px;
+                }
 
             }
         }
         &_next{
             &_main{
                 margin-right: -20px;
+                @media @1024{
+                    margin-right: 5px;
+                }
+                @media @768{
+                    margin-right: 5px;
+                }
+                @media @320{
+                    margin-right: 50px;
+                }
 
             }
         }
