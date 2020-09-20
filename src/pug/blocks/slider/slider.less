@@ -1,0 +1,40 @@
+.slider{
+
+    &_main{
+        width: calc(100% - 400px);
+    }
+
+
+
+
+    &__arrow{
+        svg{
+            path{
+                
+                transition: 0.2s;
+            }
+        }
+        cursor: pointer;
+        &_prev{
+            &_main{
+                margin-left: -20px;
+
+            }
+        }
+        &_next{
+            &_main{
+                margin-right: -20px;
+
+            }
+        }
+
+        &:hover{
+            svg{
+                path{
+                    fill-opacity: 1;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
