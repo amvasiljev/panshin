@@ -1,15 +1,33 @@
-mixin order(id)
-    .order
-        form(action="/").order__form
-                    label.order__label(for="inputName") Ваше имя
-                    input#inputName.order__input(type="text" placeholder='Иванов Иван' class= cl1 required autocomplete="off")
-                    label.order__label(for="inputTel") Номер телефона
-                    input#inputTel.order__input.order__input_phone(type="tel" placeholder='Телефон' class= cl1 required autocomplete="off")
-                    
-                    
-                    .order__consent
-                        input.order__checkbox(id!= id)(type="checkbox" checked)
-                        label.order__label.order__label_consent(for=id) Согласен с обработкой моих персональных данных в соответствии с 
-                            a(href="/").order__doc политикой конфиденциальности
-                    
-                    +button('Продвинуть сайт','button_red button_high','submit')
+mixin order(id,land)
+    if land
+        .order.order_landing
+            .order__title Скидка 50%
+            .order__caption На первый месяц продвижения
+            form(action="/").order__form
+                label.order__label(for="inputName") Ваше имя
+                input#inputName.order__input(type="text" placeholder='Иванов Иван' class= cl1 required autocomplete="off")
+                label.order__label(for="inputTel") Номер телефона
+                input#inputTel.order__input.order__input_phone(type="tel" placeholder='Телефон' class= cl1 required autocomplete="off")
+                
+                
+                .order__consent
+                    input.order__checkbox(id!= id)(type="checkbox" checked)
+                    label.order__label.order__label_consent(for=id) Согласен с обработкой моих персональных данных в соответствии с 
+                        a(href="/").order__doc политикой конфиденциальности
+                
+                +button('Продвинуть сайт','button_red button_high','submit')
+    else
+        .order
+            form(action="/").order__form
+                label.order__label(for="inputName") Ваше имя
+                input#inputName.order__input(type="text" placeholder='Иванов Иван' class= cl1 required autocomplete="off")
+                label.order__label(for="inputTel") Номер телефона
+                input#inputTel.order__input.order__input_phone(type="tel" placeholder='Телефон' class= cl1 required autocomplete="off")
+                
+                
+                .order__consent
+                    input.order__checkbox(id!= id)(type="checkbox" checked)
+                    label.order__label.order__label_consent(for=id) Согласен с обработкой моих персональных данных в соответствии с 
+                        a(href="/").order__doc политикой конфиденциальности
+                
+                +button('Продвинуть сайт','button_red button_high','submit')

@@ -6,11 +6,14 @@
     background-image: @form;
     padding: 48px 40px;
 
+    
+
     @media @768 {
         width: 340px;
         flex: 0 0 340px;
         padding: 40px 15px;
         height: 400px;
+
     }
 
     @media @320 {
@@ -19,6 +22,45 @@
         padding: 40px 15px;
         height: 400px;
         flex: unset;
+    }
+
+    &_landing {
+        height: 480px;
+        padding: 30px 40px;
+
+        @media @768{
+            height: 480px;
+        }
+        @media @320{
+            height: 450px;
+            padding: 20px 15px 30px;
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        .rem(32);
+        line-height: 130%;
+        color: @bk;
+        text-align: center;
+        margin-bottom: 4px;
+        @media @320{
+            .rem(26);
+        }
+    }
+
+    &__caption {
+        font-style: normal;
+        font-weight: normal;
+        .rem(18);
+        line-height: 130%;
+        color: @bk_light;
+        text-align: center;
+        margin-bottom: 25px ;
+        @media @320{
+            .rem(16);
+        }
     }
 
     &__form {
@@ -91,7 +133,7 @@
         transition: all 0.2s;
         -webkit-text-size-adjust: 100%;
 
-        @media @320{
+        @media @320 {
             .rem(16);
         }
 

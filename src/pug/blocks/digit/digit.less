@@ -12,6 +12,10 @@
         font-weight: 300;
         text-align: center;
         margin-bottom: 10px;
+
+        @media @320{
+            .rem(28);
+        }
     }
     &__caption{
         color: @grey;
@@ -19,5 +23,22 @@
         font-weight: normal;
         line-height: 20px;
         text-align: center;
+    }
+
+    &_landing{
+        padding: 0;
+        @media @320{
+            justify-content: flex-start;
+            height: unset;
+            &:not(:last-child){
+                margin-bottom: 50px;
+            }
+        }
+        .digit__title{
+            .rem(32);
+            @media @320{
+                .rem(28);
+            }
+        }
     }
 }

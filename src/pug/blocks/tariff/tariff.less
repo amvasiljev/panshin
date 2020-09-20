@@ -8,11 +8,15 @@
     @media @320 {
         width: 100%;
         max-width: 414px;
+        margin-bottom: 20px;
     }
 
     &_landing {
         width: calc(33% - 20px);
 
+        @media @768{
+            width: calc(50% - 20px);
+        }
         .tariff__content{
             padding: 20px;
             flex: unset;

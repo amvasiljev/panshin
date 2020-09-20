@@ -1,5 +1,12 @@
 .section {
-
+    width: 100%;
+    &_blue{
+        background-image: @section_blue;
+        
+    }
+    &_deepblue{
+        background-color: @bl;
+    }
 
     &_slider{
         height: 500px;
@@ -11,17 +18,23 @@
             height: unset;
         }
     }
+    &_landing{
+        height: 560px;
+    }
     &__inner {
         max-width: 1160px;
         width: 100%;
         margin: 0 auto;
-        padding: 80px 0;
+        padding: 100px 0;
 
         @media @1024{
             padding: 80px 35px;
         }
         @media @768{
             padding: 80px 35px;
+        }
+        @media @320{
+            padding: 60px 15px;
         }
 
 
@@ -46,13 +59,32 @@
 
         width: 100%;
 
-
+        &_numbers{
+            display: flex;
+            justify-content: space-around ;
+            flex-flow: wrap;
+        }
+        &_tariffs{
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+            padding: 50px 0 0 0;
+            @media @320{
+                justify-content: center;
+                padding: 40px 0 0 0;
+            }
+        }
 
 
         &_assets {
             display: flex;
             flex-flow: wrap;
             justify-content: space-between;
+        }
+        &_digit{
+            display: flex;
+            justify-content: space-around ;
+            flex-flow: wrap;
         }
     }
 
@@ -433,4 +465,24 @@
             }
         }
     }
+}
+
+
+.div{
+    width: 736px;
+    height: 736px;
+    background-image: @form_subscribe;
+    border-radius: 0 50% 50% 0;
+    z-index: -1;
+}
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    height: 506px;
+    width: 603px;
+    border-radius: 10px 0 0 10px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
 }

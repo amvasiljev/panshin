@@ -151,6 +151,22 @@ $('.nav_mobile .nav__link_group').on('click', function (e) {
 
 
 
+
+$(document).scroll(function () {
+  var scrollTop = $(this).scrollTop();
+  if (scrollTop > 0) {
+   
+    $('.header__contacts').addClass('header__contacts_hide');
+    $('.header__inner').addClass('header__inner_scroll');
+  } else {
+   
+    $('.header__contacts').removeClass('header__contacts_hide');
+    $('.header__inner').removeClass('header__inner_scroll');
+  }
+})
+
+
+
 //mobile menu
 
 
@@ -165,6 +181,8 @@ $('.nav__link_mobile svg path').each(function(){
 // slider 
 var arrow_next = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.5L6.875 9.625L0 2.75L1.375 0L11 9.625L1.375 19.25L0 16.5Z" fill="white" fill-opacity="0.5"/></svg>'
 var arrow_prev = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.5L4.125 9.625L11 2.75L9.625 0L0 9.625L9.625 19.25L11 16.5Z" fill="white" fill-opacity="0.5"/></svg>'
+
+
 
 
 $('.slider_main').slick({
@@ -182,6 +200,18 @@ $('.slider_main').slick({
 if($('.slider_main').slick("getSlick").slideCount == 1){
   $('.section__dots').hide()
 }
+
+$('.slider_result').slick({
+  lazyload: 'ondemand',
+  // infinite: false,
+  fade: true,
+  cssEase: 'linear',
+  nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_result">' + arrow_next + '</div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_result">' + arrow_prev + '</div>',
+  appendArrows: $('.slider__arrows'),
+})
+
+
 
 
 // slider 

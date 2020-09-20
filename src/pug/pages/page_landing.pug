@@ -1,0 +1,50 @@
+extends ../layout/main
+
+
+
+
+block variables
+    -var title = 'landing'
+    -var description = 'landing'
+    -var pageClass = ''
+
+block content
+    section.section.section_slider.lazy.section_landing(data-src="/assets/img/banners/banner.png")
+            .section__inner.section__inner_slider
+                +slider_0('','','','','land')
+                +order('order','land')
+                .section__arrows
+                .section__dots
+
+    section.section.section_tariff.section_blue
+        .section__inner
+            +title('Комплексное продвижение сайтов','','h1')
+            .section__box.section__box_numbers
+                +number('1','Собираем','целевые запросы')
+                +number('2','Вносим','изменения на сайт')
+                +number('3','Улучшаем','видимость в Yandex и Google')
+                +number('4','Анализируем','конкурентов')
+                +number('5','Делаем','ваш сайт лучше')
+
+            .section__box.section__box_tariffs
+                +tariff('tariff_landing','SEO','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>20 000</span> руб./мес.')
+                +tariff('tariff_landing','SEO + Контекст','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>30 000</span> руб./мес.')
+                +tariff('tariff_landing','SEO + Контекст','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>20 000</span> руб./мес.')
+
+    section.section.section_result
+        .section__inner
+            +title('Результат нашей работы','','','h2')
+            +slider_result()
+            .block.lazy(data-src="/assets/img/form_sales.svg")
+                .div
+            
+
+    section.section.section_deepblue
+        .section__inner
+            .section__box.section__box_digit
+                +digit('в 4 раза','в среднем увеличиваем посещаемость сайтов через SEO','digit_landing')
+                +digit('15 компаний в день','обращается к нам с заказом либо за консультацией','digit_landing')
+                +digit('в 1.4 раза','в среднем снижаем вложения в контекстную рекламу','digit_landing')
+                +digit('100% гарантия','гарантируем конкретную посещаемость либо вывод в TOP-10','digit_landing')
+                +digit('+20% дополнительно','кроме продвижения — усилим ваш сайт результат: еще на 20% больше клиентов','digit_landing')
+                +digit('от 7 000 руб.','работаем как с заводами, так и с небольшими компаниями','digit_landing')
