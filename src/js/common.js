@@ -179,11 +179,11 @@ $('.nav__link_mobile svg path').each(function(){
 
 
 // slider 
-var arrow_next = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.5L6.875 9.625L0 2.75L1.375 0L11 9.625L1.375 19.25L0 16.5Z" fill="white" fill-opacity="0.5"/></svg>'
-var arrow_prev = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.5L4.125 9.625L11 2.75L9.625 0L0 9.625L9.625 19.25L11 16.5Z" fill="white" fill-opacity="0.5"/></svg>'
+var arrow_next = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16.5L6.875 9.625L0 2.75L1.375 0L11 9.625L1.375 19.25L0 16.5Z" /></svg>'
+var arrow_prev = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.5L4.125 9.625L11 2.75L9.625 0L0 9.625L9.625 19.25L11 16.5Z" /></svg>'
 
 
-
+appendDots()
 
 $('.slider_main').slick({
   lazyload: 'ondemand',
@@ -212,6 +212,52 @@ $('.slider_result').slick({
 })
 
 
+$('.slider__box_sertificate').slick({
+  lazyload: 'ondemand',
+  infinite: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  dots: true,
+  nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_sertificate">' + arrow_next + '</div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_sertificate">' + arrow_prev + '</div>',
+  appendArrows: $('.slider__arrows_sertificate'),
+  appendDots:  $('.slider__dots_sertificate'),
+  responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        
+      }
+    }
+
+  ]
+})
+
+
 
 
 // slider 
@@ -230,3 +276,72 @@ if (/Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kin
 }
 
 //products
+
+
+// video
+
+(function () {
+  var youtube = $('.video__code');
+  youtube.addClass('test');
+  for (var i = 0; i < youtube.length; i++) {
+      var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/hqdefault.jpg";
+      var image = new Image();
+      // image.src = source;
+      image.setAttribute('class', 'lazy');
+      image.setAttribute('data-src', source);
+      image.setAttribute('data-lazy', source);
+      image.addEventListener("load", function () {
+          youtube[i].appendChild(image);
+      }(i));
+
+      youtube[i].addEventListener("click", function () {
+          var iframe = document.createElement("iframe");
+          iframe.setAttribute("frameborder", "0");
+          iframe.setAttribute("allowfullscreen", "");
+          iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=0");
+          this.innerHTML = "";
+          this.appendChild(iframe);
+      });
+  };
+})();
+
+
+
+
+
+// end video
+
+
+
+const mediaQuery = window.matchMedia('(max-width: 767px)')
+
+function videoMobileSlider(e) {
+  if (e.matches) {
+    $('.section__box_video').slick({
+      lazyload: 'ondemand',
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_video">' + arrow_next + '</div>',
+      prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_video">' + arrow_prev + '</div>',
+      appendArrows: $('.slider__arrows_video'),
+      appendDots:  $('.slider__dots_video'),
+
+    })
+
+    appendDots()
+  }else{
+    $('.section__box_video').slick('unslick');
+  }
+}
+
+mediaQuery.addListener(videoMobileSlider)
+videoMobileSlider(mediaQuery)
+
+
+function appendDots(){
+  $('.slider__dots').each(function(){
+    $(this).insertAfter($(this).prev('.slider__arrows').find('.slider__arrow_prev'))
+  })
+}

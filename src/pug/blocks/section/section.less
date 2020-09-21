@@ -52,6 +52,10 @@
                 padding: 40px 15px;
             }
         }
+
+        &_sertificate{
+            max-width: 1230px;
+        }
     }
 
     &__box {
@@ -85,6 +89,23 @@
             display: flex;
             justify-content: space-around ;
             flex-flow: wrap;
+        }
+        &_services{
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+            @media @320{
+                justify-content: center;
+            }
+        }
+        &_video{
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+            
+            @media @320{
+                margin-bottom: 0 !important;
+            }
         }
     }
 

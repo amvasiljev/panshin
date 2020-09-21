@@ -6,12 +6,21 @@
     justify-content: flex-start;
     align-items: center;
     justify-content: center;
-    height: 230px;
-    width: 360px;
+    min-height: 230px;
+    max-width: 360px;
+    width: calc(33% - 20px);
     padding: 0 36px;
     position: relative;
-    cursor: pointer;
+    
     margin-bottom: 20px;
+
+    @media @768{
+        width: calc(50% - 20px);
+        max-width: unset;
+    }
+    @media @320{
+        width: 100%;
+    }
 
     &_white {
         background-image: none;
@@ -24,7 +33,7 @@
     }
 
     &_big {
-        height: 313px;
+        // height: 313px;
         padding-bottom: 17px;
         justify-content: flex-start;
 
@@ -38,6 +47,7 @@
     }
 
     &_hidden {
+        min-height: unset;
         height: 0;
         padding: 0;
         visibility: hidden;
