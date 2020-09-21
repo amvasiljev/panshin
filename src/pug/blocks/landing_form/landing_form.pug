@@ -1,0 +1,39 @@
+mixin landing_form(image,title,button,caption,cl,other)
+    if cl
+        .landing-request(class= cl)
+            .landing-request__wrapper
+                .landing-request__offer
+                    .landing-request__box
+                        .landing-request__title= title
+                        .landing-request__button
+                            .landing-request__text= button
+                        if caption
+                            .landing-request__caption= caption
+            .landing-request__form
+                +order('request_2','','request','order_blue')
+
+    else if other
+        .landing-request
+            .landing-request__wrapper
+                .landing-request__offer
+                    .landing-request__box
+                        .landing-request__title= title
+                        .landing-request__button
+                            .landing-request__text= button
+                        if caption
+                            .landing-request__caption= caption
+            .landing-request__form
+                +order('request_3','','request')
+    else
+        .landing-request
+            .landing-request__wrapper
+                .landing-request__offer
+                    .landing-request__box
+                        .landing-request__title= title
+                        .landing-request__button
+                            .landing-request__text= button
+                        if caption
+                            .landing-request__caption= caption
+            .landing-request__form
+                +order('request_1','','request')
+        

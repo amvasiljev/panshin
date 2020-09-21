@@ -35,8 +35,7 @@ block content
         .section__inner
             +title('Результат нашей работы','','','h2')
             +slider_result()
-            .block.lazy(data-src="/assets/img/form_sales.svg")
-                .div
+            
             
 
     section.section.section_deepblue
@@ -48,3 +47,9 @@ block content
                 +digit('100% гарантия','гарантируем конкретную посещаемость либо вывод в TOP-10','digit_landing')
                 +digit('+20% дополнительно','кроме продвижения — усилим ваш сайт результат: еще на 20% больше клиентов','digit_landing')
                 +digit('от 7 000 руб.','работаем как с заводами, так и с небольшими компаниями','digit_landing')
+
+    section.section.section_result
+        .section__inner
+            +landing_form('/assets/img/landing/form_sales.svg','Скидка 50%','На первый месяц продвижения','при переходе из другой компании')
+            +landing_form('/assets/img/landing/form_audit.svg','Узнайте возможности вашего сайта','Закажите бесплатный аудит','','landing-request_blue')
+            //- +landing_form('/assets/img/landing/form_sales.svg','Скидка 50%','На первый месяц продвижения','при переходе из другой компании','','other')

@@ -37,6 +37,28 @@
         }
     }
 
+    &_request{
+        padding: 0;
+        background-image: none;
+        max-width: 360px;
+        @media @768{
+            height: unset;
+        }
+        @media @320{
+            height: unset;
+            padding: 20px 15px 30px;
+        }
+        
+    }
+    &_blue{
+        .order__label{
+            color: @wt;
+        }
+        .order__doc{
+            color: @wt;
+        }
+    }
+
     &__title {
         font-style: normal;
         font-weight: normal;
@@ -144,7 +166,8 @@
             font-style: normal;
         }
 
-        &:nth-of-type(2) {
+      
+        &:nth-last-of-type(1){
             margin-bottom: 10px;
         }
 
