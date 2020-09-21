@@ -1,8 +1,15 @@
-mixin client(logo,title,name,cl)
-    .client(class= cl)
-        .client__image
-            img.lazy.client__logo(data-src= logo)
-        .client__title= title
-        .client__profile
-            .client__name= name
-            .client__job Крупнейшая компания в мире
+mixin client(logo,title,name,cl,type,name_2,caption)
+    if type
+        .client(class= cl)
+            .client__image
+                img.lazy.client__logo(data-src= logo)
+            a(href="/").client__title= name_2
+            .client__caption= caption
+    else
+        .client(class= cl)
+            .client__image
+                img.lazy.client__logo(data-src= logo)
+            .client__title= title
+            .client__profile
+                .client__name= name
+                .client__job Крупнейшая компания в мире

@@ -183,7 +183,7 @@ var arrow_next = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xm
 var arrow_prev = '<svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 16.5L4.125 9.625L11 2.75L9.625 0L0 9.625L9.625 19.25L11 16.5Z" /></svg>'
 
 
-appendDots()
+
 
 $('.slider_main').slick({
   lazyload: 'ondemand',
@@ -257,9 +257,32 @@ $('.slider__box_sertificate').slick({
   ]
 })
 
+$('.slider__box_case').slick({
+  lazyload: 'ondemand',
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_case">' + arrow_next + '</div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_case">' + arrow_prev + '</div>',
+  appendArrows: $('.slider__arrows_case'),
+  appendDots:  $('.slider__dots_case'),
 
+})
 
+$('.slider__box_result').slick({
+  lazyload: 'ondemand',
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: false,
+  nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_result">' + arrow_next + '</div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_result">' + arrow_prev + '</div>',
+  appendArrows: $('.slider__arrows_result'),
 
+})
+
+appendDots()
 // slider 
 
 // news

@@ -1,25 +1,55 @@
-.client{
+.client {
     width: 200px;
     display: flex;
     flex-direction: column;
 
-    &_hidden{
+    &_landing {
+        width: calc(33% - 15px);
+        margin-bottom: 30px;
+
+        @media @320{
+            width: 100%;
+            max-width: 375px;
+        }
+
+        .client__image {
+            flex: 0 0 200px;
+            margin-bottom: 15px;
+        }
+
+        .client__title {
+            font-style: normal;
+            font-weight: 500;
+            .rem(18);
+            line-height: 22px;
+            color: @bl_middle;
+            margin-bottom: 5px;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: @red;
+            }
+        }
+    }
+
+    &_hidden {
         height: 0;
         padding: 0;
         visibility: hidden;
         margin: 0;
     }
 
-    &:hover{
-        .client__profile{
+    &:hover {
+        .client__profile {
             opacity: 0.9;
             z-index: 10;
             transition: all 0.2s;
         }
     }
 
-    
-    &__image{
+
+    &__image {
         width: 100%;
         flex: 0 0 150px;
         border-radius: 5px;
@@ -30,17 +60,19 @@
         margin-bottom: 10px;
         position: relative;
         cursor: pointer;
-        
+
     }
+
     // &__logo{}
-    &__title{
+    &__title {
         .rem(14);
         text-align: center;
         line-height: 17px;
         font-weight: 500;
         color: @bk_light;
     }
-    &__profile{
+
+    &__profile {
         background-image: @form_subscribe;
         border-radius: 5px;
         opacity: 0;
@@ -55,7 +87,8 @@
         z-index: -1;
         transition: all 0.2s;
     }
-    &__name{
+
+    &__name {
         font-weight: 600;
         .rem(18);
         line-height: 22px;
@@ -63,13 +96,23 @@
         text-align: center;
         margin-bottom: 14px;
     }
-    &__job{
+
+    &__job {
         color: @wt;
         .rem(14);
         line-height: 17px;
         text-align: center;
         font-weight: 500;
 
+    }
+
+    &__caption {
+        font-style: normal;
+        font-weight: normal;
+        .rem(14);
+        color: @bk_light;
+        line-height: 17px;
+        text-align: center;    
     }
 
 }

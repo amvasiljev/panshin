@@ -1,5 +1,7 @@
 .slider {
 
+    position: relative;
+
     &_main {
         width: calc(100% - 400px);
 
@@ -18,7 +20,8 @@
         }
     }
 
-    &_result {}
+
+
 
     &__box {
 
@@ -26,20 +29,51 @@
 
             padding: 0 20px;
 
-            @media @320{
+            @media @320 {
                 padding: 0;
                 margin-bottom: 0 !important;
             }
 
         }
-        
-    
+
+        &_case {
+            margin-bottom: 0 !important;
+        }
+
+        &_result {
+
+            .slick-track {
+                display: flex;
+                align-items: center;
+            }
+        }
+
     }
 
     &__options {
         display: flex;
         justify-content: center;
         width: 100%;
+
+        &_case {
+            position: relative;
+            top: -120px;
+        }
+
+        &_result {
+            position: absolute;
+            left: 0;
+            width: 100%;
+
+            top: 50%;
+            height: 0;
+
+            @media @320{
+                position: unset;
+                height: 40px;
+                margin-top: 10px;
+            }
+        }
 
         .slick-dots {
             position: unset;
@@ -96,8 +130,68 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        &_sertificate {
-           
+
+        &_result {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1160px;
+
+            @media @320{
+               max-width: 90px;
+            }
+
+            .slider__arrow {
+                margin: 0 40px;
+                height: 44px;
+                width: 44px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: @button_3;
+                transition: all 0.2s;
+
+                @media @320{
+                    height: 40px;
+                    width: 40px;
+                    margin: 0;
+
+                }
+                svg {
+                    width: 7px;
+                    height: 12px;
+
+                    @media @320{
+                        width: 6px;
+                        height: 10px;
+                    }
+                    path {
+                        fill: @red;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    svg {
+                        path {
+                            fill: @wt;
+                        }
+                    }
+                    background-color: @red;
+                    transition: all 0.2s;
+                }
+
+                &:active {
+                    svg {
+                        path {
+                            fill: @wt;
+                        }
+                    }
+                    background-color: @button_3_pressed;
+                    transition: all 0.2s;
+                }
+            }
         }
     }
 
@@ -125,6 +219,7 @@
                 }
             }
         }
+
         &_prev {
             &_main {
                 margin-left: -20px;
@@ -190,6 +285,24 @@
             }
         }
 
-        
+
+    }
+
+    &__buttons {
+        width: 100%;
+        max-width: 1160px;
+        margin: 0 auto;
+
+        &_case {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: -50px;
+        }
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: center;
     }
 }
