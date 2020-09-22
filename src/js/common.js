@@ -78,12 +78,13 @@ $('.nav__item_group').hover(
   }
 )
 
-var windowHeight = $(window).innerHeight()
+var windowHeight = $(document).innerHeight()
 
 
 $('.nav__inner').hover(
   function(){
     $('.nav__hover').dequeue().stop(true, true).fadeIn(300).css('height',windowHeight - 200)
+    
   }
   ,
   function(){
@@ -352,10 +353,13 @@ function videoMobileSlider(e) {
       appendDots:  $('.slider__dots_video'),
 
     })
-
+    $('.section__box_video').addClass('mobileSlick')
     appendDots()
   }else{
-    $('.section__box_video').slick('unslick');
+    if($('.mobileSlick').length > 0){
+      $('.section__box_video').slick('unslick');
+    }
+    
   }
 }
 
