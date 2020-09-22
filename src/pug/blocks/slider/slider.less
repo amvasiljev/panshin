@@ -28,10 +28,10 @@
         &_sertificate {
 
             padding: 0 20px;
-
+            margin-bottom: 0 !important;
             @media @320 {
                 padding: 0;
-                margin-bottom: 0 !important;
+                
             }
 
         }
@@ -58,6 +58,10 @@
         &_case {
             position: relative;
             top: -120px;
+        }
+        &_video{
+            position: relative;
+            top: -50px;
         }
 
         &_result {
@@ -304,5 +308,10 @@
     &__item {
         display: flex !important;
         justify-content: center;
+        img{
+            @media @320{
+                height: 240px;
+            }
+        }
     }
 }

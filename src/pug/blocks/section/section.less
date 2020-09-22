@@ -55,6 +55,12 @@
 
         &_case{
             padding: 100px 0 0 0;
+            @media @1024,@768{
+                padding: 80px 0 0 0;
+            }
+            @media @320{
+                padding: 60px 0 0 0;
+            }
         }
 
         &_sertificate{
@@ -106,17 +112,26 @@
             display: flex;
             justify-content: space-between;
             flex-flow: wrap;
+            padding: 60px 0 80px 0;
             
             @media @320{
                 margin-bottom: 0 !important;
+                padding: 40px 0 50px 0;
             }
         }
         &_client{
             display: flex;
             justify-content: space-between;
             flex-flow: wrap;
+            padding: 0 0 70px 0;
             @media @320{
                 justify-content: center;
+            }
+        }
+        &_sertificate{
+            padding: 100px 0 0 0;
+            @media @320{
+                padding: 60px 0 0 0;
             }
         }
     }
