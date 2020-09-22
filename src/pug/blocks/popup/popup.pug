@@ -1,0 +1,10 @@
+mixin popup(id)
+    .popup#popup
+        .popup__title Заказать обратный звонок
+        +order('popup_check','','','order_popup','Заказать звонок')
+    .popup#popup_1
+        .popup__title Оставить заявку
+        +order('popup_check_1','','','order_popup','Оставить заявку')
+    
+    .popup#thanks.popup_thanks
+        .popup__title.popup__title_thanks Спасибо! Скоро с вами свяжется наш менеджер

@@ -6,23 +6,24 @@ mixin header()
 				a(href="/").header__link Результаты
 				a(href="/").header__link Отзывы
 				a(href="/").header__link Контакты
-				a(href="/").header__link Оставить заявку
+				a(href="/" data-fancybox="" data-src="#popup_1").header__link Оставить заявку
 			.header__contacts
 				.header__callback
 					.header__cities_wrapper
 						.header__cities
 							a(href="#phone_1").header__city.header__city_active Москва
 							a(href="#phone_2").header__city Краснодар
-							a(href="#phone_3").header__city Челябинск
+							a(href="#phone_3").header__city Кемерово
+							a(href="#phone_4").header__city Харьков
 							.header__cities_arrow
 								<svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.80256 6.80256C5.58256 6.80256 5.38256 6.72256 5.22256 6.56256L0.222556 1.36256C-0.0774444 1.04256 -0.0774493 0.542562 0.242551 0.222562C0.562551 -0.0774383 1.06257 -0.0774371 1.38257 0.242563L5.80256 4.84256L10.2226 0.242563C10.5226 -0.0774371 11.0426 -0.0774383 11.3626 0.222562C11.6826 0.522562 11.6825 1.04256 11.3825 1.36256L6.38257 6.56256C6.22257 6.72256 6.02256 6.80256 5.80256 6.80256Z" fill="#213CC4"/>
 								</svg>
 
 					.header__phones
-						a(href="+74951234567" data-city="#phone_1").header__phone.header__phone_active +7 (495) 123-45-67
-						a(href="+78611234567" data-city="#phone_2").header__phone +7 (861) 123-45-67
-						a(href="+73511234567" data-city="#phone_3").header__phone +7 (351) 123-45-67
-				+button('Заказать звонок','button_blue')
+						a(href="+74957263543" data-city="#phone_1").header__phone.header__phone_active +7 (495) 726-35-43
+						a(href="+78612388581" data-city="#phone_2").header__phone +7 (861) 238-85-81
+						a(href="+73842765606" data-city="#phone_3").header__phone +7 (384) 276-56-06
+						a(href="+380577285986" data-city="#phone_4").header__phone +38 (057) 728-59-86
+				+button('Заказать звонок','button_blue','','','#popup')
 			+burger()
-

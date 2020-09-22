@@ -27,6 +27,7 @@
 @import 'blocks/number/number';
 
 @import 'blocks/order/order';
+@import 'blocks/popup/popup';
 
 
 @import 'blocks/section/section';
@@ -82,4 +83,26 @@
   border: 2px solid @red;
   color: @red;
   transition: all 0.2s;
+}
+
+.fancybox-is-open .fancybox-bg{
+  opacity: 0.7;
+}
+
+.fancybox-bg{
+  background-color: @footer;
+}
+
+.fancybox-slide--html .fancybox-close-small{
+  right: 5px;
+  top: 5px;
+  padding: 0;
+}
+.fancybox-button svg{
+  height: 30px;
+    width: 30px;
+  path{
+    fill: @red;
+    
+  }
 }
