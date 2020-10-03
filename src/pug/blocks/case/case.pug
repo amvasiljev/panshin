@@ -1,16 +1,32 @@
-mixin case(link)
-    .case__wrapper
-        .case
-            .case__content
-                .case__title Строительные материалы
-                .case__text
-                    p Был создан новый сайт, не имевший истории в поиске, и начаты работы над сайтом по стратегии низкочастотного продвижения. С минимальными вложениями клиент начал получать лиды уже через полтора месяца после старта работ по SEO. Одновременно проводится размещение контекстной рекламы в Google.Adwords и Яндекс.Директ.
+mixin case(link,cl,id)
+    if link
+        .case__wrapper
+            .case
+                .case__content
+                    .case__title Строительные материалы
+                    .case__text
+                        p Был создан новый сайт, не имевший истории в поиске, и начаты работы над сайтом по стратегии низкочастотного продвижения. С минимальными вложениями клиент начал получать лиды уже через полтора месяца после старта работ по SEO. Одновременно проводится размещение контекстной рекламы в Google.Adwords и Яндекс.Директ.
 
-                .case__result
-                    .case__item.case__item_traffic Увеличение трафика <span>в 6 раз</span>
-                    .case__item.case__item_sales Увеличение продаж <span>в 7,5 раз</span>
-                    .case__caption Окупаемость вложений в продвижение на 4-й месяц продвижения.
-                .case__link
-                +button(link,'button_trans button_icon','','','','https://www.asvgroup.ru')
-            .case__image
-                img.lazy(data-lazy="/assets/img/case/case_1.png", alt="")
+                    .case__result
+                        .case__item.case__item_traffic Увеличение трафика <span>в 6 раз</span>
+                        .case__item.case__item_sales Увеличение продаж <span>в 7,5 раз</span>
+                        .case__caption Окупаемость вложений в продвижение на 4-й месяц продвижения.
+                    .case__link
+                    +button(link,'button_trans button_icon','','','','https://www.asvgroup.ru')
+                .case__image
+                    img.lazy(data-lazy="/assets/img/case/case_1.png", alt="")
+    else
+        .case__wrapper(id= id)
+            .case(class= cl)
+                .case__content
+                    
+                    .case__text
+                        p И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Принимая во внимание показатели успешности, выбранный нами инновационный путь представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.
+
+                        ul
+                            li Первый пункт маркированного списка
+                            li Еще один менее длинный пункт
+                            li И еще пункт маркированного списка на несколько строк
+                    
+                .case__image
+                    img.lazy(data-src="/assets/img/steps/step_1.png", alt="")

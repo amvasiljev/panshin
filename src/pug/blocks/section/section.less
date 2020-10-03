@@ -2,7 +2,9 @@
     width: 100%;
     &_blue{
         background-image: @section_blue;
-        
+        &_invert{
+            background-image: @section_blue_invert;
+        }
     }
     &_deepblue{
         background-color: @bl;
@@ -134,10 +136,32 @@
                 padding: 60px 0 0 0;
             }
         }
+        &_news{
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+        }
+        &_steps{
+            position: relative;
+
+            .case__wrapper{
+                
+            }
+        }
     }
 
 
+    &__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        .button{
+            &:not(:first-child){
+                margin-left: 20px;
+            }
+        }
+    }
 
 
 
@@ -430,8 +454,6 @@
 
         &_blue {
             background-color: @footer;
-
-
         }
 
         &_link {
