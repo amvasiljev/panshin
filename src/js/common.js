@@ -458,3 +458,6 @@ $('#feedback_file').on('change', function () {
 
   formItem.appendChild(listFiles);
 });
+
+
+$('.feedback__select').niceSelect();

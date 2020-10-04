@@ -43,7 +43,11 @@ mixin feedback()
                         label.feedback__label(for="inputUrl") Адрес сайта
                         input#inputUrl.feedback__input.feedback__input_phone(type="url" placeholder='2223333444' autocomplete="off")
                         label.feedback__label(for="inputList") Откуда узнали о нас?
-                        input#inputList.feedback__input.feedback__input_phone(type="text" placeholder='Выберите из списка' autocomplete="off")
+                        select.feedback__select#inputList
+                            option.feedback__option(value='1' data-display='Выберите из списка') Выберите из списка
+                            option.feedback__option(value='2') Источник 1 
+                            option.feedback__option(value='3') Источник 2
+                            option.feedback__option(value='4') Источник 3 
 
                     .feedback__attachment
                         .feedback__heading.feedback__heading_file Прикрепить файл
