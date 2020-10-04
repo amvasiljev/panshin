@@ -8,6 +8,15 @@
     border-radius: 10px;
     box-shadow: @box_form;
 
+    @media @768 {
+        padding: 60px 30px;
+    }
+
+    @media @320 {
+        max-width: 414px;
+        padding: 40px 15px;
+    }
+
     &__title {
         .rem(32);
         font-weight: normal;
@@ -15,6 +24,11 @@
         color: @bk;
         text-align: center;
         margin-bottom: 20px;
+
+        @media @320 {
+            .rem(26);
+            margin-bottom: 10px;
+        }
     }
 
     &__subtitle {
@@ -25,6 +39,11 @@
         opacity: 0.8;
         font-weight: normal;
         margin-bottom: 55px;
+
+        @media @320 {
+            .rem(16);
+            margin-bottom: 30px;
+        }
     }
 
     &__heading {
@@ -34,6 +53,37 @@
         color: @bk;
         text-align: center;
         margin-bottom: 35px;
+
+        @media @320 {
+            .rem(16);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        &_file {
+            color: @bk;
+            font-style: normal;
+            font-weight: 500;
+            .rem(14);
+            line-height: 17px;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 10px;
+            @media @320 {
+                margin-bottom: 10px;
+                .rem(14);
+                font-weight: 500;
+            }
+        }
+    }
+
+    &__caption {
+        font-style: normal;
+        font-weight: normal;
+        .rem(12);
+        color: @bk_light;
+        line-height: 15px;
+        margin-bottom: 17px;
     }
 
     &__checks {
@@ -42,9 +92,18 @@
         justify-content: space-between;
         padding: 0 0 40px 0;
 
+        @media @320 {
+            justify-content: flex-start;
+            padding: 0 0 20px 0;
+        }
+
         .feedback__label {
             width: calc(33% - 15px);
             margin-bottom: 20px;
+
+            @media @320 {
+                width: 100%;
+            }
         }
     }
 
@@ -52,10 +111,16 @@
         display: flex;
         flex-flow: wrap;
         justify-content: space-between;
+        max-width: 680px;
+        margin: 0 auto;
     }
 
     &__box {
         width: calc(50% - 20px);
+
+        @media @320 {
+            width: 100%;
+        }
     }
 
     &__input {
@@ -96,7 +161,7 @@
 
     }
 
-    &__textarea {}
+
 
     &__label {
         color: @bk;
@@ -115,6 +180,17 @@
             color: @bk_light;
             line-height: 15px;
             margin-bottom: 17px;
+            max-width: 400px;
+
+            a {
+                color: @bl_middle;
+                text-decoration: underline;
+
+                &:hover,
+                &:focus {
+                    color: @red;
+                }
+            }
         }
     }
 
@@ -165,6 +241,75 @@
         clip: rect(0 0 0 0);
         opacity: 0;
     }
-    
 
+    &__attachment {
+        display: flex;
+        padding: 30px 0;
+        flex-flow: wrap;
+    }
+
+    &__text {
+        flex: 1;
+        padding: 0 30px 0 0;
+    }
+
+    &__files {
+        flex: 0 0 180px;
+
+        @media @320 {
+            flex: unset;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 120px;
+        margin-bottom: 20px;
+        background-color: @wt;
+        border: 1px solid @wt;
+        color: @bk;
+        padding: 20px 15px;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        .rem(14);
+        line-height: 17px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+        -webkit-text-size-adjust: 100%;
+        margin-top: 7px;
+    }
+
+    &__consent {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    button[type="submit"] {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__filelist {
+        padding: 0 0 0 15px;
+        li {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            color: @bk_light;
+        }
+
+    }
 }

@@ -3,65 +3,66 @@ mixin feedback()
         .feedback__header
             .feedback__title Форма онлайн-заказа
             .feedback__subtitle Для расчёта стоимости услуг вам достаточно заполнить простую онлайн-форму
-        
-            .feedback__heading 1. Какие виды услуг вас интересуют?
-            .feedback__checks
-               
-                    input(type="checkbox" name="" checked).feedback__checkbox#checkbox_1
-                    label(for="checkbox_1").feedback__label Поисковое продвижение (SEO)
-                    input(type="checkbox" name="" checked).feedback__checkbox#checkbox_2
-                    label(for="checkbox_2").feedback__label Управление репутацией (SERM)
-                    input(type="checkbox" name="" checked).feedback__checkbox#checkbox_3
-                    label(for="checkbox_3").feedback__label Разработка сайта
-
-                    input(type="checkbox" name="").feedback__checkbox#checkbox_4
-                    label(for="checkbox_4").feedback__label Контекстная реклама
-                    input(type="checkbox" name="").feedback__checkbox#checkbox_5
-                    label(for="checkbox_5").feedback__label Аудиты сайтов и РК
-                    input(type="checkbox" name="").feedback__checkbox#checkbox_6
-                    label(for="checkbox_6").feedback__label Техническая поддержка
-
-                    input(type="checkbox" name="").feedback__checkbox#checkbox_7
-                    label(for="checkbox_7").feedback__label Продвижение в социальных сетях (SMM)
-                    input(type="checkbox" name="").feedback__checkbox#checkbox_8
-                    label(for="checkbox_8").feedback__label Обучение и консалтинг
-                    input(type="checkbox" name="").feedback__checkbox#checkbox_9
-                    label(for="checkbox_9").feedback__label Автоматизация
-
-            .feedback__heading 2. Персональные данные
-            .feedback__inputs
-                .feedback__box
-                    label.feedback__label(for="inputName") Ваше имя
-                    input#inputName.feedback__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
-                    label.feedback__label(for="inputTel") Номер телефона
-                    input#inputTel.feedback__input.feedback__input_phone(type="tel" placeholder='Телефон' required autocomplete="off")
-                    label.feedback__label(for="inputEmail") Ваш e-mail
-                    input#inputEmail.feedback__input.feedback__input_phone(type="email" placeholder='email@gmail.com' required autocomplete="off")
-                .feedback__box
-                    label.feedback__label(for="inputCompany") Название компании
-                    input#inputCompany.feedback__input(type="text" placeholder='Super Company' autocomplete="off")
-                    label.feedback__label(for="inputUrl") Адрес сайта
-                    input#inputUrl.feedback__input.feedback__input_phone(type="url" placeholder='2223333444' autocomplete="off")
-                    label.feedback__label(for="inputList") Откуда узнали о нас?
-                    input#inputList.feedback__input.feedback__input_phone(type="text" placeholder='Выберите из списка' autocomplete="off")
-
-                .feedback__bottom
-                    .feedback__caption
-                        .feedback__heading.feedback__heading_file
-                        .feedback__caption К вашей заявке вы можете приложить бриф или ТЗ на разработку сайта, список ключевых слов по продвижению сайта или любые другие материалы
-
-                        .feedback__caption Максимальный размер одного файла: 2 МБ<br>Максимальное количество файлов: 10
-                    .feedback__files
-                        input(type="file" multiple="multiple" id="feedback_file" name="").feedback__file
-                        label(for="feedback_file" class="button button_smoke") Выберите файл
-
-                .feedback__bottom
-                    label(for="feedback_textarea").feedback__label Ваш комментарий
-                    textarea#feedback_textarea(name="" placeholder="Опишите свою задачу").feedback__textarea
-                    .feedback__consent
-                        input.feedback__checkbox#feedback_consent(type="checkbox" checked)
-                        label.feedback__label.feedback__label_consent(for="feedback_consent") Согласен с обработкой моих персональных данных в соответствии с 
-                            a(href="/").feedback__doc политикой конфиденциальности
+            form(action="/").feedback__form
+                .feedback__heading 1. Какие виды услуг вас интересуют?
+                .feedback__checks
                 
-                    +button(text,'button_red button_high','submit')
+                        input(type="checkbox" name="" checked).feedback__checkbox#checkbox_1
+                        label(for="checkbox_1").feedback__label Поисковое продвижение (SEO)
+                        input(type="checkbox" name="" checked).feedback__checkbox#checkbox_2
+                        label(for="checkbox_2").feedback__label Управление репутацией (SERM)
+                        input(type="checkbox" name="" checked).feedback__checkbox#checkbox_3
+                        label(for="checkbox_3").feedback__label Разработка сайта
+
+                        input(type="checkbox" name="").feedback__checkbox#checkbox_4
+                        label(for="checkbox_4").feedback__label Контекстная реклама
+                        input(type="checkbox" name="").feedback__checkbox#checkbox_5
+                        label(for="checkbox_5").feedback__label Аудиты сайтов и РК
+                        input(type="checkbox" name="").feedback__checkbox#checkbox_6
+                        label(for="checkbox_6").feedback__label Техническая поддержка
+
+                        input(type="checkbox" name="").feedback__checkbox#checkbox_7
+                        label(for="checkbox_7").feedback__label Продвижение в социальных сетях (SMM)
+                        input(type="checkbox" name="").feedback__checkbox#checkbox_8
+                        label(for="checkbox_8").feedback__label Обучение и консалтинг
+                        input(type="checkbox" name="").feedback__checkbox#checkbox_9
+                        label(for="checkbox_9").feedback__label Автоматизация
+
+                .feedback__heading 2. Персональные данные
+                .feedback__inputs
+                    .feedback__box
+                        label.feedback__label(for="inputName") Ваше имя
+                        input#inputName.feedback__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
+                        label.feedback__label(for="inputTel") Номер телефона
+                        input#inputTel.feedback__input.feedback__input_phone(type="tel" placeholder='Телефон' required autocomplete="off")
+                        label.feedback__label(for="inputEmail") Ваш e-mail
+                        input#inputEmail.feedback__input.feedback__input_phone(type="email" placeholder='email@gmail.com' required autocomplete="off")
+                    .feedback__box
+                        label.feedback__label(for="inputCompany") Название компании
+                        input#inputCompany.feedback__input(type="text" placeholder='Super Company' autocomplete="off")
+                        label.feedback__label(for="inputUrl") Адрес сайта
+                        input#inputUrl.feedback__input.feedback__input_phone(type="url" placeholder='2223333444' autocomplete="off")
+                        label.feedback__label(for="inputList") Откуда узнали о нас?
+                        input#inputList.feedback__input.feedback__input_phone(type="text" placeholder='Выберите из списка' autocomplete="off")
+
+                    .feedback__attachment
+                        .feedback__heading.feedback__heading_file Прикрепить файл
+                        .feedback__text
+                            
+                            .feedback__caption К вашей заявке вы можете приложить бриф или ТЗ на разработку сайта, список ключевых слов по продвижению сайта или любые другие материалы
+
+                            .feedback__caption Максимальный размер одного файла: 2 МБ<br>Максимальное количество файлов: 10
+                        .feedback__files
+                            input(type="file" multiple="multiple" id="feedback_file" name="").feedback__file
+                            label(for="feedback_file" class="button button_smoke") Выберите файл
+
+                    .feedback__bottom
+                        label(for="feedback_textarea").feedback__label Ваш комментарий
+                        textarea#feedback_textarea(name="" placeholder="Опишите свою задачу").feedback__textarea
+                        .feedback__consent
+                            input.feedback__checkbox#feedback_consent(type="checkbox" checked)
+                            label.feedback__label.feedback__label_consent(for="feedback_consent") Согласен с обработкой моих персональных данных в соответствии с 
+                                a(href="/").feedback__doc политикой конфиденциальности
+                    
+                        +button('Отправить заявку','button_red button_high','submit')
         
