@@ -8,6 +8,9 @@
     @media @768{
         display: none;
     }
+    @media @320{
+        display: none;
+    }
 
     &__item {
         display: flex;
@@ -43,7 +46,7 @@
 
 
         &_active {
-
+            
             .tabs__number {
                 background-color: @red;
                 box-shadow: @box_number_red;
@@ -66,6 +69,9 @@
                 @media @1024 {
                     left: calc(20px - 10px);
                 }
+                @media @768,@320{
+                    bottom: -22px;
+                }
             }
 
         }
@@ -73,6 +79,9 @@
         &_mobile{
             width: 100%;
             margin: 0 0 33px 0;
+            @media @768,@320{
+                margin: 0 0 22px 0;
+            }
         }
     }
 
@@ -112,6 +121,12 @@
         .rem(18);
 
         @media @1024 {
+            .rem(16);
+        }
+        @media @768 {
+            .rem(16);
+        }
+        @media @320 {
             .rem(16);
         }
     }

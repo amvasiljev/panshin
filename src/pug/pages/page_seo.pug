@@ -1,11 +1,63 @@
-//- extends ../layout/main
+extends ../layout/main
 
 
 
 
-//- block variables
-//-     -var title = 'seo'
-//-     -var description = 'seo'
-//-     -var pageClass = ''
+block variables
+    -var title = 'seo'
+    -var description = 'seo'
+    -var pageClass = ''
 
-//- block content
+block content
+
+    section.section.section_slider.lazy.section_landing(data-src="/assets/img/banners/banner.png")
+            .section__inner.section__inner_slider
+                +slider_0('','single_1','','','')
+                +order('order','  ')
+                .section__arrows
+                .section__dots
+
+   
+
+    //- section.section.section_blue_invert
+    //-     .section__inner
+    //-         +title('Тарифы по продвижению сайтов','','','h2')
+    //-         .section__box.section__box_tariffs.section__box_tariffs_page
+                
+    //-             +tariff('','Базовый','<ul><li>Новые сайты</li><li>Региональные сайты</li><li>Персональные блоги</li></ul>','от <span>15 000</span> руб./мес.')
+    //-             +tariff('tariff_active','Оптимальный','<ul><li>Сайты по продаже услуг</li><li>Корпоративные сайты</li><li>Информационные сайты</li></ul>','от <span>25 000</span> руб./мес.')
+    //-             +tariff('','Комплексный','<ul><li>Интернет-магазины</li><li>Каталоги товаров</li><li>UGC-платформы</li></ul>','от <span>45 000</span> руб./мес.')
+    //-             +tariff('','Большие сайты','<ul><li>Мультиязычные сайты</li><li>Мультирегиональные сайты</li><li>Онлайн-сервисы</li></ul>','от <span>100 000</span> руб./мес.')
+
+
+
+    section.section.section_deepblue
+        .section__inner
+            +title('Команда, которая работает над продвижением сайта','title_white','','')
+            .section__box.section__box_services
+                +service('member_7','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+                +service('member_8','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+                +service('member_9','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+                +service('member_10','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+                +service('member_11','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+                +service('member_12','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+
+    section.section.section_blue_invert
+        .section__inner
+            +title('Как начать работать','','','h2')
+            +tabs()
+            .section__box.section__box_steps
+                +case('','case_step','step_1')
+                +case('','case_step','step_2')
+                +case('','case_step','step_3')
+                +case('','case_step','step_4')
+                +case('','case_step','step_5')
+
+    section.section
+        .section__inner
+            +title('Отзывы клиентов','','','h2')
+            +slider_reviews()
+
+    section.section.section_deepblue
+        .section__inner.section__inner_feedback
+            +feedback()

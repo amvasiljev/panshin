@@ -269,6 +269,18 @@ $('.slider__box_case').slick({
   appendDots: $('.slider__dots_case'),
 
 })
+$('.slider__box_reviews').slick({
+  lazyload: 'ondemand',
+  infinite: false,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_reviews">' + arrow_next + '</div>',
+  prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_reviews">' + arrow_prev + '</div>',
+  appendArrows: $('.slider__arrows_reviews'),
+  appendDots: $('.slider__dots_reviews'),
+
+})
 
 $('.slider__box_result').slick({
   lazyload: 'ondemand',
@@ -303,30 +315,30 @@ $('.news').last().addClass('news_final');
 
 // video
 
-// (function () {
-//   var youtube = $('.video__code');
-//   youtube.addClass('test');
-//   for (var i = 0; i < youtube.length; i++) {
-//       var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/hqdefault.jpg";
-//       var image = new Image();
-//       // image.src = source;
-//       image.setAttribute('class', 'lazy');
-//       image.setAttribute('data-src', source);
-//       image.setAttribute('data-lazy', source);
-//       image.addEventListener("load", function () {
-//           youtube[i].appendChild(image);
-//       }(i));
+(function () {
+  var youtube = $('.video__code');
+  youtube.addClass('test');
+  for (var i = 0; i < youtube.length; i++) {
+    var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/hqdefault.jpg";
+    var image = new Image();
+    // image.src = source;
+    image.setAttribute('class', 'lazy');
+    image.setAttribute('data-src', source);
+    image.setAttribute('data-lazy', source);
+    image.addEventListener("load", function () {
+      youtube[i].appendChild(image);
+    }(i));
 
-//       youtube[i].addEventListener("click", function () {
-//           var iframe = document.createElement("iframe");
-//           iframe.setAttribute("frameborder", "0");
-//           iframe.setAttribute("allowfullscreen", "");
-//           iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=0");
-//           this.innerHTML = "";
-//           this.appendChild(iframe);
-//       });
-//   };
-// })();
+    youtube[i].addEventListener("click", function () {
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=0");
+      this.innerHTML = "";
+      this.appendChild(iframe);
+    });
+  };
+})();
 
 
 
@@ -376,10 +388,10 @@ function stepsMobile(e) {
 
     })
     var mobile = 'mobile'
-    
+
     tabsChange(mobile)
 
-    $('.case__wrapper').addClass('case__wrapper_mobile').show()
+    $('.section__box_steps .case__wrapper').addClass('case__wrapper_mobile').show()
     $('.case_step').addClass('case_mobile')
     var activeCase = $('.tabs__item_active').next('.case')
     $('.section__box_steps .case_step').not(activeCase).slideUp()
@@ -390,13 +402,29 @@ function stepsMobile(e) {
     $('.section__box_steps .case').show()
     $('.section__box_steps .case__wrapper:not(:first-child)').hide()
     $('.case_step').removeClass('case_mobile')
-    
+
     tabsChange('')
   }
 }
 
+
+function reviewButtonMove(e) {
+
+      $('.review .button').each(function(){
+        if (e.matches){
+          $(this).prependTo($(this).parent().parent())
+        }else{
+          $(this).parent().find('.review__content').append($(this))
+        }
+        
+      })
+  
+}
+
 mediaQuery_767.addListener(videoMobileSlider)
 videoMobileSlider(mediaQuery_767)
+mediaQuery_1023.addListener(reviewButtonMove)
+reviewButtonMove(mediaQuery_1023)
 mediaQuery_1023.addListener(stepsMobile)
 stepsMobile(mediaQuery_1023)
 
@@ -427,13 +455,9 @@ function tabsChange(mobile) {
     } else {
       $('.section__box_steps .case__wrapper').hide()
       $(id).show()
-      
+
     }
-
-
   })
-
-
 }
 
 

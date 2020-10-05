@@ -20,7 +20,14 @@
         }
     }
 
+    &_reviews {
+        border: 8px solid @border;
+        border-radius: 10px;
 
+        @media @320 {
+            border: 5px solid @border;
+        }
+    }
 
 
     &__box {
@@ -29,9 +36,10 @@
 
             padding: 0 20px;
             margin-bottom: 0 !important;
+
             @media @320 {
                 padding: 0;
-                
+
             }
 
         }
@@ -39,10 +47,11 @@
         &_case {
             margin-bottom: 0 !important;
 
-            .case__wrapper{
+            .case__wrapper {
                 display: flex !important;
             }
-            .case{
+
+            .case {
                 display: flex !important;
             }
         }
@@ -52,6 +61,20 @@
             .slick-track {
                 display: flex;
                 align-items: center;
+            }
+        }
+
+        &_reviews {
+            margin-bottom: 0 !important;
+
+            .slick-track {
+                display: flex;
+                align-items: center;
+            }
+
+            .review {
+                display: flex !important;
+                border: none;
             }
         }
 
@@ -66,9 +89,18 @@
             position: relative;
             top: -120px;
         }
-        &_video{
+
+        &_video {
             position: relative;
             top: -50px;
+        }
+
+        &_reviews {
+            height: 94px;
+            margin: -73px 0 0 0;
+            @media @768{
+                margin: -40px 0 0 0;
+            }
         }
 
         &_result {
@@ -79,7 +111,7 @@
             top: 50%;
             height: 0;
 
-            @media @320{
+            @media @320 {
                 position: unset;
                 height: 40px;
                 margin-top: 10px;
@@ -148,8 +180,8 @@
             justify-content: space-between;
             max-width: 1160px;
 
-            @media @320{
-               max-width: 90px;
+            @media @320 {
+                max-width: 90px;
             }
 
             .slider__arrow {
@@ -163,20 +195,22 @@
                 background-color: @button_3;
                 transition: all 0.2s;
 
-                @media @320{
+                @media @320 {
                     height: 40px;
                     width: 40px;
                     margin: 0;
 
                 }
+
                 svg {
                     width: 7px;
                     height: 12px;
 
-                    @media @320{
+                    @media @320 {
                         width: 6px;
                         height: 10px;
                     }
+
                     path {
                         fill: @red;
                     }
@@ -189,6 +223,7 @@
                             fill: @wt;
                         }
                     }
+
                     background-color: @red;
                     transition: all 0.2s;
                 }
@@ -199,17 +234,20 @@
                             fill: @wt;
                         }
                     }
+
                     background-color: @button_3_pressed;
                     transition: all 0.2s;
                 }
             }
         }
+
+        &_reviews {
+            z-index: 100;
+        }
     }
 
 
     &__arrow {
-
-
 
         svg {
             path {
@@ -315,8 +353,9 @@
     &__item {
         display: flex !important;
         justify-content: center;
-        img{
-            @media @320{
+
+        img {
+            @media @320 {
                 height: 240px;
             }
         }

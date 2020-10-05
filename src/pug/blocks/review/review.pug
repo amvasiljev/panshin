@@ -1,0 +1,18 @@
+mixin review(video,text,cl)
+    if video
+        .review(class= cl)
+            .review__media
+                +video('video_review','YddDc5-fVw8')
+            .review__content
+                .review__title Константинопольский Владимир Сергеевич
+                .review__subtitle Название компании
+                .review__text И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Принимая во внимание показатели успешности, выбранный нами инновационный путь представляет.
+    else if text
+        .review(class= cl)
+            .review__media
+                a(href='/assets/img/sert.png'  data-fancybox="image").review__link
+                    img.review__image.lazy(data-src='/assets/img/sert.png' data-lazy='/assets/img/sert.png')
+            .review__content
+                .review__title Digital Company
+                .review__text.review__text_quote И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями. Принимая во внимание показатели успешности, выбранный нами инновационный путь представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.
+                +button('Читать далее','button_red','','/')

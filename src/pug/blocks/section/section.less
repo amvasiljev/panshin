@@ -25,6 +25,14 @@
     }
 
 
+    &_feedback{
+        background-repeat: no-repeat;
+        background-position: center 100%;
+        background-size: contain;
+        @media @320{
+            background-image: none !important;
+        }
+    }
 
 
 
@@ -97,9 +105,13 @@
             flex-flow: wrap;
             justify-content: space-between;
             padding: 50px 0 0 0;
+
             @media @320{
                 justify-content: center;
                 padding: 40px 0 0 0;
+            }
+            &_page{
+                padding: 0;
             }
         }
 
@@ -118,6 +130,7 @@
             display: flex;
             justify-content: space-between;
             flex-flow: wrap;
+            padding: 20px 0 0 0;
             @media @320{
                 justify-content: center;
             }
@@ -138,8 +151,8 @@
             justify-content: space-between;
             flex-flow: wrap;
             padding: 0 0 70px 0;
-            @media @320{
-                justify-content: center;
+            .client_landing{
+                margin: 0 auto 30px;
             }
         }
         &_sertificate{
@@ -152,6 +165,22 @@
             display: flex;
             justify-content: space-between;
             flex-flow: wrap;
+            @media @320{
+                justify-content: center;
+            }
+            .news{
+                width: calc(33% - 20px);
+                margin-bottom: 30px;
+                @media @768{
+                    width: calc(50% - 20px);
+                    margin-bottom: 15px;
+                }
+                @media @320{
+                    width: 100%;
+                    max-width: 414px;
+                    margin-bottom: 15px;
+                }
+            }
         }
         &_steps{
             position: relative;

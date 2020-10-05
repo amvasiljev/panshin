@@ -1,6 +1,6 @@
 mixin feedback()
     .feedback
-        .feedback__header
+        
             .feedback__title Форма онлайн-заказа
             .feedback__subtitle Для расчёта стоимости услуг вам достаточно заполнить простую онлайн-форму
             form(action="/").feedback__form
@@ -60,7 +60,7 @@ mixin feedback()
                             input(type="file" multiple="multiple" id="feedback_file" name="").feedback__file
                             label(for="feedback_file" class="button button_smoke") Выберите файл
 
-                    .feedback__bottom
+                .feedback__bottom
                         label(for="feedback_textarea").feedback__label Ваш комментарий
                         textarea#feedback_textarea(name="" placeholder="Опишите свою задачу").feedback__textarea
                         .feedback__consent
@@ -69,4 +69,3 @@ mixin feedback()
                                 a(href="/").feedback__doc политикой конфиденциальности
                     
                         +button('Отправить заявку','button_red button_high','submit')
-        

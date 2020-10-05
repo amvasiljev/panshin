@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-image: @section_blue;
+    background-image: @form;
     padding: 60px 100px;
     border-radius: 10px;
     box-shadow: @box_form;
@@ -114,6 +114,11 @@
         justify-content: space-between;
         max-width: 680px;
         margin: 0 auto;
+        @media @768{
+            margin: 0;
+            width: 100%;
+            max-width: unset;
+        }
     }
 
     &__box {
@@ -239,6 +244,7 @@
         position: absolute;
         clip: rect(0 0 0 0);
         opacity: 0;
+        width: 0;
     }
 
     &__attachment {
