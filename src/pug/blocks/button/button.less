@@ -1,6 +1,5 @@
 .button {
 
-    
     display: inline-flex;
     border-radius: 5px;
     align-items: center;
@@ -16,72 +15,87 @@
     cursor: pointer;
     transition: all 0.2s;
 
-    @media @768{
+    @media @768 {
         height: 40px;
         padding: 0 16px;
     }
+
     @media @320 {
         .rem(12);
         height: 40px;
         padding: 0 16px;
     }
 
-    
 
-    &_blue{
+
+    &_blue {
         color: @bl_middle;
         border: 2px solid @bl_middle;
 
-        &:hover,&:focus{
+        &:hover,
+        &:focus {
             color: @red;
             border-color: @red;
             transition: all 0.2s;
         }
-        &:active{
+
+        &:active {
             color: @button_3_pressed;
             border-color: @button_3_pressed;
             transition: all 0.2s;
         }
     }
-    &_red{
+
+    &_red {
         color: @wt;
         background-color: @red;
         box-shadow: @button_2_box;
-        &:hover,&:focus{
+
+        &:hover,
+        &:focus {
             background-color: @bl_middle;
             box-shadow: @button_2_box_hover;
             transition: all 0.2s;
         }
-        &:active{
+
+        &:active {
             background-color: @button_2_pressed;
             box-shadow: none;
             transition: all 0.2s;
         }
     }
-    &_trans{
+
+    &_trans {
         color: @red;
         background-color: @button_3;
-        &:hover,&:focus{
+
+        &:hover,
+        &:focus {
             color: @wt;
             background-color: @red;
             transition: all 0.2s;
         }
-        &:active{
+
+        &:active {
             color: @wt;
             background-color: @button_3_pressed;
             transition: all 0.2s;
         }
     }
-    &_smoke{
+
+    &_smoke {
         color: @wt;
         border: 2px solid @button_4;
         background-color: @button_4;
-        &:hover,&:focus{
+
+        &:hover,
+        &:focus {
             border: 2px solid @button_4_hover;
             background-color: @button_4_hover;
             transition: all 0.2s;
         }
-        &:active{
+
+        &:active {
             border: 2px solid @button_4_hover;
             color: @button_4_hover;
             background-color: transparent;
@@ -89,16 +103,19 @@
         }
     }
 
-    &_white{
+    &_white {
         color: @wt;
         border: 2px solid @wt;
-        &:hover,&:focus{
+
+        &:hover,
+        &:focus {
             border: 2px solid @red;
             color: @wt;
             background-color: @red;
             transition: all 0.2s;
         }
-        &:active{
+
+        &:active {
             border: 2px solid @button_3_pressed;
             color: @wt;
             background-color: @button_3_pressed;
@@ -106,38 +123,86 @@
         }
     }
 
-    &_icon{
+    &_icon {
         color: @bk;
         font-weight: 600;
         height: 42px;
         justify-content: space-between;
         padding: 0 16px;
         flex-direction: row-reverse;
-        svg{
+
+        svg {
             margin-right: 10px;
         }
-        &:hover,&:focus{
-           svg{
-               path{
-                   stroke: @wt;
-               }
-           }
+
+        &:hover,
+        &:focus {
+            svg {
+                path {
+                    stroke: @wt;
+                }
+            }
         }
     }
 
-    &_high{
+    &_high {
         height: 60px;
-        @media @768{
+
+        @media @768 {
             height: 57px;
         }
-        @media @320{
+
+        @media @320 {
             height: 57px;
             width: 100%;
             .rem(14);
         }
     }
-    &_wide{
+
+    &_wide {
         padding: 0 50px;
     }
 
+}
+
+
+.button-side {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 0 50px;
+
+    &__link {
+
+        height: 55px;
+        .rem(16);
+        font-weight: 500;
+        line-height: 140%;
+
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        width: 200px;
+        text-decoration: underline;
+
+        cursor: pointer;
+        svg {
+            flex: 0 0 50px;
+            margin-right: 20px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+
+        
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: @red;
+        }
+
+      
+    }
 }

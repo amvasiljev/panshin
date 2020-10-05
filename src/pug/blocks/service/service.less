@@ -20,6 +20,9 @@
     }
     @media @320{
         width: 100%;
+        margin-bottom: 10px;
+        height: 200px;
+        min-height: unset;
     }
 
     &_white {
@@ -43,6 +46,9 @@
         }
         .service__image{
             flex: 0 0 130px;
+        }
+        @media @320{
+            height: unset;
         }
     }
     &_transparent{
@@ -71,6 +77,10 @@
         padding: 0;
         visibility: hidden;
         margin: 0;
+        @media @320{
+            min-height: unset;
+        height: 0;
+        }
     }
 
     &:before {
@@ -130,6 +140,11 @@
         transition: all 0.2s;
         z-index: 10;
         flex: 0 0 91px;
+        @media @320{
+            .rem(16);
+            flex: 0 0 71px;
+
+        }
 
     }
 

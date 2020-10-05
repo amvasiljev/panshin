@@ -78,6 +78,13 @@ $('.nav__item_group').hover(
   }
 )
 
+
+
+
+
+
+
+
 var windowHeight = $(document).innerHeight()
 
 
@@ -139,6 +146,7 @@ mobileFake.on('click', function () {
 })
 
 
+
 $('.nav_mobile .nav__link_group').on('click', function (e) {
   e.preventDefault()
   var $this = $(this).next('.nav_level2');
@@ -148,6 +156,18 @@ $('.nav_mobile .nav__link_group').on('click', function (e) {
   $(this).toggleClass('nav__link_open')
   $(this).parent().parent().find('.nav__link_group').not($(this)).removeClass('nav__link_open')
 })
+
+
+$('.navside__link_group').on('click', function (e) {
+  e.preventDefault()
+  var $this = $(this).next('.navside__submenu');
+  $(this).parent().parent().find('.navside__submenu').not($this).slideUp()
+  $this.slideToggle()
+
+  $(this).toggleClass('navside__link_open')
+  $(this).parent().parent().find('.navside__link_group').not($(this)).removeClass('navside__link_open')
+})
+
 
 
 
@@ -274,6 +294,7 @@ $('.slider__box_reviews').slick({
   infinite: false,
   slidesToShow: 1,
   slidesToScroll: 1,
+  adaptiveHeight: true,
   dots: true,
   nextArrow: '<div class="slider__arrow slider__arrow_next slider__arrow_next_reviews">' + arrow_next + '</div>',
   prevArrow: '<div class="slider__arrow slider__arrow_prev slider__arrow_prev_reviews">' + arrow_prev + '</div>',
@@ -410,15 +431,15 @@ function stepsMobile(e) {
 
 function reviewButtonMove(e) {
 
-      $('.review .button').each(function(){
-        if (e.matches){
-          $(this).prependTo($(this).parent().parent())
-        }else{
-          $(this).parent().find('.review__content').append($(this))
-        }
-        
-      })
-  
+  $('.review .button').each(function () {
+    if (e.matches) {
+      $(this).prependTo($(this).parent().parent())
+    } else {
+      $(this).parent().find('.review__content').append($(this))
+    }
+
+  })
+
 }
 
 mediaQuery_767.addListener(videoMobileSlider)
@@ -485,3 +506,13 @@ $('#feedback_file').on('change', function () {
 
 
 $('.feedback__select').niceSelect();
+
+
+$('.button-side__link').on('click', function () {
+  var id = $(this).attr('data-link')
+  var marker = $(id)
+  $('html, body').animate({
+    scrollTop: marker.offset().top - 150,
+    easing: 'linear'
+  }, 1000);
+})

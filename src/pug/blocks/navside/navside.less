@@ -1,0 +1,90 @@
+.navside{
+    padding: 0 30px;
+    border-left: 1px solid @line;
+
+    &_blog{
+        .navside__item{
+            margin-bottom: 20px;
+        }
+    }
+    &__item{
+        margin-bottom: 30px;
+        padding: 0;
+        
+    }
+
+    &__link{
+        line-height: 20px;
+        .rem(16);
+        font-weight: 500;
+        color: @bk_light;
+        &:hover,&:focus{
+            color: @red;
+        }
+        &_active{
+            color: @red;
+            position: relative;
+            &:before{
+                content:'';
+                position: absolute;
+                display: block;
+                width: 3px;
+                height: 20px;
+                top: 0;
+                left: -31px;
+                background-color: @red;
+            }
+            &:hover,&:focus{
+                color: @bl_middle;
+            }
+        }
+        &_group{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            &:after{
+                content:'';
+                display: block;
+                width: 12px;
+                height: 7px;
+                background-image: url('/assets/img/down_mobile.svg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+            }
+            
+        }
+        &_open{
+            &:after {
+                background-image: url('/assets/img/up_mobile.svg');
+               
+            }
+        }
+    }
+    &__submenu{
+        display: none;
+        &_open{
+            display: block;
+        }
+        padding: 20px 10px 0;
+        .navside__item{
+            margin-bottom: 20px;
+        }
+        .navside__link{
+            color: @grey_light;
+            &:hover,&:focus{
+                color: @bk;
+            }
+        }
+    }
+
+
+    &__title{
+        line-height: 24px;
+        color: @bk;
+        font-weight: 500;
+        .rem(20);
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,40 @@
+.kpi{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @media @768,@320{
+        flex-flow: wrap;
+    }
+    &__icon{
+        flex: 0 0 103px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 80px;
+        @media @768,@320{
+            height: 80px;
+            margin-bottom: 15px;
+        }
+    }
+    &__title{
+        .rem(18);
+        font-weight: 500;
+        line-height: 22px;
+        color: @bk;
+        margin-bottom: 15px;
+        @media @768,@320{
+            height: 80px;
+            display: flex;
+            align-items: center;
+            width: calc(100% - 103px);
+        }
+    }
+    &__text{
+        .rem(14);
+        line-height: 150%;
+        color: @bk_light;
+        font-weight: normal;
+    }
+}

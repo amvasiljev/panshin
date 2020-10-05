@@ -133,6 +133,7 @@
             padding: 20px 0 0 0;
             @media @320{
                 justify-content: center;
+                
             }
         }
         &_video{
@@ -189,6 +190,26 @@
                 
             }
         }
+
+        &_sidebar{
+            display: flex;
+            @media @768,@320{
+                flex-flow: wrap;
+            }
+        }
+        &_kpi{
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+
+            .kpi{
+                width: calc(33% - 20px);
+                @media @768,@320{
+                    width: 100%;
+                    margin-bottom: 30px  ;
+                }
+            }
+        }
     }
 
 
@@ -205,6 +226,15 @@
     }
 
 
+    &__sidebar{
+        width: 300px;
+        flex: 0 0 300px;
+        margin-left: 40px;
+
+        .navside{
+            margin-left: 22px;
+        }
+    }
 
     &__text {
         h1 {
