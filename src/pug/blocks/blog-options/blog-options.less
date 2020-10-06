@@ -1,0 +1,45 @@
+.blog-options{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 20px 0;
+    &__date {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+        color: @bk_light_07;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0 20px 0 0;
+
+        @media @320{
+            margin: 0 0 7px 0;
+        }
+        svg{
+            margin-right: 10px;
+        }
+    }
+
+    &__comments {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 150%;
+        color: @bk_light_07;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        svg{
+            margin-right: 10px;
+        }
+    }
+    &__rate{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

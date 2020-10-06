@@ -1,0 +1,88 @@
+.creator{
+    width: 100%;
+    padding: 30px;
+    border: 3px solid @border;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media @320{
+        flex-flow: wrap;
+        align-items: flex-start;
+     }
+    &__image{
+        flex: 0 0 80px;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+        
+        @media @320{
+            flex: 0 0 50px;
+            height: 50px;
+            width: 50px;
+        }
+    }
+    &__profile{
+        flex: 1;
+        padding: 15px;
+        @media @320{
+            flex: unset;
+            width: calc(100% - 50px);
+            padding: 0 10px;
+            margin-bottom: 15px;
+         }
+    }
+    &__job{
+        .rem(14);
+        color: @bk_light;
+        opacity: 0.7;
+        font-weight: normal;
+        @media @320{
+           .rem(12);
+        }
+    }
+    &__name{
+        .rem(16);
+        line-height: 150%;
+        color: @bk;
+        font-weight: 500;
+        @media @320{
+            .rem(14);
+         }
+    }
+    &__rate{
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+       @media @320{
+        align-items: flex-start;
+     }
+    }
+    &__offer{
+        .rem(14);
+        line-height: 150%;
+        font-weight: 500;
+        color: @bk;
+        margin-bottom: 3px;
+        @media @320{
+            .rem(12);
+         }
+    }
+    &__empty{
+        .rem(14);
+        color: @bk_light;
+        opacity: 0.7;
+        font-weight: normal;
+        margin-top: 7px;
+        @media @320{
+            .rem(12);
+         }
+    }
+
+    
+}

@@ -1,0 +1,10 @@
+mixin creator()
+    .creator
+        .creator__image.lazy(data-src="/assets/img/blog/creator.jpg")
+        .creator__profile
+            .creator__job Автор
+            .creator__name Екатерина Константинопольская
+        .creator__rate
+            .creator__offer Оцените статью
+            +stars('','stars_creator')
+            .creator__empty (нет оценок)

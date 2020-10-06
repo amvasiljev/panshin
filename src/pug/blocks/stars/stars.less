@@ -1,0 +1,30 @@
+// fill="#DEE3E9"
+
+.stars {
+    display: flex;
+    &__item {
+        width: 17px;
+        height: 17px;
+
+        &_active {
+            .stars__icon{
+                fill: @red;
+            }
+        }
+    }
+
+    &__icon {
+        height: 100%;
+        width: 100%;
+        fill: @grey;
+    }
+
+    &_creator{
+
+        .stars__item{
+            height: 25px;
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+}
