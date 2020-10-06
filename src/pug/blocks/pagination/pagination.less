@@ -1,0 +1,97 @@
+.pagination {
+    display: flex;
+    @media @320{
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+    &__arrow {
+        height: 44px;
+        width: 44px;
+        
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: @wt;
+        border: 1.5px solid @bl_middle;
+        opacity: 0.3;
+        transition: all 0.2s;
+        svg{
+            path{
+                fill: @bl_middle;
+            }
+        }
+        &:hover,&:focus,&:active{
+           opacity: 1;
+           transition: all 0.2s;
+        }
+
+        @media @320{
+            height: 44px;
+            width: 44px;
+            
+        }
+        @media @300{
+            height: 40px;
+            width: 40px;
+            
+        }
+        cursor: pointer;
+
+        &_left {
+            margin-right: 5px;
+            @media @320{
+                margin-right: 3px;
+            }
+            @media @300{
+                margin-right: 2px;
+            }
+        }
+
+        // &_right {}
+
+    }
+
+    &__number {
+        height: 44px;
+        width: 44px;
+        border-radius: 5px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 500;
+        .rem(16);
+        color: @bl;
+        background-color: @bl_01;
+        
+        cursor: pointer;
+        transition: all 0.2s;
+        @media @320{
+            height: 44px;
+            width: 44px;
+            margin-right: 3px;
+        }
+        @media @300{
+            height: 40px;
+            width: 40px;
+            margin-right: 2px;
+        }
+
+        &:hover,&:focus,&:active{
+            background-color: @bl_middle;
+            color: @wt;
+            transition: all 0.2s;
+        }
+        &_active {
+            
+            background-color: @bl_middle;
+            color: @wt;
+            font-weight: 500;
+            &:hover,&:focus,&:active{
+                background-color: @bl_middle;
+            }
+        }
+    }
+}

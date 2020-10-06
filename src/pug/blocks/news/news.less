@@ -14,11 +14,23 @@
         border-bottom: 1px solid @line;
         justify-content: space-between;
         
-
+        @media @1024{
+            flex-flow: wrap;
+        }
        
         .news__content{
             padding: 0 0 0 20px;
             width: calc(100% - 300px);
+            @media @1024{
+                width: 100%;
+                padding: 20px 0 0 0;
+
+            }
+            @media @768{
+                width: 100%;
+                padding: 20px 0 0 0;
+
+            }
             @media @320{
                 width: 100%;
                 padding: 20px 0 0 0;
