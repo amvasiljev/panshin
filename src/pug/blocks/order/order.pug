@@ -1,4 +1,4 @@
-mixin order(id,land,request,cl,text)
+mixin order(id,land,request,cl,text,sidebar)
     if land
         .order.order_landing
             .order__title Скидка 50%
@@ -25,6 +25,26 @@ mixin order(id,land,request,cl,text)
                 input#inputTel.order__input.order__input_phone(type="tel" placeholder='Телефон' required autocomplete="off")
                 label.order__label(for="inputEmail") E-mail
                 input#inputEmail.order__input.order__input_email(type="email" placeholder='myemail@gmai.com' required)
+                
+                
+                .order__consent
+                    input.order__checkbox(id!= id)(type="checkbox" checked)
+                    label.order__label.order__label_consent(for=id) Согласен с обработкой моих персональных данных в соответствии с 
+                        a(href="/").order__doc политикой конфиденциальности
+                
+                +button('Отправить заявку','button_red button_high','submit')
+    else if sidebar
+        .order.order_sidebar(class= cl)
+            .order__title Хотите быть Топ-1?
+            form(action="/").order__form
+                label.order__label(for="inputName") Ваше имя
+                input#inputName.order__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
+                label.order__label(for="inputTel") Номер телефона
+                input#inputTel.order__input.order__input_phone(type="tel" placeholder='Телефон' required autocomplete="off")
+                label.order__label(for="inputEmail") E-mail
+                input#inputEmail.order__input.order__input_email(type="email" placeholder='myemail@gmai.com' required)
+                label.order__label(for="inputEmail") Ваш сайт
+                input#inputEmail.order__input.order__input_email(type="email" placeholder='www.mysite.ru' required)
                 
                 
                 .order__consent

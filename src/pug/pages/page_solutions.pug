@@ -1,128 +1,128 @@
-extends ../layout/main
+//- extends ../layout/main
 
 
 
 
-block variables
-    -var title = 'industry solutions'
-    -var description = 'industry solutions'
-    -var pageClass = ''
+//- block variables
+//-     -var title = 'industry solutions'
+//-     -var description = 'industry solutions'
+//-     -var pageClass = ''
 
-block content
-    section.section.section_slider.lazy.section_landing(data-src="/assets/img/banners/banner.png")
-            .section__inner.section__inner_slider
-                +slider_0('','single_1','','','')
-                +order('order','')
-                .section__arrows
-                .section__dots
-    +breadcrumbs()
-    section.section
-        .section__inner
-            +title('Отраслевые решения','','h1','')
-            .section__text
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+//- block content
+//-     section.section.section_slider.lazy.section_landing(data-src="/assets/img/banners/banner.png")
+//-             .section__inner.section__inner_slider
+//-                 +slider_0('','single_1','','','')
+//-                 +order('order','')
+//-                 .section__arrows
+//-                 .section__dots
+//-     +breadcrumbs()
+//-     section.section
+//-         .section__inner
+//-             +title('Отраслевые решения','','h1','')
+//-             .section__text
+//-                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
 
-    section.section.section_blue
-        .section__inner
-            +title('Сайты услуг','','','h2')
-            .section__box.section__box_services
-                +service('show','s_1','service__icon_blue','solutions/service','service','Продвижение сайтов банковских услуг','service_white')
-                +service('show','s_2','service__icon_blue','solutions/service','service','Продвижение туристических сайтов','service_white')
-                +service('show','s_3','service__icon_blue','solutions/service','service','Продвижение сайтов транспортных компаний','service_white')
-                +service('show','s_4','service__icon_blue','solutions/service','service','Продвижение сайтов по фитнесу','service_white')
-                +service('show','s_5','service__icon_blue','solutions/service','service','Продвижение сайтов коллекторского агентства','service_white')
-                +service('','','','','','','service_hidden')
-                +service('','','','','','','service_hidden')
+//-     section.section.section_blue
+//-         .section__inner
+//-             +title('Сайты услуг','','','h2')
+//-             .section__box.section__box_services
+//-                 +service('show','s_1','service__icon_blue','solutions/service','service','Продвижение сайтов банковских услуг','service_white')
+//-                 +service('show','s_2','service__icon_blue','solutions/service','service','Продвижение туристических сайтов','service_white')
+//-                 +service('show','s_3','service__icon_blue','solutions/service','service','Продвижение сайтов транспортных компаний','service_white')
+//-                 +service('show','s_4','service__icon_blue','solutions/service','service','Продвижение сайтов по фитнесу','service_white')
+//-                 +service('show','s_5','service__icon_blue','solutions/service','service','Продвижение сайтов коллекторского агентства','service_white')
+//-                 +service('','','','','','','service_hidden')
+//-                 +service('','','','','','','service_hidden')
 
-    section.section
-        .section__inner
-            +title('Юридические услуги','','','h2')
-            .section__box.section__box_services
-                +service('show','law_1','service__icon_red','solutions/law','law','Продвижение сайта адвоката')
-                +service('show','law_2','service__icon_red','solutions/law','law','Продвижение юридических сайтов')
-
-
-                +service('','','','','','','service_hidden')
-                +service('','','','','','','service_hidden')
+//-     section.section
+//-         .section__inner
+//-             +title('Юридические услуги','','','h2')
+//-             .section__box.section__box_services
+//-                 +service('show','law_1','service__icon_red','solutions/law','law','Продвижение сайта адвоката')
+//-                 +service('show','law_2','service__icon_red','solutions/law','law','Продвижение юридических сайтов')
 
 
-    section.section.section_blue
-        .section__inner
-            +title('HoReCa','','','h2')
-            .section__box.section__box_services
-                +service('show','h_1','service__icon_blue','solutions/horeca','horeca','Продвижение сайта для ресторана','service_white')
-                +service('show','h_2','service__icon_blue','solutions/horeca','horeca','Продвижение сайта гостиницы','service_white')
-                +service('show','h_3','service__icon_blue','solutions/horeca','horeca','Продвижение сайта санатория','service_white')
+//-                 +service('','','','','','','service_hidden')
+//-                 +service('','','','','','','service_hidden')
 
 
-                +service('','','','','','','service_hidden')
-                +service('','','','','','','service_hidden')
+//-     section.section.section_blue
+//-         .section__inner
+//-             +title('HoReCa','','','h2')
+//-             .section__box.section__box_services
+//-                 +service('show','h_1','service__icon_blue','solutions/horeca','horeca','Продвижение сайта для ресторана','service_white')
+//-                 +service('show','h_2','service__icon_blue','solutions/horeca','horeca','Продвижение сайта гостиницы','service_white')
+//-                 +service('show','h_3','service__icon_blue','solutions/horeca','horeca','Продвижение сайта санатория','service_white')
 
 
-    section.section
-        .section__inner
-            +title('Медицинские сайты','','','h2')
-            .section__box.section__box_services
-                +service('show','med_1','service__icon_red','solutions/medicine','medicine','Продвижение медицинских сайтов')
-                +service('show','med_2','service__icon_red','solutions/medicine','medicine','Продвижение сайта стоматологии')
-                +service('show','med_3','service__icon_red','solutions/medicine','medicine','Продвижение клиники наркологии')
-                +service('show','med_4','service__icon_red','solutions/medicine','medicine','Продвижение клиники косметологии')
-                +service('show','med_5','service__icon_red','solutions/medicine','medicine','Продвижение клиники ЭКО')
-                +service('show','med_6','service__icon_red','solutions/medicine','medicine','Продвижение клиники онкологии')
-                +service('show','med_7','service__icon_red','solutions/medicine','medicine','Продвижение ветеринарной клиники')
-                +service('show','med_8','service__icon_red','solutions/medicine','medicine','Продвижение клиники пластической хирургии')
-
-                +service('','','','','','','service_hidden')
-                +service('','','','','','','service_hidden')
-
-    section.section.section_blue
-        .section__inner
-            +title('Интернет магазины','','','h2')
-            .section__box.section__box_services
-                +service('show','online_1','service__icon_blue','solutions/online','online','Продвижение интернет-магазина стройматериалов','service_white')
-                +service('show','online_2','service__icon_blue','solutions/online','online','Продвижение интернет-магазина интимных товаров','service_white')
-                +service('show','online_3','service__icon_blue','solutions/online','online','Продвижение интернет-магазина мебели','service_white')
-                +service('show','online_4','service__icon_blue','solutions/online','online','Продвижение интернет – магазина спортивных товаров','service_white')
-                +service('show','online_5','service__icon_blue','solutions/online','online','Продвижение интернет-магазина косметики','service_white')
-                +service('show','online_6','service__icon_blue','solutions/online','online','Продвижение интернет-магазина детских товаров','service_white')
-                +service('show','online_7','service__icon_blue','solutions/online','online','Продвижение интернет-магазина жалюзи','service_white')
-                +service('show','online_8','service__icon_blue','solutions/online','online','Продвижение интернет-магазина автозапчастей','service_white')
-                +service('show','online_9','service__icon_blue','solutions/online','online','Продвижение магазина одежды','service_white')
-                +service('show','online_10','service__icon_blue','solutions/online','online','Продвижение магазина мужской одежды','service_white')
-                +service('show','online_11','service__icon_blue','solutions/online','online','Продвижение магазина цветов','service_white')
-                +service('show','online_12','service__icon_blue','solutions/online','online','Продвижение магазина детской одежды','service_white')
-                +service('show','online_13','service__icon_blue','solutions/online','online','Продвижение книжного магазина','service_white')
-                +service('show','online_14','service__icon_blue','solutions/online','online','Продвижение ювелирного магазина','service_white')
+//-                 +service('','','','','','','service_hidden')
+//-                 +service('','','','','','','service_hidden')
 
 
-                +service('','','','','','','service_hidden')
-                +service('','','','','','','service_hidden')
+//-     section.section
+//-         .section__inner
+//-             +title('Медицинские сайты','','','h2')
+//-             .section__box.section__box_services
+//-                 +service('show','med_1','service__icon_red','solutions/medicine','medicine','Продвижение медицинских сайтов')
+//-                 +service('show','med_2','service__icon_red','solutions/medicine','medicine','Продвижение сайта стоматологии')
+//-                 +service('show','med_3','service__icon_red','solutions/medicine','medicine','Продвижение клиники наркологии')
+//-                 +service('show','med_4','service__icon_red','solutions/medicine','medicine','Продвижение клиники косметологии')
+//-                 +service('show','med_5','service__icon_red','solutions/medicine','medicine','Продвижение клиники ЭКО')
+//-                 +service('show','med_6','service__icon_red','solutions/medicine','medicine','Продвижение клиники онкологии')
+//-                 +service('show','med_7','service__icon_red','solutions/medicine','medicine','Продвижение ветеринарной клиники')
+//-                 +service('show','med_8','service__icon_red','solutions/medicine','medicine','Продвижение клиники пластической хирургии')
 
-    section.section
-        .section__inner
-            +title('Прочее','','','h2')
-            .section__box.section__box_services
-                +service('show','other_1','service__icon_red','solutions/other','other','Продвижение мебельных сайтов')
-                +service('show','other_2','service__icon_red','solutions/other','other','Продвижение сайта жилого комплекса')
-                +service('show','other_3','service__icon_red','solutions/other','other','Продвижение сайта РТИ')
-                +service('show','other_4','service__icon_red','solutions/other','other','Продвижение сайта по металлопрокату')
-                +service('show','other_5','service__icon_red','solutions/other','other','Продвижение сайта знакомств')
-                +service('show','other_6','service__icon_red','solutions/other','other','Продвижение букмекерских сайтов')
+//-                 +service('','','','','','','service_hidden')
+//-                 +service('','','','','','','service_hidden')
 
-                +service('','','','','','','service_hidden')
-                +service('','','','','','','service_hidden')
+//-     section.section.section_blue
+//-         .section__inner
+//-             +title('Интернет магазины','','','h2')
+//-             .section__box.section__box_services
+//-                 +service('show','online_1','service__icon_blue','solutions/online','online','Продвижение интернет-магазина стройматериалов','service_white')
+//-                 +service('show','online_2','service__icon_blue','solutions/online','online','Продвижение интернет-магазина интимных товаров','service_white')
+//-                 +service('show','online_3','service__icon_blue','solutions/online','online','Продвижение интернет-магазина мебели','service_white')
+//-                 +service('show','online_4','service__icon_blue','solutions/online','online','Продвижение интернет – магазина спортивных товаров','service_white')
+//-                 +service('show','online_5','service__icon_blue','solutions/online','online','Продвижение интернет-магазина косметики','service_white')
+//-                 +service('show','online_6','service__icon_blue','solutions/online','online','Продвижение интернет-магазина детских товаров','service_white')
+//-                 +service('show','online_7','service__icon_blue','solutions/online','online','Продвижение интернет-магазина жалюзи','service_white')
+//-                 +service('show','online_8','service__icon_blue','solutions/online','online','Продвижение интернет-магазина автозапчастей','service_white')
+//-                 +service('show','online_9','service__icon_blue','solutions/online','online','Продвижение магазина одежды','service_white')
+//-                 +service('show','online_10','service__icon_blue','solutions/online','online','Продвижение магазина мужской одежды','service_white')
+//-                 +service('show','online_11','service__icon_blue','solutions/online','online','Продвижение магазина цветов','service_white')
+//-                 +service('show','online_12','service__icon_blue','solutions/online','online','Продвижение магазина детской одежды','service_white')
+//-                 +service('show','online_13','service__icon_blue','solutions/online','online','Продвижение книжного магазина','service_white')
+//-                 +service('show','online_14','service__icon_blue','solutions/online','online','Продвижение ювелирного магазина','service_white')
 
-    section.section.section_blue_invert
-        .section__inner
-            +title('Как начать работать','','','h2')
-            +tabs()
-            .section__box.section__box_steps
-                +case('','case_step','step_1')
-                +case('','case_step','step_2')
-                +case('','case_step','step_3')
-                +case('','case_step','step_4')
-                +case('','case_step','step_5')
 
-    section.section.section_deepblue
-        .section__inner.section__inner_feedback
-            +feedback()
+//-                 +service('','','','','','','service_hidden')
+//-                 +service('','','','','','','service_hidden')
+
+//-     section.section
+//-         .section__inner
+//-             +title('Прочее','','','h2')
+//-             .section__box.section__box_services
+//-                 +service('show','other_1','service__icon_red','solutions/other','other','Продвижение мебельных сайтов')
+//-                 +service('show','other_2','service__icon_red','solutions/other','other','Продвижение сайта жилого комплекса')
+//-                 +service('show','other_3','service__icon_red','solutions/other','other','Продвижение сайта РТИ')
+//-                 +service('show','other_4','service__icon_red','solutions/other','other','Продвижение сайта по металлопрокату')
+//-                 +service('show','other_5','service__icon_red','solutions/other','other','Продвижение сайта знакомств')
+//-                 +service('show','other_6','service__icon_red','solutions/other','other','Продвижение букмекерских сайтов')
+
+//-                 +service('','','','','','','service_hidden')
+//-                 +service('','','','','','','service_hidden')
+
+//-     section.section.section_blue_invert
+//-         .section__inner
+//-             +title('Как начать работать','','','h2')
+//-             +tabs()
+//-             .section__box.section__box_steps
+//-                 +case('','case_step','step_1')
+//-                 +case('','case_step','step_2')
+//-                 +case('','case_step','step_3')
+//-                 +case('','case_step','step_4')
+//-                 +case('','case_step','step_5')
+
+//-     section.section.section_deepblue
+//-         .section__inner.section__inner_feedback
+//-             +feedback()

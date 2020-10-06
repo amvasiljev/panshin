@@ -50,6 +50,29 @@
         }
         
     }
+    &_sidebar{
+        padding: 30px 20px;
+        border-radius: 5px;
+        background-image: @form_subscribe;
+        max-width: 360px;
+        height: unset;
+        @media @768{
+            height: unset;
+        }
+        @media @320{
+            height: unset;
+            padding: 20px 15px 30px;
+        }
+
+        .order__title{
+            .rem(24);
+            font-weight: 500;
+            color: @wt;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        
+    }
     &_blue{
         .order__label{
             color: @wt;

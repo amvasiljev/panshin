@@ -1,85 +1,85 @@
-extends ../layout/main
+//- extends ../layout/main
 
 
 
 
-block variables
-    -var title = 'seo'
-    -var description = 'seo'
-    -var pageClass = ''
+//- block variables
+//-     -var title = 'seo'
+//-     -var description = 'seo'
+//-     -var pageClass = ''
 
-block content
+//- block content
 
 
 
-    section.section.section_slider.lazy.section_landing(data-src="/assets/img/banners/banner.png")
-            .section__inner.section__inner_slider
-                +slider_0('','single_1','','','')
-                +order('order','')
-                .section__arrows
-                .section__dots
-    +breadcrumbs()
+//-     section.section.section_slider.lazy.section_landing(data-src="/assets/img/banners/banner.png")
+//-             .section__inner.section__inner_slider
+//-                 +slider_0('','single_1','','','')
+//-                 +order('order','')
+//-                 .section__arrows
+//-                 .section__dots
+//-     +breadcrumbs()
 
-    section.section
-        .section__inner
-            +title('Эффективное продвижение сайтов','','h1','')
-            .section__box.section__box_sidebar
-                .section__text
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+//-     section.section
+//-         .section__inner
+//-             +title('Эффективное продвижение сайтов','','h1','')
+//-             .section__box.section__box_sidebar
+//-                 .section__text
+//-                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+//-                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
                 
-                    +title('Самый важный KPI при работе','','','h2')
-                    .section__box.section__box_kpi
-                        +kpi('/assets/img/kpi/kpi_1.svg','Комплексное улучшение сайта','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата. Комплексное улучшение сайта')
-                        +kpi('/assets/img/kpi/kpi_2.svg','Максимальное ядро запросов','Не ограничиваем продвижение количеством запросов. Максимально полное ядро по вашему бизнесу  - залог успешного SEO и продаж.')
-                        +kpi('/assets/img/kpi/kpi_3.svg','Прозрачность работы','Планируем работы и согласовываем с клиентом для прозрачности взаимоотношений. Предоставляем понятные отчеты за период услуг.')
+//-                     +title('Самый важный KPI при работе','','','h2')
+//-                     .section__box.section__box_kpi
+//-                         +kpi('/assets/img/kpi/kpi_1.svg','Комплексное улучшение сайта','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата. Комплексное улучшение сайта')
+//-                         +kpi('/assets/img/kpi/kpi_2.svg','Максимальное ядро запросов','Не ограничиваем продвижение количеством запросов. Максимально полное ядро по вашему бизнесу  - залог успешного SEO и продаж.')
+//-                         +kpi('/assets/img/kpi/kpi_3.svg','Прозрачность работы','Планируем работы и согласовываем с клиентом для прозрачности взаимоотношений. Предоставляем понятные отчеты за период услуг.')
                 
                 
-                .section__sidebar
-                    +navside('menu')
-                    +button-side()
+//-                 .section__sidebar
+//-                     +navside('menu')
+//-                     +button-side()
 
 
 
-    section.section.section_blue_invert
-        .section__inner
-            +title('Тарифы по продвижению сайтов','','','h2')
-            .section__box.section__box_tariffs.section__box_tariffs_page
+//-     section.section.section_blue_invert
+//-         .section__inner
+//-             +title('Тарифы по продвижению сайтов','','','h2')
+//-             .section__box.section__box_tariffs.section__box_tariffs_page
                 
-                +tariff('','Базовый','<ul><li>Новые сайты</li><li>Региональные сайты</li><li>Персональные блоги</li></ul>','от <span>15 000</span> руб./мес.')
-                +tariff('tariff_active','Оптимальный','<ul><li>Сайты по продаже услуг</li><li>Корпоративные сайты</li><li>Информационные сайты</li></ul>','от <span>25 000</span> руб./мес.')
-                +tariff('','Комплексный','<ul><li>Интернет-магазины</li><li>Каталоги товаров</li><li>UGC-платформы</li></ul>','от <span>45 000</span> руб./мес.')
-                +tariff('','Большие сайты','<ul><li>Мультиязычные сайты</li><li>Мультирегиональные сайты</li><li>Онлайн-сервисы</li></ul>','от <span>100 000</span> руб./мес.')
+//-                 +tariff('','Базовый','<ul><li>Новые сайты</li><li>Региональные сайты</li><li>Персональные блоги</li></ul>','от <span>15 000</span> руб./мес.')
+//-                 +tariff('tariff_active','Оптимальный','<ul><li>Сайты по продаже услуг</li><li>Корпоративные сайты</li><li>Информационные сайты</li></ul>','от <span>25 000</span> руб./мес.')
+//-                 +tariff('','Комплексный','<ul><li>Интернет-магазины</li><li>Каталоги товаров</li><li>UGC-платформы</li></ul>','от <span>45 000</span> руб./мес.')
+//-                 +tariff('','Большие сайты','<ul><li>Мультиязычные сайты</li><li>Мультирегиональные сайты</li><li>Онлайн-сервисы</li></ul>','от <span>100 000</span> руб./мес.')
 
 
 
-    section.section.section_deepblue
-        .section__inner
-            +title('Команда, которая работает над продвижением сайта','title_white','','')
-            .section__box.section__box_services
-                +service('show','member_7','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
-                +service('show','member_8','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
-                +service('show','member_9','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
-                +service('show','member_10','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
-                +service('show','member_11','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
-                +service('show','member_12','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+//-     section.section.section_deepblue
+//-         .section__inner
+//-             +title('Команда, которая работает над продвижением сайта','title_white','','')
+//-             .section__box.section__box_services
+//-                 +service('show','member_7','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+//-                 +service('show','member_8','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+//-                 +service('show','member_9','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+//-                 +service('show','member_10','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+//-                 +service('show','member_11','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+//-                 +service('show','member_12','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
 
-    section.section.section_blue_invert
-        .section__inner
-            +title('Как начать работать','','','h2')
-            +tabs()
-            .section__box.section__box_steps
-                +case('','case_step','step_1')
-                +case('','case_step','step_2')
-                +case('','case_step','step_3')
-                +case('','case_step','step_4')
-                +case('','case_step','step_5')
+//-     section.section.section_blue_invert
+//-         .section__inner
+//-             +title('Как начать работать','','','h2')
+//-             +tabs()
+//-             .section__box.section__box_steps
+//-                 +case('','case_step','step_1')
+//-                 +case('','case_step','step_2')
+//-                 +case('','case_step','step_3')
+//-                 +case('','case_step','step_4')
+//-                 +case('','case_step','step_5')
 
-    section.section
-        .section__inner
-            +title('Отзывы клиентов','','','h2')
-            +slider_reviews()
+//-     section.section
+//-         .section__inner
+//-             +title('Отзывы клиентов','','','h2')
+//-             +slider_reviews()
 
-    section.section.section_deepblue
-        .section__inner.section__inner_feedback
-            +feedback()
+//-     section.section.section_deepblue
+//-         .section__inner.section__inner_feedback
+//-             +feedback()

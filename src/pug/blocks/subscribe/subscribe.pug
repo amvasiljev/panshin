@@ -1,0 +1,8 @@
+mixin subscribe()
+    .subscribe
+        .subscribe__title Подписка на новости
+        .subscribe__text Подпишитесь сейчас и получайте уникальную информацию и скидки, недоступные читателям блога!
+        form(action="/").subscribe__form
+            label.subscribe__label(for="inputEmailSubscribe") Ваш e-mail
+            input#inputEmailSubscribe.subscribe__input.subscribe__input_phone(type="email" placeholder='email@gmail.com' required autocomplete="off")
+            +button('Подписаться','button_red button_high','submit')
