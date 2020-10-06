@@ -99,6 +99,9 @@
             display: flex;
             justify-content: space-around ;
             flex-flow: wrap;
+            @media @320{
+                padding: 0 0 40px 0;
+            }
         }
         &_tariffs{
             display: flex;
@@ -108,7 +111,8 @@
 
             @media @320{
                 justify-content: center;
-                padding: 40px 0 0 0;
+                // padding: 40px 0 0 0;
+                padding: 0;
             }
             &_page{
                 padding: 0;
@@ -193,7 +197,7 @@
 
         &_sidebar{
             display: flex;
-            @media @768,@320{
+            @media @320{
                 flex-flow: wrap;
             }
         }
@@ -231,8 +235,20 @@
         flex: 0 0 300px;
         margin-left: 40px;
 
+        @media @320{
+            width: 100%;
+            flex: unset;
+            margin: 0;
+            max-width: 520px;
+            padding: 30px 0 0 0;
+        }
+
         .navside{
             margin-left: 22px;
+
+            @media @320{
+                margin: 0;
+            }
         }
     }
 
