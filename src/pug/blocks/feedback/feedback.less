@@ -23,7 +23,8 @@
         line-height: 130%;
         color: @bk;
         text-align: center;
-        margin-bottom: 20px;
+        max-width: 700px;
+        margin: 0 auto 20px;
 
         @media @320 {
             .rem(26);
@@ -365,5 +366,22 @@
         border-bottom: 2px solid @red;
         border-right: 2px solid @red;
         
+    }
+
+
+
+    &_blue{
+        background-image: @form_subscribe;
+        box-shadow: none;
+        
+        .feedback__title{
+            color: @wt;
+        }
+        .feedback__label{
+            color: @wt;
+        }
+        .feedback__doc{
+            color: @wt;
+        }
     }
 }

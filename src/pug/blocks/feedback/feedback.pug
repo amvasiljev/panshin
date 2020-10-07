@@ -1,6 +1,7 @@
-mixin feedback()
-    .feedback#feedback
-        
+mixin feedback(feedback,lead,cl,id)
+    if feedback
+        .feedback#feedback
+            
             .feedback__title Форма онлайн-заказа
             .feedback__subtitle Для расчёта стоимости услуг вам достаточно заполнить простую онлайн-форму
             form(action="/").feedback__form
@@ -69,3 +70,37 @@ mixin feedback()
                                 a(href="/").feedback__doc политикой конфиденциальности
                     
                         +button('Отправить заявку','button_red button_high','submit')
+
+    else if lead
+        .feedback#feedback(class= cl)
+            
+            .feedback__title Оставьте заявку и узнайте цену лида в своей нише в течение часа
+            
+            form(action="/").feedback__form
+                
+                .feedback__inputs
+                    .feedback__box
+                        label.feedback__label(for="inputName") Ваше имя
+                        input#inputName.feedback__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
+                        label.feedback__label(for="inputTel") Ваш телефон
+                        input#inputTel.feedback__input.feedback__input_phone(type="tel" placeholder='Телефон' required autocomplete="off")
+                        label.feedback__label(for="inputEmail") Ваш e-mail
+                        input#inputEmail.feedback__input(type="email" placeholder='email@gmail.com' required autocomplete="off")
+                    .feedback__box
+                        label.feedback__label(for="inputCompany") Ваш город
+                        input#inputCompany.feedback__input(type="text" placeholder='Москва' required autocomplete="off")
+                        label.feedback__label(for="inputUrl") Ваша ниша
+                        input#inputUrl.feedback__input(type="text" placeholder='Металлургия' required autocomplete="off")
+                        label.feedback__label(for="inputList") Количество лидов в месяц
+                        input#inputUrl.feedback__input(type="text" placeholder='50' required autocomplete="off")
+                        
+
+
+                .feedback__bottom
+                       
+                        .feedback__consent
+                            input.feedback__checkbox(type="checkbox" checked id= id)
+                            label.feedback__label.feedback__label_consent(for= id) Согласен с обработкой моих персональных данных в соответствии с 
+                                a(href="/").feedback__doc политикой конфиденциальности
+                    
+                        +button('Узнать цену лида в моей нише ','button_red button_high','submit')

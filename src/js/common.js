@@ -1,3 +1,7 @@
+const {
+  each
+} = require("jquery");
+
 $(function () {
   $('.lazy').Lazy();
 });
@@ -24,6 +28,9 @@ $('input').each(function () {
 
 
 $('.order__input_phone').mask('+7 (000) 000-00-00', {
+  placeholder: "+7 (___) ___-__-__"
+});
+$('.feedback__input_phone').mask('+7 (000) 000-00-00', {
   placeholder: "+7 (___) ___-__-__"
 });
 
@@ -376,7 +383,7 @@ const mediaQuery_1023 = window.matchMedia('(max-width: 1023px)')
 function breadCrumbsChange(e) {
   if (e.matches) {
     breadcrumbs(0)
-  }else{
+  } else {
     breadcrumbs(45)
   }
 }
@@ -451,6 +458,95 @@ function reviewButtonMove(e) {
 
 }
 
+var tableStorage = $('<div>').addClass('table__storage').appendTo($('body'))
+
+
+function tableTransform(e) {
+
+
+  if (e.matches) {
+    $('.table').each(function (indx) {
+
+
+      var table = $(this)
+      $(this).attr('data-table', 'data-table_' + indx)
+      var tempTable = $(this).clone()
+      tempTable.attr('data-clone', 'data-table_' + indx).attr('data-table', '')
+      tempTable.appendTo(tableStorage)
+
+      var cellFirst = table.find('th')
+
+      cellFirst.each(function (indx) {
+        var elem = $(this).html();
+        var index = indx;
+        table.find('tr').each(function () {
+
+          var cell = $(this).find('td');
+
+
+          cell.each(function (indx) {
+
+            if (indx == index && indx != 0) {
+              var fake = $('<div>').addClass('table__cell_fake')
+
+              if (table.hasClass('table_calc')) {
+                if (indx > 1) {
+                  var temp = $('<div>').addClass('table__cell_temp').text($(this).text())
+                  $(this).text('')
+                  temp.appendTo($(this))
+                }
+              } else {
+                var temp = $('<div>').addClass('table__cell_temp').text($(this).text())
+                $(this).text('')
+                temp.appendTo($(this))
+                $('<div style="clear: both;">').appendTo($(this))
+              }
+
+
+              fake.prependTo($(this))
+              fake.append(elem)
+
+            }
+          })
+        })
+
+      })
+
+
+      table.find('.table__row').eq(0).hide()
+      table.find('tr').eq(0).hide()
+
+    })
+    
+  } else {
+   
+    tableStorage.find('.table').each(function (indx) {
+
+      var clone = $(this)
+      var attr = clone.attr('data-clone')
+
+      $('.table').not($(this)).each(function () {
+        var table = $(this)
+        if (table.attr('data-table') == attr) {
+
+          clone.attr('data-clone', '')
+          table.before(clone)
+          table.remove()
+        }
+      })
+
+    })
+  }
+
+
+
+
+
+}
+
+
+mediaQuery_1023.addListener(tableTransform)
+tableTransform(mediaQuery_1023)
 mediaQuery_767.addListener(breadCrumbsChange)
 breadCrumbsChange(mediaQuery_767)
 mediaQuery_767.addListener(videoMobileSlider)
@@ -533,10 +629,12 @@ $('.button-side__link').on('click', function () {
 
 
 
-function breadcrumbs(padding){
+function breadcrumbs(padding) {
   var crumbs = $('.breadcrumbs')
-  if(crumbs.length > 0){
-     var nextSection = crumbs.next().find('.section__inner')
-     nextSection.css('padding-top', padding)
+  if (crumbs.length > 0) {
+    var nextSection = crumbs.next().find('.section__inner')
+    nextSection.css('padding-top', padding)
   }
 }
+
+

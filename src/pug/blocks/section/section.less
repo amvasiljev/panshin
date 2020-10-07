@@ -33,6 +33,11 @@
             background-image: none !important;
         }
     }
+    &_city{
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
 
 
 
@@ -87,6 +92,10 @@
                 display: flex;
                 justify-content: center;
             }
+        }
+
+        &_text{
+            padding: 100px 0 0 0;
         }
     }
 
@@ -219,6 +228,36 @@
 
             .news{
                 margin-bottom: 30px;
+            }
+        }
+        &_feedback{
+            padding: 60px 0 0 0;
+            @media @320{
+                padding: 30px 0 0;
+                .feedback{
+                    margin: 0 auto;
+                    
+                }
+            }
+        }
+
+        &_city{
+            padding: 10px 0 0 0;
+            ul{
+                column-count: 4;
+                @media @320{
+                    column-count: 2;
+                }
+            }
+            li{
+                .rem(16);
+                line-height: 200%;
+                font-weight: 500;
+                color: @wt;
+                opacity: 0.7 ;
+                @media @320{
+                    .rem(14);
+                }
             }
         }
     }
@@ -586,7 +625,7 @@
 
 
         &_blue {
-            background-color: @footer;
+            background: @form_subscribe;
         }
 
         &_link {
