@@ -1,0 +1,14 @@
+mixin comment-form()
+    .comment-form
+        .comment-form__title Оставьте свой комментарий к статье
+        form(action="/").comment-form__form
+            .comment-form__box
+                label.comment-form__label(for="inputName") Ваше имя
+                input#inputNameCf.comment-form__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
+            .comment-form__box
+                label.comment-form__label(for="inputEmail") Ваш e-mail
+                input#inputEmailCf.comment-form__input(type="email" placeholder='email@gmail.com' required autocomplete="off")
+
+            label(for="textareaCf").comment-form__label Ваш комментарий
+            textarea#textareaCf(name="" placeholder="Напишите здесь комментарий").comment-form__textarea
+            +button('Отправить','button_red button_high button_wide','submit')

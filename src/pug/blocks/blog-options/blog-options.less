@@ -3,6 +3,13 @@
     display: flex;
     justify-content: space-between;
     padding: 0 0 20px 0;
+
+    &__items{
+        display: flex;
+        @media @320{
+            flex-direction: column;
+        }
+    }
     &__date {
         font-style: normal;
         font-weight: normal;

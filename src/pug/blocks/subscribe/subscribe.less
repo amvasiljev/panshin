@@ -7,6 +7,7 @@
     flex-direction: column;
     background: url(/assets/img/subscribe.png) no-repeat 100% 0, @section_blue;
 
+
     &__title {
         .rem(20);
         color: @bk;
@@ -66,6 +67,85 @@
 
     .button {
         width: 100%;
+    }
+
+    &_blue {
+        border-radius: 10px;
+        width: 100%;
+        max-width: unset;
+        background: url(/assets/img/subscribe_blue.png) no-repeat 100% 0, @form_subscribe;
+        margin-bottom: 30px;
+        @media @768,
+        @320 {
+            max-width: 414px;
+            padding: 30px 20px;
+        }
+
+        .subscribe__title {
+            line-height: 130%;
+            .rem(32);
+            color: @wt;
+            font-weight: normal;
+            @media @768,
+            @320 {
+                .rem(24);
+            }
+        }
+
+        .subscribe__text {
+            .rem(16);
+            font-weight: normal;
+            line-height: 150%;
+            color: @wt;
+            opacity: 1;
+            @media @768,
+            @320 {
+                .rem(14);
+            }
+        }
+
+        .subscribe__form {
+            display: flex;
+            align-items: flex-end;
+
+            @media @768,
+            @320 {
+                display: block;
+            }
+        }
+
+        .subscribe__fieldset {
+            flex: 1;
+            margin-right: 20px;
+
+            @media @768,
+            @320 {
+                flex: unset;
+                margin-right: 0;
+            }
+        }
+
+        .subscribe__input {
+            margin-bottom: 0;
+
+            @media @768,
+            @320 {
+                margin-bottom: 10px;
+            }
+        }
+
+        .subscribe__label {
+            color: @wt;
+        }
+
+        .button {
+            width: 280px;
+
+            @media @768,
+            @320 {
+                width: 100%;
+            }
+        }
     }
 
 }

@@ -5,10 +5,10 @@ $(function () {
 
 
 // inputs
-$(document).on('focus', 'input', function () {
+$(document).on('focus', 'input,textarea', function () {
   $(this).addClass('input_focus');
 })
-$(document).on('blur', 'input', function () {
+$(document).on('blur', 'input,textarea', function () {
   if (!$(this).val()) {
     $(this).removeClass('input_focus');
   }

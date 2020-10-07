@@ -1,0 +1,122 @@
+.comment-form{
+
+    width: 100%;
+    background-image: @form;
+    padding: 40px;
+    border-radius: 10px;
+    
+    @media @320{
+        padding: 30px 15px;
+    }
+
+    &__title{
+        .rem(32);
+        font-weight: normal;
+        line-height: 130%;
+        color: @bk;
+        text-align: left;
+        margin-bottom: 20px;
+
+        @media @320 {
+            .rem(22);
+            margin-bottom: 10px;
+        }
+    }
+
+    &__form{
+        display: flex;
+        flex-flow: wrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__box{
+        width: calc(50% - 10px);
+
+        @media @768,@320{
+            width: 100%;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 20px;
+        background-color: @wt;
+        border: 1px solid @wt;
+        color: @bk;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        .rem(14);
+        line-height: 17px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+        -webkit-text-size-adjust: 100%;
+        margin-top: 7px;
+
+        @media @320 {
+            .rem(16);
+        }
+
+        &::placeholder {
+            color: @placeholder;
+            opacity: 0.5;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+
+
+    }
+
+
+
+    &__label {
+        color: @bk;
+        font-style: normal;
+        font-weight: 500;
+        .rem(14);
+        line-height: 17px;
+        width: 100%;
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 120px;
+        margin-bottom: 20px;
+        background-color: @wt;
+        border: 1px solid @wt;
+        color: @bk;
+        padding: 20px 15px;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        .rem(14);
+        line-height: 17px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+        -webkit-text-size-adjust: 100%;
+        margin-top: 7px;
+
+        @media @320 {
+            .rem(16);
+            height: 180px;
+        }
+
+        &::placeholder {
+            color: @placeholder;
+            opacity: 0.5;
+            font-weight: normal;
+            font-style: normal;
+        }
+    }
+
+    .button{
+        margin: 0 0 0 auto;
+    }
+}
