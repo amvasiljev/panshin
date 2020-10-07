@@ -75,4 +75,15 @@
             color: @wt;
         }
     }
+
+    &_border{
+        &:not(:first-of-type){
+            margin-top: 40px;
+        }
+        h2{
+            margin-bottom: 30px;
+            padding: 0 0 15px 0;
+            border-bottom: 3px solid @red;
+        }
+    }
 }

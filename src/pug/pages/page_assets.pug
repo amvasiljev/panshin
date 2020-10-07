@@ -1,255 +1,255 @@
-extends ../layout/main
+//- extends ../layout/main
 
 
 
 
-block variables
-    -var title = 'assets'
-    -var description = 'assets'
-    -var pageClass = ''
+//- block variables
+//-     -var title = 'assets'
+//-     -var description = 'assets'
+//-     -var pageClass = ''
 
-block content
-    .section 
-        .section__inner
-            .section__box.section__box_assets
+//- block content
+//-     .section 
+//-         .section__inner
+//-             .section__box.section__box_assets
 
-                +banner()
+//-                 +banner()
 
-                +social('sidebar')
-                +social()
+//-                 +social('sidebar')
+//-                 +social()
 
-                +tariff('','Базовый','<ul><li>Новые сайты</li><li>Региональные сайты</li><li>Персональные блоги</li></ul>','от <span>15 000</span> руб./мес.')
-                +tariff('tariff_active','Оптимальный','<ul><li>Сайты по продаже услуг</li><li>Корпоративные сайты</li><li>Информационные сайты</li></ul>','от <span>25 000</span> руб./мес.')
-                +tariff('','Комплексный','<ul><li>Интернет-магазины</li><li>Каталоги товаров</li><li>UGC-платформы</li></ul>','от <span>45 000</span> руб./мес.')
-                +tariff('','Большие сайты','<ul><li>Мультиязычные сайты</li><li>Мультирегиональные сайты</li><li>Онлайн-сервисы</li></ul>','от <span>100 000</span> руб./мес.')
-                +tariff('tariff_landing','SEO','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>20 000</span> руб./мес.')
-                +tariff('tariff_landing','SEO + Контекст','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>30 000</span> руб./мес.')
-                +tariff('tariff_landing','SEO + Контекст','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>20 000</span> руб./мес.')
+//-                 +tariff('','Базовый','<ul><li>Новые сайты</li><li>Региональные сайты</li><li>Персональные блоги</li></ul>','от <span>15 000</span> руб./мес.')
+//-                 +tariff('tariff_active','Оптимальный','<ul><li>Сайты по продаже услуг</li><li>Корпоративные сайты</li><li>Информационные сайты</li></ul>','от <span>25 000</span> руб./мес.')
+//-                 +tariff('','Комплексный','<ul><li>Интернет-магазины</li><li>Каталоги товаров</li><li>UGC-платформы</li></ul>','от <span>45 000</span> руб./мес.')
+//-                 +tariff('','Большие сайты','<ul><li>Мультиязычные сайты</li><li>Мультирегиональные сайты</li><li>Онлайн-сервисы</li></ul>','от <span>100 000</span> руб./мес.')
+//-                 +tariff('tariff_landing','SEO','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>20 000</span> руб./мес.')
+//-                 +tariff('tariff_landing','SEO + Контекст','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>30 000</span> руб./мес.')
+//-                 +tariff('tariff_landing','SEO + Контекст','Над проектом работают SEO-специалист, контент-менеджер, копирайтеры, аналитик, линкбилдеры. Работаем над всеми факторами ранжирования и “давим на все кнопки” для достижения результата.','<span>20 000</span> руб./мес.')
 
-                +news('news_also','/assets/img/news/news_1.png','Заголовок публикации','','','')
-                +news('news_also','/assets/img/news/news_1.png','Заголовок публикации','','','')
-                +news('news_also','/assets/img/news/news_1.png','Заголовок публикации','','','')
-                +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
-                +news('news_blog','/assets/img/news/news_3.png','Быстрее и эффективнее: Яндекс выпустил большое поисковое обновление «Вега»','«Вега» – обновление, благодаря которому поисковая система Яндекс выходит на новый уровень. Теперь пользователи смогут мгновенно получать экспертные ответы на свои запросы. ','22.01.2020','2 комментария')
-                +news('news_press','/assets/img/news/news_1.png','Непростой вывод из-под «Баден-Бадена»','Мне наплевать на творческое видение клиента в отношении SEO вообще и на тексты в частности. Если слушать все «хотелки», то сами понимаете, дальше будет «бла-бла-бла» про результаты. И это правда. Смиритесь. ','','','VS.ru')
-                +news('news_press','/assets/img/news/news_1.png','Монополизация поисковой выдачи','Продвижение основного сайта в поисковых системах будет недостаточным условием увеличения продаж, поэтому нам понадобятся дополнительные ресурсы, способные привлекать клиентов, о которых и пойдет речь.','','','www.searchengines.ru')
+//-                 +news('news_also','/assets/img/news/news_1.png','Заголовок публикации','','','')
+//-                 +news('news_also','/assets/img/news/news_1.png','Заголовок публикации','','','')
+//-                 +news('news_also','/assets/img/news/news_1.png','Заголовок публикации','','','')
+//-                 +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
+//-                 +news('news_blog','/assets/img/news/news_3.png','Быстрее и эффективнее: Яндекс выпустил большое поисковое обновление «Вега»','«Вега» – обновление, благодаря которому поисковая система Яндекс выходит на новый уровень. Теперь пользователи смогут мгновенно получать экспертные ответы на свои запросы. ','22.01.2020','2 комментария')
+//-                 +news('news_press','/assets/img/news/news_1.png','Непростой вывод из-под «Баден-Бадена»','Мне наплевать на творческое видение клиента в отношении SEO вообще и на тексты в частности. Если слушать все «хотелки», то сами понимаете, дальше будет «бла-бла-бла» про результаты. И это правда. Смиритесь. ','','','VS.ru')
+//-                 +news('news_press','/assets/img/news/news_1.png','Монополизация поисковой выдачи','Продвижение основного сайта в поисковых системах будет недостаточным условием увеличения продаж, поэтому нам понадобятся дополнительные ресурсы, способные привлекать клиентов, о которых и пойдет речь.','','','www.searchengines.ru')
 
 
-                .section__assets
-                    +button('Заказать звонок','button_blue')
-                    +button('Выбрать тариф','button_red')
-                    +button('Подробнее','button_trans')
-                    +button('Выберите файл','button_smoke')
-                .section__assets.section__assets_blue
-                    +button('Заказать звонок','button_blue')
-                    +button('Выбрать тариф','button_red')
-                    +button('Подробнее','button_trans')
-                    +button('Выберите файл','button_smoke')
-                    +button('Белая кнопка','button_white')
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate aperiam velit, tempore magni aliquid voluptates fugit culpa quaerat eum error tempora sint laudantium hic porro consectetur laboriosam ducimus eos? Dolore.
-                    +button('Выбрать тариф','button_red')
-                .section__assets.section__assets_blue
-                    a(href="/").section__assets_link.section__assets_link_white Ссылка на темном фоне
-                    a(href="/").section__assets_link.section__assets_link_black Темно-серая ссылка
-                    a(href="/").section__assets_link.section__assets_link_blue Синяя ссылка
-                    a(href="/").section__assets_link.section__assets_link_grey Светло-серая ссылка
-                    a(href="/").section__assets_link.section__assets_link_underline Ссылка с подчеркиванием
-                    a(href="/").section__assets_link.section__assets_link_darkblue Темно-синяя ссылка
-                    a(href="/").section__assets_link.section__assets_link_red Оранжевая ссылка
-                .section__assets.section__assets_links
-                    a(href="/").section__assets_link.section__assets_link_black Темно-серая ссылка
-                    a(href="/").section__assets_link.section__assets_link_blue Синяя ссылка
-                    a(href="/").section__assets_link.section__assets_link_grey Светло-серая ссылка
-                    a(href="/").section__assets_link.section__assets_link_underline Ссылка с подчеркиванием
-                    a(href="/").section__assets_link.section__assets_link_darkblue Темно-синяя ссылка
-                    a(href="/").section__assets_link.section__assets_link_red Оранжевая ссылка
+//-                 .section__assets
+//-                     +button('Заказать звонок','button_blue')
+//-                     +button('Выбрать тариф','button_red')
+//-                     +button('Подробнее','button_trans')
+//-                     +button('Выберите файл','button_smoke')
+//-                 .section__assets.section__assets_blue
+//-                     +button('Заказать звонок','button_blue')
+//-                     +button('Выбрать тариф','button_red')
+//-                     +button('Подробнее','button_trans')
+//-                     +button('Выберите файл','button_smoke')
+//-                     +button('Белая кнопка','button_white')
+//-                     p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate aperiam velit, tempore magni aliquid voluptates fugit culpa quaerat eum error tempora sint laudantium hic porro consectetur laboriosam ducimus eos? Dolore.
+//-                     +button('Выбрать тариф','button_red')
+//-                 .section__assets.section__assets_blue
+//-                     a(href="/").section__assets_link.section__assets_link_white Ссылка на темном фоне
+//-                     a(href="/").section__assets_link.section__assets_link_black Темно-серая ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_blue Синяя ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_grey Светло-серая ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_underline Ссылка с подчеркиванием
+//-                     a(href="/").section__assets_link.section__assets_link_darkblue Темно-синяя ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_red Оранжевая ссылка
+//-                 .section__assets.section__assets_links
+//-                     a(href="/").section__assets_link.section__assets_link_black Темно-серая ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_blue Синяя ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_grey Светло-серая ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_underline Ссылка с подчеркиванием
+//-                     a(href="/").section__assets_link.section__assets_link_darkblue Темно-синяя ссылка
+//-                     a(href="/").section__assets_link.section__assets_link_red Оранжевая ссылка
                 
                 
-                .section__text
+//-                 .section__text
                 
-                    h1 Заголовок h1
-                    h2 Заголовок h2
-                    h3 Заголовок h3
+//-                     h1 Заголовок h1
+//-                     h2 Заголовок h2
+//-                     h3 Заголовок h3
                    
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consectetur maxime vel adipisci ipsa. Odit qui esse tempora odio laboriosam beatae, cum aliquid assumenda molestias inventore totam quia dolorum impedit atque est minima? Officia nisi reiciendis quas nulla sint non est vero impedit architecto molestiae quibusdam, numquam perspiciatis dolores rem repellendus ullam quos laudantium aperiam, mollitia, saepe sunt tenetur provident doloribus. Rerum, architecto, odit perferendis corrupti velit accusamus sit maxime esse facere sint nemo aperiam neque iste maiores officiis odio voluptatem est laudantium doloremque porro libero, aliquam omnis molestias ipsa. Provident commodi porro hic saepe aliquam tempora aspernatur laudantium explicabo?
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum ipsam laboriosam suscipit beatae quidem, voluptatum culpa pariatur totam impedit sint eum, delectus officia voluptatibus voluptas recusandae qui expedita obcaecati nulla assumenda quia commodi non enim. Culpa quo labore voluptates inventore. Sequi aperiam reiciendis, dolorem reprehenderit doloremque itaque incidunt, quibusdam libero quas veniam iusto dolor ut? Iusto provident quam animi, ut deleniti quasi obcaecati nesciunt officiis sunt optio placeat libero fugit, consequuntur ipsam delectus. Tempora temporibus autem sequi? Explicabo, a!
-                .section__assets
-                    .section__text
-                        p
-                            strong Маркированный список
-                        ul
-                            li <strong>Пункт</strong> маркированного списка
-                            li <b>Пункт</b> маркированного списка
-                            li Пункт маркированного списка
-                            li Пункт маркированного списка
-                            li Пункт маркированного списка
-                            li Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident itaque facere nemo enim. Possimus incidunt voluptate eum ducimus corporis voluptatum fugit, repellat numquam laborum nulla quo. Temporibus, non tenetur!
-                            li Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident itaque facere nemo enim. Possimus incidunt voluptate eum ducimus corporis voluptatum fugit, repellat numquam laborum nulla quo. Temporibus, non tenetur!
-                            li Пункт маркированного списка
-                            li Пункт маркированного списка
-                            li Пункт маркированного списка
-                .section__assets
-                    .section__text
-                        p
-                            strong Нумерованный список
-                        ol
-                            li <strong>Lorem ipsum dolor sit</strong> amet consectetur adipisicing elit. Magni porro nihil veniam quibusdam explicabo! Iste, aliquid beatae porro consectetur fugiat amet ut aut adipisci, labore sapiente consequatur ab sint officiis.
-                            li Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni porro nihil veniam quibusdam explicabo! Iste, aliquid beatae porro consectetur fugiat amet ut aut adipisci, labore sapiente consequatur ab sint officiis.
-                            li Пункт нумерованного списка
-                            li Пункт нумерованного списка
-                            li Пункт нумерованного списка
-                            li Пункт нумерованного списка
-                            li Пункт нумерованного списка
-                            li Пункт нумерованного списка
-                            li Пункт нумерованного списка
-                            li Пункт нумерованного списка
+//-                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed consectetur maxime vel adipisci ipsa. Odit qui esse tempora odio laboriosam beatae, cum aliquid assumenda molestias inventore totam quia dolorum impedit atque est minima? Officia nisi reiciendis quas nulla sint non est vero impedit architecto molestiae quibusdam, numquam perspiciatis dolores rem repellendus ullam quos laudantium aperiam, mollitia, saepe sunt tenetur provident doloribus. Rerum, architecto, odit perferendis corrupti velit accusamus sit maxime esse facere sint nemo aperiam neque iste maiores officiis odio voluptatem est laudantium doloremque porro libero, aliquam omnis molestias ipsa. Provident commodi porro hic saepe aliquam tempora aspernatur laudantium explicabo?
+//-                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum ipsam laboriosam suscipit beatae quidem, voluptatum culpa pariatur totam impedit sint eum, delectus officia voluptatibus voluptas recusandae qui expedita obcaecati nulla assumenda quia commodi non enim. Culpa quo labore voluptates inventore. Sequi aperiam reiciendis, dolorem reprehenderit doloremque itaque incidunt, quibusdam libero quas veniam iusto dolor ut? Iusto provident quam animi, ut deleniti quasi obcaecati nesciunt officiis sunt optio placeat libero fugit, consequuntur ipsam delectus. Tempora temporibus autem sequi? Explicabo, a!
+//-                 .section__assets
+//-                     .section__text
+//-                         p
+//-                             strong Маркированный список
+//-                         ul
+//-                             li <strong>Пункт</strong> маркированного списка
+//-                             li <b>Пункт</b> маркированного списка
+//-                             li Пункт маркированного списка
+//-                             li Пункт маркированного списка
+//-                             li Пункт маркированного списка
+//-                             li Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident itaque facere nemo enim. Possimus incidunt voluptate eum ducimus corporis voluptatum fugit, repellat numquam laborum nulla quo. Temporibus, non tenetur!
+//-                             li Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident itaque facere nemo enim. Possimus incidunt voluptate eum ducimus corporis voluptatum fugit, repellat numquam laborum nulla quo. Temporibus, non tenetur!
+//-                             li Пункт маркированного списка
+//-                             li Пункт маркированного списка
+//-                             li Пункт маркированного списка
+//-                 .section__assets
+//-                     .section__text
+//-                         p
+//-                             strong Нумерованный список
+//-                         ol
+//-                             li <strong>Lorem ipsum dolor sit</strong> amet consectetur adipisicing elit. Magni porro nihil veniam quibusdam explicabo! Iste, aliquid beatae porro consectetur fugiat amet ut aut adipisci, labore sapiente consequatur ab sint officiis.
+//-                             li Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni porro nihil veniam quibusdam explicabo! Iste, aliquid beatae porro consectetur fugiat amet ut aut adipisci, labore sapiente consequatur ab sint officiis.
+//-                             li Пункт нумерованного списка
+//-                             li Пункт нумерованного списка
+//-                             li Пункт нумерованного списка
+//-                             li Пункт нумерованного списка
+//-                             li Пункт нумерованного списка
+//-                             li Пункт нумерованного списка
+//-                             li Пункт нумерованного списка
+//-                             li Пункт нумерованного списка
                 
-                .section__text
-                    blockquote 
-                        p Cледите за длиной текста в сообщениях и делайте паузы между ответами чат-бота, чтобы клиент успевал читать полученную информацию.
+//-                 .section__text
+//-                     blockquote 
+//-                         p Cледите за длиной текста в сообщениях и делайте паузы между ответами чат-бота, чтобы клиент успевал читать полученную информацию.
 
-                .section__box.section__box_assets  
-                    +service('show','s_1','service__icon_blue','solutions/service','service','Продвижение сайтов банковских услуг','service_white')
-                    +service('show','s_2','service__icon_blue','solutions/service','service','Продвижение туристических сайтов','service_white')
-                    +service('show','s_3','service__icon_blue','solutions/service','service','Продвижение сайтов транспортных компаний','service_white')
-                    +service('show','s_4','service__icon_blue','solutions/service','service','Продвижение сайтов по фитнесу','service_white')
-                    +service('show','s_5','service__icon_blue','solutions/service','service','Продвижение сайтов коллекторского агентства','service_white')
+//-                 .section__box.section__box_assets  
+//-                     +service('show','s_1','service__icon_blue','solutions/service','service','Продвижение сайтов банковских услуг','service_white')
+//-                     +service('show','s_2','service__icon_blue','solutions/service','service','Продвижение туристических сайтов','service_white')
+//-                     +service('show','s_3','service__icon_blue','solutions/service','service','Продвижение сайтов транспортных компаний','service_white')
+//-                     +service('show','s_4','service__icon_blue','solutions/service','service','Продвижение сайтов по фитнесу','service_white')
+//-                     +service('show','s_5','service__icon_blue','solutions/service','service','Продвижение сайтов коллекторского агентства','service_white')
 
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
-
-
-                .section__box.section__box_assets  
-                    +service('show','law_1','service__icon_red','solutions/law','law','Продвижение сайта адвоката')
-                    +service('show','law_2','service__icon_red','solutions/law','law','Продвижение юридических сайтов')
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
 
 
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
+//-                 .section__box.section__box_assets  
+//-                     +service('show','law_1','service__icon_red','solutions/law','law','Продвижение сайта адвоката')
+//-                     +service('show','law_2','service__icon_red','solutions/law','law','Продвижение юридических сайтов')
 
 
-                .section__box.section__box_assets  
-                    +service('show','h_1','service__icon_blue','solutions/horeca','horeca','Продвижение сайта для ресторана','service_white')
-                    +service('show','h_2','service__icon_blue','solutions/horeca','horeca','Продвижение сайта гостиницы','service_white')
-                    +service('show','h_3','service__icon_blue','solutions/horeca','horeca','Продвижение сайта санатория','service_white')
-
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
-
-                .section__box.section__box_assets  
-                    +service('show','med_1','service__icon_red','solutions/medicine','medicine','Продвижение медицинских сайтов')
-                    +service('show','med_2','service__icon_red','solutions/medicine','medicine','Продвижение сайта стоматологии')
-                    +service('show','med_3','service__icon_red','solutions/medicine','medicine','Продвижение клиники наркологии')
-                    +service('show','med_4','service__icon_red','solutions/medicine','medicine','Продвижение клиники косметологии')
-                    +service('show','med_5','service__icon_red','solutions/medicine','medicine','Продвижение клиники ЭКО')
-                    +service('show','med_6','service__icon_red','solutions/medicine','medicine','Продвижение клиники онкологии')
-                    +service('show','med_7','service__icon_red','solutions/medicine','medicine','Продвижение ветеринарной клиники')
-                    +service('show','med_8','service__icon_red','solutions/medicine','medicine','Продвижение клиники пластической хирургии')
-
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
-
-                .section__box.section__box_assets  
-                    +service('show','online_1','service__icon_blue','solutions/online','online','Продвижение интернет-магазина стройматериалов','service_white')
-                    +service('show','online_2','service__icon_blue','solutions/online','online','Продвижение интернет-магазина интимных товаров','service_white')
-                    +service('show','online_3','service__icon_blue','solutions/online','online','Продвижение интернет-магазина мебели','service_white')
-                    +service('show','online_4','service__icon_blue','solutions/online','online','Продвижение интернет – магазина спортивных товаров','service_white')
-                    +service('show','online_5','service__icon_blue','solutions/online','online','Продвижение интернет-магазина косметики','service_white')
-                    +service('show','online_6','service__icon_blue','solutions/online','online','Продвижение интернет-магазина детских товаров','service_white')
-                    +service('show','online_7','service__icon_blue','solutions/online','online','Продвижение интернет-магазина жалюзи','service_white')
-                    +service('show','online_8','service__icon_blue','solutions/online','online','Продвижение интернет-магазина автозапчастей','service_white')
-                    +service('show','online_9','service__icon_blue','solutions/online','online','Продвижение магазина одежды','service_white')
-                    +service('show','online_10','service__icon_blue','solutions/online','online','Продвижение магазина мужской одежды','service_white')
-                    +service('show','online_11','service__icon_blue','solutions/online','online','Продвижение магазина цветов','service_white')
-                    +service('show','online_12','service__icon_blue','solutions/online','online','Продвижение магазина детской одежды','service_white')
-                    +service('show','online_13','service__icon_blue','solutions/online','online','Продвижение книжного магазина','service_white')
-                    +service('show','online_14','service__icon_blue','solutions/online','online','Продвижение ювелирного магазина','service_white')
-
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
-
-                .section__box.section__box_assets  
-                    +service('show','other_1','service__icon_red','solutions/other','other','Продвижение мебельных сайтов')
-                    +service('show','other_2','service__icon_red','solutions/other','other','Продвижение сайта жилого комплекса')
-                    +service('show','other_3','service__icon_red','solutions/other','other','Продвижение сайта РТИ')
-                    +service('show','other_4','service__icon_red','solutions/other','other','Продвижение сайта по металлопрокату')
-                    +service('show','other_5','service__icon_red','solutions/other','other','Продвижение сайта знакомств')
-                    +service('show','other_6','service__icon_red','solutions/other','other','Продвижение букмекерских сайтов')
-
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
-
-                .section__box.section__box_assets  
-
-                    +service('show','service_1','service__icon_srv','services','main','Поисковое продвижение (SEO)')
-                    +service('show','service_2','service__icon_srv','services','main','Контекстная реклама')
-                    +service('show','service_3','service__icon_srv','services','main','Разработка сайтов')
-                    +service('show','service_4','service__icon_srv','services','main','Управление репутацией (SERM)')
-                    +service('show','service_5','service__icon_srv','services','main','Аудиты сайтов и РК')
-                    +service('show','service_6','service__icon_srv','services','main','Техническая поддержка')
-                    +service('show','service_7','service__icon_srv','services','main','Продвижение в социальных сетях (SMM)')
-                    +service('show','service_8','service__icon_srv','services','main','Обучение и консалтинг')
-                    +service('show','service_9','service__icon_srv','services','main','Автоматизация')
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
 
 
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
+//-                 .section__box.section__box_assets  
+//-                     +service('show','h_1','service__icon_blue','solutions/horeca','horeca','Продвижение сайта для ресторана','service_white')
+//-                     +service('show','h_2','service__icon_blue','solutions/horeca','horeca','Продвижение сайта гостиницы','service_white')
+//-                     +service('show','h_3','service__icon_blue','solutions/horeca','horeca','Продвижение сайта санатория','service_white')
 
-                .section__box.section__box_assets  
-                    +service('show','condition_1','service__icon_blue','solutions/condition','condition','Оплачиваются лиды (звонки и заявки), а не продажи','service_white')
-                    +service('show','condition_2','service__icon_blue','solutions/condition','condition','Источник трафика: поисковый трафик и контекстная реклама','service_white')
-                    +service('show','condition_3','service__icon_blue','solutions/condition','condition','Предоплата за 30 лидов','service_white')
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
 
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
+//-                 .section__box.section__box_assets  
+//-                     +service('show','med_1','service__icon_red','solutions/medicine','medicine','Продвижение медицинских сайтов')
+//-                     +service('show','med_2','service__icon_red','solutions/medicine','medicine','Продвижение сайта стоматологии')
+//-                     +service('show','med_3','service__icon_red','solutions/medicine','medicine','Продвижение клиники наркологии')
+//-                     +service('show','med_4','service__icon_red','solutions/medicine','medicine','Продвижение клиники косметологии')
+//-                     +service('show','med_5','service__icon_red','solutions/medicine','medicine','Продвижение клиники ЭКО')
+//-                     +service('show','med_6','service__icon_red','solutions/medicine','medicine','Продвижение клиники онкологии')
+//-                     +service('show','med_7','service__icon_red','solutions/medicine','medicine','Продвижение ветеринарной клиники')
+//-                     +service('show','med_8','service__icon_red','solutions/medicine','medicine','Продвижение клиники пластической хирургии')
 
-                .section__box.section__box_assets  
-                    +service('show','member_1','service__icon_blue','solutions/member','member','Веб-разработчик','service_white service_member')
-                    +service('show','member_2','service__icon_blue','solutions/member','member','UX/UI дизайнер','service_white service_member')
-                    +service('show','member_3','service__icon_blue','solutions/member','member','Front-end разработчик','service_white service_member')
-                    +service('show','member_4','service__icon_blue','solutions/member','member','Менеджер проектов','service_white service_member')
-                    +service('show','member_5','service__icon_blue','solutions/member','member','Арт-директор','service_white service_member')
-                    +service('show','member_6','service__icon_blue','solutions/member','member','Копирайтер','service_white service_member')
-                    +service('show','member_7','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
 
-                    +service('','','','','','','service_hidden')
-                    +service('','','','','','','service_hidden')
+//-                 .section__box.section__box_assets  
+//-                     +service('show','online_1','service__icon_blue','solutions/online','online','Продвижение интернет-магазина стройматериалов','service_white')
+//-                     +service('show','online_2','service__icon_blue','solutions/online','online','Продвижение интернет-магазина интимных товаров','service_white')
+//-                     +service('show','online_3','service__icon_blue','solutions/online','online','Продвижение интернет-магазина мебели','service_white')
+//-                     +service('show','online_4','service__icon_blue','solutions/online','online','Продвижение интернет – магазина спортивных товаров','service_white')
+//-                     +service('show','online_5','service__icon_blue','solutions/online','online','Продвижение интернет-магазина косметики','service_white')
+//-                     +service('show','online_6','service__icon_blue','solutions/online','online','Продвижение интернет-магазина детских товаров','service_white')
+//-                     +service('show','online_7','service__icon_blue','solutions/online','online','Продвижение интернет-магазина жалюзи','service_white')
+//-                     +service('show','online_8','service__icon_blue','solutions/online','online','Продвижение интернет-магазина автозапчастей','service_white')
+//-                     +service('show','online_9','service__icon_blue','solutions/online','online','Продвижение магазина одежды','service_white')
+//-                     +service('show','online_10','service__icon_blue','solutions/online','online','Продвижение магазина мужской одежды','service_white')
+//-                     +service('show','online_11','service__icon_blue','solutions/online','online','Продвижение магазина цветов','service_white')
+//-                     +service('show','online_12','service__icon_blue','solutions/online','online','Продвижение магазина детской одежды','service_white')
+//-                     +service('show','online_13','service__icon_blue','solutions/online','online','Продвижение книжного магазина','service_white')
+//-                     +service('show','online_14','service__icon_blue','solutions/online','online','Продвижение ювелирного магазина','service_white')
 
-                .section__box.section__box_assets  
-                    +service('show','landing_1','service__icon_red','solutions/landing','landing','Внесение изменений на сайт','service_white service_big','Оптимизируем сайт под поисковые системы. Исправляем технические ошибки и недоработки. Корректируем и добавляем тексты на сайт.')
-                    +service('show','landing_2','service__icon_red','solutions/landing','landing','Внешние отклики, ссылки и отзывы','service_white service_big','Размещаем внешние ссылки на сайт с авторитетных площадок, социальных сетей, сервисов. Размещаем пресс-релизы и рекламные статьи.')
-                    +service('show','landing_3','service__icon_red','solutions/landing','landing','Аналитика','service_white service_big','Анализируем поведение пользователей на сайте: пути по сайту, что делает, что читает и смотрят, а что - нет.')
-                .section__assets.section__assets_blue
-                    +digit('10 лет опыта','Компания успешно работает для вас с 2010 года')
-                    +digit('3 офиса','Москва, Краснодар, Харьков')
-                    +digit('42 специалиста','В штате компании')
-                    +digit('57','Проверенных стратегий продвижения')
-                    +digit('Из 118','Ниш бизнеса наши клиенты')
-                    +digit('86 отзывов','О нашей работе на сайте и в интернете')
-                    +digit('42 дня','До ТОПа с момента старта работ. Наш рекорд по SEO')
-                    +digit('32','Фильтров ПС снято. Гастролируем по Минусинскам и Баден-Баденам')
-                    +digit('0','Фильтров получено от ПС. Мы работаем над этим :)')
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
 
-                +client('/assets/img/clients/client_1.png','SEO-продвижение','Cemtec')
-                +client('/assets/img/clients/client_2.png','Управление репутацией','Quaker')
-                +client('/assets/img/clients/client_3.png','Продвижение в социальных сетях','TeleAdapt')
-                +client('/assets/img/clients/client_4.png','SEO-продвижение','ASK')
-                +client('/assets/img/clients/client_5.png','Разработка сайта','Zimmatic')
-                +client('','','','client_hidden')
-                +client('','','','client_hidden')
-                +client('','','','client_hidden')
-                +client('','','','client_hidden')
+//-                 .section__box.section__box_assets  
+//-                     +service('show','other_1','service__icon_red','solutions/other','other','Продвижение мебельных сайтов')
+//-                     +service('show','other_2','service__icon_red','solutions/other','other','Продвижение сайта жилого комплекса')
+//-                     +service('show','other_3','service__icon_red','solutions/other','other','Продвижение сайта РТИ')
+//-                     +service('show','other_4','service__icon_red','solutions/other','other','Продвижение сайта по металлопрокату')
+//-                     +service('show','other_5','service__icon_red','solutions/other','other','Продвижение сайта знакомств')
+//-                     +service('show','other_6','service__icon_red','solutions/other','other','Продвижение букмекерских сайтов')
 
-                +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
-                +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
-                +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
-                +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
-                +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
-                +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
 
-                +team('/assets/img/team/team_1.png','Алексей Паньшин',' Генеральный директор','Назвал компанию в честь самого себя, что свидетельствует о его невероятной скромности. Любит хороший кофе и вкусно покушать.')
-                +team('/assets/img/team/team_2.png','Александр Князев','Технический директор','Не существует технической проблемы с сайтом, с которой Александр не справится. Руководитель проекта “SEO-CRM.ru”.')
-                +team('/assets/img/team/team_3.png','Игорь Калугин','Контекстолог-любитель','Занимается продвижением клиентов в Я.Директ, Я.Маркет и Google Adwords. Любит сложные задачи и большие бюджеты.')
-                +team('/assets/img/team/team_4.png','Ирина Брычева','SMM-специалист','Любит деньги больше, чем котиков, поэтому старается создать продающий контент для Вашего бизнеса. Созданные Ириной посты, которые привлекут к себе внимание.')
-                +team('/assets/img/team/team_5.png','Наталья Кривницкая','Интернет-маркетолог','Пробег в сфере интернет рекламы почти 3 года. В прошлом – SEO специалист – продвижение клиентских сайтов в поиске.')
-                +team('/assets/img/team/team_6.png','Станислав Колесов','Аккаунт-менеджер','Ведет наиболее сложных клиентов в агентстве. Любит твикс и колу в банке, боится голубей и розового цвета.')
+//-                 .section__box.section__box_assets  
+
+//-                     +service('show','service_1','service__icon_srv','services','main','Поисковое продвижение (SEO)')
+//-                     +service('show','service_2','service__icon_srv','services','main','Контекстная реклама')
+//-                     +service('show','service_3','service__icon_srv','services','main','Разработка сайтов')
+//-                     +service('show','service_4','service__icon_srv','services','main','Управление репутацией (SERM)')
+//-                     +service('show','service_5','service__icon_srv','services','main','Аудиты сайтов и РК')
+//-                     +service('show','service_6','service__icon_srv','services','main','Техническая поддержка')
+//-                     +service('show','service_7','service__icon_srv','services','main','Продвижение в социальных сетях (SMM)')
+//-                     +service('show','service_8','service__icon_srv','services','main','Обучение и консалтинг')
+//-                     +service('show','service_9','service__icon_srv','services','main','Автоматизация')
+
+
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
+
+//-                 .section__box.section__box_assets  
+//-                     +service('show','condition_1','service__icon_blue','solutions/condition','condition','Оплачиваются лиды (звонки и заявки), а не продажи','service_white')
+//-                     +service('show','condition_2','service__icon_blue','solutions/condition','condition','Источник трафика: поисковый трафик и контекстная реклама','service_white')
+//-                     +service('show','condition_3','service__icon_blue','solutions/condition','condition','Предоплата за 30 лидов','service_white')
+
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
+
+//-                 .section__box.section__box_assets  
+//-                     +service('show','member_1','service__icon_blue','solutions/member','member','Веб-разработчик','service_white service_member')
+//-                     +service('show','member_2','service__icon_blue','solutions/member','member','UX/UI дизайнер','service_white service_member')
+//-                     +service('show','member_3','service__icon_blue','solutions/member','member','Front-end разработчик','service_white service_member')
+//-                     +service('show','member_4','service__icon_blue','solutions/member','member','Менеджер проектов','service_white service_member')
+//-                     +service('show','member_5','service__icon_blue','solutions/member','member','Арт-директор','service_white service_member')
+//-                     +service('show','member_6','service__icon_blue','solutions/member','member','Копирайтер','service_white service_member')
+//-                     +service('show','member_7','service__icon_white','solutions/member','member','Аккаунт-менеджер','service_transparent service_member','Ведет коммуникацию с клиентом')
+
+//-                     +service('','','','','','','service_hidden')
+//-                     +service('','','','','','','service_hidden')
+
+//-                 .section__box.section__box_assets  
+//-                     +service('show','landing_1','service__icon_red','solutions/landing','landing','Внесение изменений на сайт','service_white service_big','Оптимизируем сайт под поисковые системы. Исправляем технические ошибки и недоработки. Корректируем и добавляем тексты на сайт.')
+//-                     +service('show','landing_2','service__icon_red','solutions/landing','landing','Внешние отклики, ссылки и отзывы','service_white service_big','Размещаем внешние ссылки на сайт с авторитетных площадок, социальных сетей, сервисов. Размещаем пресс-релизы и рекламные статьи.')
+//-                     +service('show','landing_3','service__icon_red','solutions/landing','landing','Аналитика','service_white service_big','Анализируем поведение пользователей на сайте: пути по сайту, что делает, что читает и смотрят, а что - нет.')
+//-                 .section__assets.section__assets_blue
+//-                     +digit('10 лет опыта','Компания успешно работает для вас с 2010 года')
+//-                     +digit('3 офиса','Москва, Краснодар, Харьков')
+//-                     +digit('42 специалиста','В штате компании')
+//-                     +digit('57','Проверенных стратегий продвижения')
+//-                     +digit('Из 118','Ниш бизнеса наши клиенты')
+//-                     +digit('86 отзывов','О нашей работе на сайте и в интернете')
+//-                     +digit('42 дня','До ТОПа с момента старта работ. Наш рекорд по SEO')
+//-                     +digit('32','Фильтров ПС снято. Гастролируем по Минусинскам и Баден-Баденам')
+//-                     +digit('0','Фильтров получено от ПС. Мы работаем над этим :)')
+
+//-                 +client('/assets/img/clients/client_1.png','SEO-продвижение','Cemtec')
+//-                 +client('/assets/img/clients/client_2.png','Управление репутацией','Quaker')
+//-                 +client('/assets/img/clients/client_3.png','Продвижение в социальных сетях','TeleAdapt')
+//-                 +client('/assets/img/clients/client_4.png','SEO-продвижение','ASK')
+//-                 +client('/assets/img/clients/client_5.png','Разработка сайта','Zimmatic')
+//-                 +client('','','','client_hidden')
+//-                 +client('','','','client_hidden')
+//-                 +client('','','','client_hidden')
+//-                 +client('','','','client_hidden')
+
+//-                 +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
+//-                 +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
+//-                 +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
+//-                 +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
+//-                 +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
+//-                 +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
+
+//-                 +team('/assets/img/team/team_1.png','Алексей Паньшин',' Генеральный директор','Назвал компанию в честь самого себя, что свидетельствует о его невероятной скромности. Любит хороший кофе и вкусно покушать.')
+//-                 +team('/assets/img/team/team_2.png','Александр Князев','Технический директор','Не существует технической проблемы с сайтом, с которой Александр не справится. Руководитель проекта “SEO-CRM.ru”.')
+//-                 +team('/assets/img/team/team_3.png','Игорь Калугин','Контекстолог-любитель','Занимается продвижением клиентов в Я.Директ, Я.Маркет и Google Adwords. Любит сложные задачи и большие бюджеты.')
+//-                 +team('/assets/img/team/team_4.png','Ирина Брычева','SMM-специалист','Любит деньги больше, чем котиков, поэтому старается создать продающий контент для Вашего бизнеса. Созданные Ириной посты, которые привлекут к себе внимание.')
+//-                 +team('/assets/img/team/team_5.png','Наталья Кривницкая','Интернет-маркетолог','Пробег в сфере интернет рекламы почти 3 года. В прошлом – SEO специалист – продвижение клиентских сайтов в поиске.')
+//-                 +team('/assets/img/team/team_6.png','Станислав Колесов','Аккаунт-менеджер','Ведет наиболее сложных клиентов в агентстве. Любит твикс и колу в банке, боится голубей и розового цвета.')

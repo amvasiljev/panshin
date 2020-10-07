@@ -39,6 +39,23 @@
         background-size: contain;
     }
 
+    &_map{
+        margin: -55px 0 0 0;
+        padding: 55px 0 0 0;
+
+        @media @320{
+            display: none;
+        }
+    }
+    &_moscow{
+        display: none;
+        @media @320{
+            display: block;
+            margin: -120px 0 0 0;
+            padding: 60px 0 0 0;
+        }
+    }
+
 
 
     &__inner {
@@ -97,6 +114,10 @@
         &_text{
             padding: 100px 0 0 0;
         }
+
+        // &_map{
+        //     padding: 155px 0 100px;
+        // }
     }
 
     &__box {
@@ -259,6 +280,12 @@
                     .rem(14);
                 }
             }
+
+            &_mo{
+                li{
+                    color: @bl_middle;
+                }
+            }
         }
         &_wiki{
             display: flex;
@@ -274,6 +301,12 @@
                     width: 100%;
                     max-width: 414px;
                 }
+            }
+        }
+
+        &_team{
+            .team{
+                margin-bottom: 10px;
             }
         }
     }
@@ -521,11 +554,11 @@
         }
 
 
-        img{
-            margin-bottom: 30px;
-            height: 100%;
-            width: 100%;
-        }
+        // img{
+        //     margin-bottom: 30px;
+        //     height: 100%;
+        //     width: 100%;
+        // }
 
     }
 
