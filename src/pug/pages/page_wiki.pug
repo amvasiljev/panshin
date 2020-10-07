@@ -1,11 +1,26 @@
-//- extends ../layout/main
+extends ../layout/main
 
 
 
 
-//- block variables
-//-     -var title = 'wiki'
-//-     -var description = 'wiki'
-//-     -var pageClass = ''
+block variables
+    -var title = 'wiki'
+    -var description = 'wiki'
+    -var pageClass = ''
 
-//- block content
+block content
+
+    +breadcrumbs()
+
+    section.section
+        .section__inner
+            +title('SEO Wiki — Список терминов','','h1','')
+            .section__wiki
+                p Наш раздел SEO Wiki представляет собой библиотеку, предназначенную для ознакомления заказчиков услуг и всех желающих со специфической терминологией, которую используют специалисты в области оптимизации и продвижения сайтов.
+
+                p В нашем словаре SEO терминов собрано, большинство определений и подробное описание web-терминологий, аббревиатур и профессионального сленга. Поскольку Internet постоянно растет и развивается, словарь SEO Wiki регулярно пополняется новым материалом. Поэтому если Вы встретили какой-то незнакомый термин касающийся SEO оптимизации или продвижения сайта, поисковых систем или интернет-маркетинга, то здесь вы сможете найти эту информацию.
+
+            .section__box.section__box_wiki
+                +wiki('en')
+            .section__box.section__box_wiki
+                +wiki('','ru')

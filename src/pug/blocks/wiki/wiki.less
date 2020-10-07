@@ -1,0 +1,46 @@
+.wiki{
+
+    display: flex;
+    flex-direction: column;
+
+    &__letter{
+        .rem(20);
+        color: @bk;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 0 0 15px 20px;
+        margin-bottom: 15px;
+        border-bottom: 3px solid @red; 
+        @media @320{
+            margin-bottom: 10px;
+        }
+    }
+
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 60px 20px;
+        @media @320{
+            padding: 0 0 30px 20px;
+        }
+    }
+    &__value{
+        line-height: 200%;
+        .rem(16);
+        font-weight: 500;
+        color: @bl_middle;
+
+        &:hover{
+            color: @red;
+        }
+    }
+
+    &_hidden{
+        height: 0;
+        width: 0;
+        visibility: hidden;
+        margin: 0;
+        padding: 0;
+    }
+}
