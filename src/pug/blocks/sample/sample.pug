@@ -1,0 +1,49 @@
+mixin sample()
+    .sample
+        .sample__wrapper
+                img.sample__image.lazy(data-src="/assets/img/sample/sample_1.png", alt="")
+        .sample__content
+            .sample__title ООО «Компания Комси»
+            .sample__options
+                .sample__option 
+                    .sample__item Услуга: 
+                    .sample__value Разработка сайта
+                .sample__option 
+                    .sample__item Регион: 
+                    .sample__value Москва
+                .sample__option 
+                    .sample__item Сайт: 
+                    .sample__value  http://comsy.ru/
+            +button('Подробнее','button_trans','','/')
+    .sample
+        .sample__wrapper
+            img(data-src="/assets/img/sample/sample_2.png", alt="").sample__image.lazy
+        .sample__content
+            .sample__title ООО «ХастенсГрупп»
+            .sample__options
+                .sample__option 
+                    .sample__item Услуга: 
+                    .sample__value Разработка сайта
+                .sample__option 
+                    .sample__item Регион: 
+                    .sample__value Москва
+                .sample__option 
+                    .sample__item Сайт: 
+                    .sample__value http://service-park.ru/
+            +button('Подробнее','button_trans','','/')
+    .sample
+        .sample__wrapper
+            img(data-src="/assets/img/sample/sample_3.png", alt="").sample__image.lazy
+        .sample__content
+            .sample__title ООО «МОСЭНЕРГОТЕСТ»
+            .sample__options
+                .sample__option 
+                    .sample__item Услуга: 
+                    .sample__value Разработка сайта
+                .sample__option 
+                    .sample__item Регион: 
+                    .sample__value Москва
+                .sample__option 
+                    .sample__item Сайт: 
+                    .sample__value https://energo-sg.ru/
+            +button('Подробнее','button_trans','','/')

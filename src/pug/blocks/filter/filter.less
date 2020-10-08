@@ -1,0 +1,35 @@
+.filter{
+    display: flex;
+    flex-flow: wrap;
+    &__item{
+        height: 45px;
+        padding: 0 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: @bl_01;
+        color:  @bl_middle;
+        .rem(14);
+        font-weight: 600;
+        transition: all 0.2s;
+
+        &:hover,&:focus{
+            background-color: @bl_middle;
+            color: @wt;
+            transition: all 0.2s;
+        }
+        &_active{
+            background-color: @bl_middle;
+            color: @wt;
+        }
+
+        &:not(:last-child){
+            margin-right: 10px;
+            
+        }
+        @media @320{
+            margin-bottom: 10px;
+        }
+    }
+}

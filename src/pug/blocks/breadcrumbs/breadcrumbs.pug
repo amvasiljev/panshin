@@ -1,6 +1,7 @@
-mixin breadcrumbs()
+mixin breadcrumbs(link2,item)
     .breadcrumbs
         .breadcrumbs__inner
             a(href="/").breadcrumbs__link Главная
-            a(href="/").breadcrumbs__link Блог
-            .breadcrumbs__item Чат-боты для бизнеса. Принципы создания чат-ботов, примеры и сервисы для их разработки
+            if link2
+                a(href="/").breadcrumbs__link= link2
+            .breadcrumbs__item= item

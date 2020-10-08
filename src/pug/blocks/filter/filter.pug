@@ -1,0 +1,11 @@
+mixin filter(type1,type2)
+    .filter
+        if type1
+            a(href="/").filter__item.filter__item_active Все
+            a(href="/").filter__item Разработка сайтов
+            a(href="/").filter__item SEO
+            a(href="/").filter__item Контекст
+        else if type2
+            a(href="/").filter__item.filter__item_active Все
+            a(href="/").filter__item Текстовые отзывы
+            a(href="/").filter__item Видеоотзывы

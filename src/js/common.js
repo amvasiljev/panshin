@@ -447,7 +447,7 @@ function stepsMobile(e) {
 
 function reviewButtonMove(e) {
 
-  $('.review .button').each(function () {
+  $('.review .button_red').each(function () {
     if (e.matches) {
       $(this).prependTo($(this).parent().parent())
     } else {
