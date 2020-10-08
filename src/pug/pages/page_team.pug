@@ -1,45 +1,46 @@
-extends ../layout/main
+//- extends ../layout/main
 
 
 
 
-block variables
-    -var title = 'team'
-    -var description = 'team'
-    -var pageClass = ''
+//- block variables
+//-     -var title = 'team'
+//-     -var description = 'team'
+//-     -var pageClass = ''
 
-block content
-    +breadcrumbs()
+//- block content
+    
 
-    section.section
-        .section__inner
+//-     section.section
+//-         +breadcrumbs()
+//-         .section__inner
             
-            .section__box.section__box_sidebar
-                .section__text
-                    +title('Сотрудники','','h1','')
-                    p Мы - настоящая команда профессионалов своего дела. У нас работают самые квалифицированные специалисты со всей планеты. Мы делаем то, что любим и любим то, что делаем. Вот такой вот пример небольшой текста, чтобы не бить структуру страницы.
+//-             .section__box.section__box_sidebar
+//-                 .section__text
+//-                     +title('Сотрудники','','h1','')
+//-                     p Мы - настоящая команда профессионалов своего дела. У нас работают самые квалифицированные специалисты со всей планеты. Мы делаем то, что любим и любим то, что делаем. Вот такой вот пример небольшой текста, чтобы не бить структуру страницы.
                    
-                    .section__box.section__box_team
-                        +title('Менеджмент','title_border','','h2')
-                        +team('/assets/img/team/team_1.png','Алексей Паньшин',' Генеральный директор','Назвал компанию в честь самого себя, что свидетельствует о его невероятной скромности. Любит хороший кофе и вкусно покушать.')
-                        +team('/assets/img/team/team_2.png','Александр Князев','Технический директор','Не существует технической проблемы с сайтом, с которой Александр не справится. Руководитель проекта “SEO-CRM.ru”.')
+//-                     .section__box.section__box_team
+//-                         +title('Менеджмент','title_border','','h2')
+//-                         +team('/assets/img/team/team_1.png','Алексей Паньшин',' Генеральный директор','Назвал компанию в честь самого себя, что свидетельствует о его невероятной скромности. Любит хороший кофе и вкусно покушать.')
+//-                         +team('/assets/img/team/team_2.png','Александр Князев','Технический директор','Не существует технической проблемы с сайтом, с которой Александр не справится. Руководитель проекта “SEO-CRM.ru”.')
                         
-                        +title('Отдел маркетинга','title_border','','h2')
-                        +team('/assets/img/team/team_3.png','Игорь Калугин','Контекстолог-любитель','Занимается продвижением клиентов в Я.Директ, Я.Маркет и Google Adwords. Любит сложные задачи и большие бюджеты.')
-                        +team('/assets/img/team/team_4.png','Ирина Брычева','SMM-специалист','Любит деньги больше, чем котиков, поэтому старается создать продающий контент для Вашего бизнеса. Созданные Ириной посты, которые привлекут к себе внимание.')
+//-                         +title('Отдел маркетинга','title_border','','h2')
+//-                         +team('/assets/img/team/team_3.png','Игорь Калугин','Контекстолог-любитель','Занимается продвижением клиентов в Я.Директ, Я.Маркет и Google Adwords. Любит сложные задачи и большие бюджеты.')
+//-                         +team('/assets/img/team/team_4.png','Ирина Брычева','SMM-специалист','Любит деньги больше, чем котиков, поэтому старается создать продающий контент для Вашего бизнеса. Созданные Ириной посты, которые привлекут к себе внимание.')
                         
-                        +title('Отдел по работе с клиентами','title_border','','h2')
-                        +team('/assets/img/team/team_5.png','Наталья Кривницкая','Интернет-маркетолог','Пробег в сфере интернет рекламы почти 3 года. В прошлом – SEO специалист – продвижение клиентских сайтов в поиске.')
-                        +team('/assets/img/team/team_6.png','Станислав Колесов','Аккаунт-менеджер','Ведет наиболее сложных клиентов в агентстве. Любит твикс и колу в банке, боится голубей и розового цвета.')
+//-                         +title('Отдел по работе с клиентами','title_border','','h2')
+//-                         +team('/assets/img/team/team_5.png','Наталья Кривницкая','Интернет-маркетолог','Пробег в сфере интернет рекламы почти 3 года. В прошлом – SEO специалист – продвижение клиентских сайтов в поиске.')
+//-                         +team('/assets/img/team/team_6.png','Станислав Колесов','Аккаунт-менеджер','Ведет наиболее сложных клиентов в агентстве. Любит твикс и колу в банке, боится голубей и розового цвета.')
                         
 
-                .section__sidebar.section__sidebar_blog
+//-                 .section__sidebar.section__sidebar_blog
                    
-                    +banner()
+//-                     +banner()
                     
-                    +order('form_sidebar','','','order_blue','','sidebar')
-                    +social('sidebar')  
+//-                     +order('form_sidebar','','','order_blue','','sidebar')
+//-                     +social('sidebar')  
                     
-        section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
-            .section__inner.section__inner_feedback
-                +feedback('feedback')
+//-         section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
+//-             .section__inner.section__inner_feedback
+//-                 +feedback('feedback')

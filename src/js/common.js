@@ -632,7 +632,7 @@ $('.button-side__link').on('click', function () {
 function breadcrumbs(padding) {
   var crumbs = $('.breadcrumbs')
   if (crumbs.length > 0) {
-    var nextSection = crumbs.next().find('.section__inner')
+    var nextSection = crumbs.next('.section__inner')
     nextSection.css('padding-top', padding)
   }
 }
