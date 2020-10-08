@@ -275,6 +275,9 @@
         width: 100%;
         max-width: 680px;
         margin: 0 auto;
+        @media @768{
+            max-width: unset;
+        }
     }
 
     &__textarea {
@@ -385,5 +388,9 @@
         .feedback__doc{
             color: @wt;
         }
+    }
+
+    &_noshadow{
+        box-shadow: unset;
     }
 }

@@ -1,4 +1,4 @@
-mixin feedback(feedback,lead,cl,id)
+mixin feedback(feedback,lead,cl,id,short,page_404)
     if feedback
         .feedback#feedback
             
@@ -104,3 +104,57 @@ mixin feedback(feedback,lead,cl,id)
                                 a(href="/").feedback__doc политикой конфиденциальности
                     
                         +button('Узнать цену лида в моей нише ','button_red button_high','submit')
+
+    else if short
+        .feedback#feedback(class= cl)
+            
+            .feedback__title Связаться с нами
+            
+            form(action="/").feedback__form
+                
+                .feedback__inputs
+                    .feedback__box
+                        label.feedback__label(for="inputName") Ваше имя
+                        input#inputName.feedback__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
+                       
+                       
+                    .feedback__box
+                        label.feedback__label(for="inputEmail") Ваш e-mail
+                        input#inputEmail.feedback__input(type="email" placeholder='email@gmail.com' required autocomplete="off")
+                        
+
+
+                .feedback__bottom
+                       
+                        label(for="feedback_textarea").feedback__label Ваш комментарий
+                        textarea#feedback_textarea(name="" placeholder="Напишите здесь комментарий").feedback__textarea
+                    
+                        +button('Отправить','button_red button_high','submit')
+    else if page_404
+        .feedback#feedback(class= cl)
+            
+            .feedback__title Обязательно напишите нам, что именно вы искали
+            
+            form(action="/").feedback__form
+                
+                .feedback__inputs
+                    .feedback__box
+                        label.feedback__label(for="inputName") Ваше имя
+                        input#inputName.feedback__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
+                       
+                       
+                    .feedback__box
+                        label.feedback__label(for="inputEmail") Ваш e-mail
+                        input#inputEmail.feedback__input(type="email" placeholder='email@gmail.com' required autocomplete="off")
+                        
+
+
+                .feedback__bottom
+                       
+                        label(for="feedback_textarea").feedback__label Сообщение
+                        textarea#feedback_textarea(name="" placeholder="Напишите здесь свой вопрос или предложение").feedback__textarea
+                        .feedback__consent
+                            input.feedback__checkbox#feedback_consent(type="checkbox" checked)
+                            label.feedback__label.feedback__label_consent(for="feedback_consent") Согласен с обработкой моих персональных данных в соответствии с 
+                                a(href="/").feedback__doc политикой конфиденциальности
+                        +button('Отправить сообщение','button_red button_high','submit')

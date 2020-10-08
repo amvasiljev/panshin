@@ -111,6 +111,10 @@
             padding: 100px 0 0 0;
         }
 
+        &_404{
+            padding: 60px 0 100px;
+        }
+
 
     }
 
@@ -409,6 +413,23 @@
             }
             .pagination{
                 margin-top: 60px;
+            }
+        }
+        &_contacts{
+            display: flex;
+            justify-content: space-between;
+            flex-flow: wrap;
+            padding: 0 0 30px 0;
+
+            .contacts{
+                &:not(:last-child){
+                    width: calc(50% - 20px);
+                    @media @320{
+                        width: 100%;
+                    }
+                }
+
+              
             }
         }
 
@@ -800,6 +821,12 @@
     }
 
 
+    &__404{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 60px;
+    }
 
 
     &__assets {

@@ -1,0 +1,71 @@
+mixin contacts()
+    
+        .contacts
+            .contacts__title Телефоны
+                <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0V2.78949L10 8.44718L20 2.78949V0H0ZM0 4.57365V12.7531L5.094 7.45518L0 4.57365ZM20 4.57365L14.906 7.45518L20 12.7531V4.57365ZM6.49292 8.24733L0 15H20L13.5071 8.24733L10 10.2313L6.49292 8.24733Z" fill="#FF6D2A"/>
+                </svg>
+            .contacts__content
+            
+                .contacts__item
+                    .contacts__option Москва:
+                    a(href="tel:+74957263543").contacts__value +7 (495) 726-35-43
+                .contacts__item
+                    .contacts__option Краснодар:
+                    a(href="tel:+78612388581").contacts__value +7 (861) 238-85-81
+                .contacts__item
+                    .contacts__option Кемерово:
+                    a(href="tel:+73842765606").contacts__value +7 (384) 276-56-06
+                .contacts__item
+                    .contacts__option Харьков <span>(Украина)</span>:
+                    a(href="tel:+380577285986").contacts__value +38 (057) 728-59-86
+
+                
+    
+        .contacts
+            .contacts__title E-mail
+                <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.6667 0H1.33333C0.979711 0 0.640573 0.135459 0.390525 0.376577C0.140476 0.617695 0 0.944722 0 1.28571V16.7143C0 17.0553 0.140476 17.3823 0.390525 17.6234C0.640573 17.8645 0.979711 18 1.33333 18H10.6667C11.0203 18 11.3594 17.8645 11.6095 17.6234C11.8595 17.3823 12 17.0553 12 16.7143V1.28571C12 0.944722 11.8595 0.617695 11.6095 0.376577C11.3594 0.135459 11.0203 0 10.6667 0ZM6.66667 16.7143H5.33333V15.4286H6.66667V16.7143ZM1.33333 14.1429V1.28571H10.6667V14.1429H1.33333Z" fill="#FF6D2A"/>
+                </svg>
+            .contacts__content
+                .contacts__item
+                    .contacts__option По общим вопросам:
+                    a(href="mailto:office@apanshin.ru").contacts__value office@apanshin.ru
+                .contacts__item
+                    .contacts__option Отдел поддержки клиентов:
+                    a(href="mailto:manager@apanshin.ru").contacts__value manager@apanshin.ru
+                .contacts__item
+                    .contacts__option Отдел продаж:
+                    a(href="mailto:sales@apanshin.ru").contacts__value sales@apanshin.ru
+                .contacts__item
+                    .contacts__option Сотрудничество:
+                    a(href="mailto:director@apanshin.ru").contacts__value director@apanshin.ru
+                .contacts__item
+                    .contacts__option Служба персонала:
+                    a(href="mailto:hr@apanshin.ru").contacts__value hr@apanshin.ru
+                .contacts__item
+                    .contacts__option Служба контроля качества:
+                    a(href="mailto:control@apanshin.ru").contacts__value control@apanshin.ru
+    
+        .contacts
+            .contacts__title Адреса
+                <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.50001 0C3.35788 0 0 3.37535 0 7.53907C0 8.93152 0.271138 10.3697 1.04922 11.4063L7.50001 20L13.9508 11.4063C14.6575 10.4648 15 8.80032 15 7.53907C15 3.37535 11.6421 0 7.50001 0ZM7.50001 4.36645C9.24286 4.36645 10.6562 5.78713 10.6562 7.53905C10.6562 9.291 9.24286 10.7117 7.50001 10.7117C5.75715 10.7117 4.34384 9.291 4.34384 7.53907C4.34384 5.78713 5.75715 4.36645 7.50001 4.36645Z" fill="#FF6D2A"/>
+                </svg>
+
+            .contacts__content.contacts__content_maps
+                .contacts__item
+                    .contacts__option Москва:
+                    .contacts__text 107023, Россия, Москва, Семеновский переулок, д.15.
+                    .contacts__map
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.6037560681752!2d37.71394619506527!3d55.78275346864619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5356ce5d4c21b%3A0x1de028851d18fc64!2sSemenovskiy%20Pereulok%2C%2015%2C%20Moskva%2C%20107023!5e0!3m2!1sen!2sru!4v1602164936654!5m2!1sen!2sru"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                .contacts__item
+                    .contacts__option Краснодар:
+                    .contacts__text 350051, Россия, Краснодар, Федора Лузана, д.19
+                    .contacts__map
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.827887744199!2d38.977922915544276!3d45.06900237909822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f045937f4dc27d%3A0xe8cecb81b222d077!2z0YPQuy4g0JvRg9C30LDQvdCwLCAxOSwg0JrRgNCw0YHQvdC-0LTQsNGALCDQmtGA0LDRgdC90L7QtNCw0YDRgdC60LjQuSDQutGA0LDQuSwgMzUwMDUx!5e0!3m2!1sru!2sru!4v1602165096322!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                .contacts__item
+                    .contacts__option Харьков:
+                    .contacts__text 61052, Украина, Харьков, Полтавский шлях, д.31, оф.513.
+                    .contacts__map
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.2722769299326!2d36.21456131593195!3d49.98750452849413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a057d436ef1f%3A0x5ba90ea43af9ab4e!2z0YPQuy4g0J_QvtC70YLQsNCy0YHQutC40Lkg0KjQu9GP0YUsIDMxLCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDQuNC90LAsIDYxMDAw!5e0!3m2!1sru!2sru!4v1602165170858!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
