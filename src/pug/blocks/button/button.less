@@ -50,6 +50,7 @@
         color: @wt;
         background-color: @red;
         box-shadow: @button_2_box;
+        transition: all 0.2s;
 
         &:hover,
         &:focus {
@@ -63,6 +64,28 @@
             box-shadow: none;
             transition: all 0.2s;
         }
+        
+    }
+    &_red_2 {
+        color: @wt;
+        background-color: @red;
+        border: 2px solid @red;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            
+            border: 2px solid @wt;
+            transition: all 0.2s;
+        }
+
+        &:active {
+            background-color: transparent;
+            
+            border: 2px solid @wt;
+            transition: all 0.2s;
+        }
+        
     }
 
     &_trans {

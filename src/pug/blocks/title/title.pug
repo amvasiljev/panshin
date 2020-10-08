@@ -1,7 +1,7 @@
 mixin title(text,cl,h1,h2,h3)
     if h1
         .title(class= cl)
-            h1= text
+            h1!= text
     else if h2
         .title(class= cl)
             h2= text

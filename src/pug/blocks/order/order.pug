@@ -52,7 +52,7 @@ mixin order(id,land,request,cl,text,sidebar)
                     label.order__label.order__label_consent(for=id) Согласен с обработкой моих персональных данных в соответствии с 
                         a(href="/").order__doc политикой конфиденциальности
                 
-                +button('Отправить заявку','button_red button_high','submit')
+                +button('Отправить заявку','button_red_2 button_high','submit')
     else
         .order(class= cl)
             form(action="/").order__form

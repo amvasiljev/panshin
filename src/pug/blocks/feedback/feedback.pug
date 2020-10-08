@@ -1,4 +1,4 @@
-mixin feedback(feedback,lead,cl,id,short,page_404)
+mixin feedback(feedback,lead,cl,id,short,page_404,blue)
     if feedback
         .feedback#feedback
             
@@ -71,7 +71,7 @@ mixin feedback(feedback,lead,cl,id,short,page_404)
                     
                         +button('Отправить заявку','button_red button_high','submit')
 
-    else if lead
+    else if lead || blue
         .feedback#feedback(class= cl)
             
             .feedback__title Оставьте заявку и узнайте цену лида в своей нише в течение часа
@@ -102,8 +102,10 @@ mixin feedback(feedback,lead,cl,id,short,page_404)
                             input.feedback__checkbox(type="checkbox" checked id= id)
                             label.feedback__label.feedback__label_consent(for= id) Согласен с обработкой моих персональных данных в соответствии с 
                                 a(href="/").feedback__doc политикой конфиденциальности
-                    
-                        +button('Узнать цену лида в моей нише ','button_red button_high','submit')
+                        if blue
+                            +button('Узнать цену лида в моей нише ','button_red_2 button_high','submit')
+                        else
+                            +button('Узнать цену лида в моей нише ','button_red button_high','submit')
 
     else if short
         .feedback#feedback(class= cl)
@@ -128,8 +130,8 @@ mixin feedback(feedback,lead,cl,id,short,page_404)
                        
                         label(for="feedback_textarea").feedback__label Ваш комментарий
                         textarea#feedback_textarea(name="" placeholder="Напишите здесь комментарий").feedback__textarea
-                    
-                        +button('Отправить','button_red button_high','submit')
+                        
+                        +button('Отправить','button_red button_wide button_high','submit')
     else if page_404
         .feedback#feedback(class= cl)
             
@@ -157,4 +159,4 @@ mixin feedback(feedback,lead,cl,id,short,page_404)
                             input.feedback__checkbox#feedback_consent(type="checkbox" checked)
                             label.feedback__label.feedback__label_consent(for="feedback_consent") Согласен с обработкой моих персональных данных в соответствии с 
                                 a(href="/").feedback__doc политикой конфиденциальности
-                        +button('Отправить сообщение','button_red button_high','submit')
+                        +button('Отправить сообщение','button_red_2 button_high','submit')
