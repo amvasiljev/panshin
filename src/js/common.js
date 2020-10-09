@@ -373,6 +373,18 @@ $('.news').last().addClass('news_final');
 // end video
 
 
+// make 
+
+$('.make__number').on('click',function(){
+  var $this = $(this)
+  var total = $this.parent().parent().find('.make__total')
+  var price = $this.attr('data-price')
+  
+  $this.addClass('make__number_active')
+  $('.make__number').not($this).removeClass('make__number_active')
+  total.text(price)
+
+})
 
 
 
@@ -385,6 +397,14 @@ function breadCrumbsChange(e) {
     breadcrumbs(0)
   } else {
     breadcrumbs(45)
+  }
+}
+
+function makeButtonMove(e){
+  if (e.matches) {
+    $('.make .button').appendTo($('.make'))
+  } else {
+    $('.make .button').appendTo($('.make__content'))
   }
 }
 
@@ -547,6 +567,8 @@ function tableTransform(e) {
 
 mediaQuery_1023.addListener(tableTransform)
 tableTransform(mediaQuery_1023)
+mediaQuery_767.addListener(makeButtonMove)
+makeButtonMove(mediaQuery_767)
 mediaQuery_767.addListener(breadCrumbsChange)
 breadCrumbsChange(mediaQuery_767)
 mediaQuery_767.addListener(videoMobileSlider)

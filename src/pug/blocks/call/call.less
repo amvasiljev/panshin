@@ -1,0 +1,31 @@
+.call{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background: url(/assets/img/call.png) no-repeat 20px 100%,@form_subscribe_invert;
+    border-radius: 10px;
+    
+    &__text{
+        .rem(22);
+        color: @wt;
+        font-weight: 500;
+        line-height: 130%;
+        margin-bottom: 20px;
+        text-align: center;
+        max-width: 960px;
+        @media @320{
+            .rem(18);
+            line-height: 150%;
+        }
+    }
+    &__phone{
+        .rem(36);
+        color: @wt;
+        font-weight: 500;
+        line-height: 130%;
+        @media @320{
+            .rem(25);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+mixin make()
+    .make
+
+        
+        .make__content
+            .make__title Узнайте, сколько вы сможете зарабатывать в среднем в месяц на партнерской программе
+            +button('Начать зарабатывать','button_red button_high button_wide','','','#popup')
+        .make__calc
+
+        
+            .make__heading Со сколькими клиентами Вы сможете нас познакомить?
+            .make__box
+                .make__number(data-price="3000") 1
+                .make__number.make__number_active(data-price="6000") 2
+                .make__number(data-price="9000") 3
+                .make__number(data-price="12000") 4
+            .make__label Ваше вознаграждение в месяц:
+            .make__total 6 000

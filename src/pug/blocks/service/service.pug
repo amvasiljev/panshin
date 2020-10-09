@@ -1,10 +1,12 @@
-mixin service(show,name,cl,folder,sprite_name,text,cl1,content)
+mixin service(show,name,cl,folder,sprite_name,text,cl1,content,number)
     .service(class= cl1)
         if show
             .service__image
                 svg.service__icon(class= cl)
                     use(xlink:href="/assets/img/" + folder + "/sprite_" + sprite_name + ".svg#" + name)
-            .service__text= text
+            .service__text!= text
             if content
                 .service__content= content
+            else if number
+                .service__number= number
         else

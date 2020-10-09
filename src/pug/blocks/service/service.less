@@ -11,14 +11,15 @@
     width: calc(33% - 20px);
     padding: 0 36px;
     position: relative;
-    
+
     margin-bottom: 20px;
 
-    @media @768{
+    @media @768 {
         width: calc(50% - 20px);
         max-width: unset;
     }
-    @media @320{
+
+    @media @320 {
         width: 100%;
         margin-bottom: 10px;
         height: 200px;
@@ -40,37 +41,44 @@
         padding-bottom: 17px;
         justify-content: flex-start;
 
-        .service__text{
+        .service__text {
             flex: unset;
             margin-bottom: 15px;
         }
-        .service__image{
+
+        .service__image {
             flex: 0 0 130px;
         }
-        @media @320{
+
+        @media @320 {
             height: unset;
         }
     }
-    &_transparent{
+
+    &_transparent {
         background-color: transparent;
         background-image: none;
         border: 2px solid @bl_light;
         height: 220px;
-        &:before{
+
+        &:before {
             display: none;
         }
-        .service__text{
+
+        .service__text {
             color: @wt;
             flex: unset;
             margin-bottom: 7px;
         }
-        .service__content{
+
+        .service__content {
             color: @wt_07;
             transition: all 0.2s;
             flex: 0 0 62px;
         }
     }
-    &_advantage{
+
+    &_advantage {
         background-image: none;
         background-color: @wt;
         border: none;
@@ -82,9 +90,10 @@
         padding: 0;
         visibility: hidden;
         margin: 0;
-        @media @320{
+
+        @media @320 {
             min-height: unset;
-        height: 0;
+            height: 0;
         }
     }
 
@@ -122,18 +131,27 @@
                 fill: @wt;
                 // stroke: @wt;
             }
-            &_white{
+
+            &_white {
                 fill: @wt;
             }
         }
 
         .service__text {
-            transition: all 0.2s;
+
             color: @wt;
+            transition: all 0.2s;
         }
-        .service__content{
-            transition: all 0.2s;
+
+        .service__content {
+
             color: @wt;
+            transition: all 0.2s;
+        }
+
+        .service__number {
+            color: @wt;
+            transition: all 0.2s;
         }
     }
 
@@ -145,7 +163,12 @@
         transition: all 0.2s;
         z-index: 10;
         flex: 0 0 91px;
-        @media @320{
+
+        span {
+            color: @red;
+        }
+
+        @media @320 {
             .rem(16);
             flex: 0 0 71px;
 
@@ -171,6 +194,15 @@
         padding: 0 0 20px 0;
         align-items: flex-end;
 
+    }
+
+    &__number {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: @service_number;
+        .rem(30);
+        font-weight: 500;
     }
 
     &__icon {
@@ -200,11 +232,13 @@
                 color: @wt;
             }
         }
-        &_white{
+
+        &_white {
             fill: @bl_light_05;
-           &:hover{
-               color: @wt;
-           }
+
+            &:hover {
+                color: @wt;
+            }
         }
     }
 }

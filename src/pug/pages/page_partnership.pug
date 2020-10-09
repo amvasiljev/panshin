@@ -10,4 +10,25 @@ block variables
 
 block content
 
+    section.section.section_slider.lazy(data-src="/assets/img/banners/banner.png")
+        .section__inner.section__inner_slider
+            +slider_0('','','','','','partner')
+            +order('order','','','','Продвинуть сайт')
+            .section__arrows
+            .section__dots
+    section.section.section_blue_invert
+            
+        .section__inner
+            +title('Как это работает','','h1','')
+            .section__box.section__box_services
+                +service('show','ps_1','service__icon_red','partnership','ps','Вы знакомите нас с клиентом. По почте, телефону, лично.','service_white','','01')
+                +service('show','ps_2','service__icon_red','partnership','ps','Мы заключаем сделку и начинаем работать','service_white','','02')
+                +service('show','ps_3','service__icon_red','partnership','ps','Вы каждый месяц получаете <span>10% от суммы сделки</span>','service_white','','03')
+    
     section.section
+        .section__inner.section__inner_call
+            +call()
+    section.section.section_blue_invert
+        .section__inner.section__inner_call
+            +make()
+        
