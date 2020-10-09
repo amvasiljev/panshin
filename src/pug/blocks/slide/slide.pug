@@ -1,5 +1,5 @@
-mixin slide(title,text,box,list)
-    .slide
+mixin slide(title,text,box,list,offer)
+    .slide(class= cl)
         .slide__title!= title
         if text
             .slide__text= text
@@ -20,3 +20,6 @@ mixin slide(title,text,box,list)
                 li На 60% увеличим посещаемость
                 li В 2,5 раза — количество звонков и заявок
                 li В среднем за 4 месяца.
+
+        else if offer
+            .slide__offer Платим от 10% бюджета

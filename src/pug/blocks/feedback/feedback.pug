@@ -1,6 +1,6 @@
-mixin feedback(feedback,lead,cl,id,short,page_404,blue)
+mixin feedback(feedback,lead,cl,id,short,page_404,blue,pf)
     if feedback
-        .feedback#feedback
+        .feedback#feedback.feedback_order
             
             .feedback__title Форма онлайн-заказа
             .feedback__subtitle Для расчёта стоимости услуг вам достаточно заполнить простую онлайн-форму
@@ -159,4 +159,34 @@ mixin feedback(feedback,lead,cl,id,short,page_404,blue)
                             input.feedback__checkbox#feedback_consent(type="checkbox" checked)
                             label.feedback__label.feedback__label_consent(for="feedback_consent") Согласен с обработкой моих персональных данных в соответствии с 
                                 a(href="/").feedback__doc политикой конфиденциальности
-                        +button('Отправить сообщение','button_red_2 button_high','submit')
+                        +button('Отправить сообщение','button_red_2 button_high button_wide ','submit')
+    else if pf
+        .feedback#feedback(class= cl)
+            
+            .feedback__title Оставьте заявку и узнайте стоимость разработки своего проекта
+            
+            form(action="/").feedback__form
+                
+                .feedback__inputs
+                    .feedback__box
+                        label.feedback__label(for="inputName") Ваше имя
+                        input#inputName.feedback__input(type="text" placeholder='Иванов Иван' required autocomplete="off")
+                        label.feedback__label(for="inputTel") Номер телефона
+                        input#inputTel.feedback__input.feedback__input_phone(type="tel" placeholder='Телефон' required autocomplete="off")
+                       
+                    .feedback__box
+                        label.feedback__label(for="inputEmail") Ваш e-mail
+                        input#inputEmail.feedback__input(type="email" placeholder='email@gmail.com' required autocomplete="off")
+                        label.feedback__label(for="inputUrl") Ваша ниша
+                        input#inputUrl.feedback__input(type="text" placeholder='Металлургия' required autocomplete="off")
+
+
+                .feedback__bottom
+                       
+                        label(for="feedback_textarea").feedback__label Опишите задачу
+                        textarea#feedback_textarea(name="" placeholder="Расскажите о своем проекте").feedback__textarea
+                        .feedback__consent
+                            input.feedback__checkbox#feedback_consent(type="checkbox" checked)
+                            label.feedback__label.feedback__label_consent(for="feedback_consent") Согласен с обработкой моих персональных данных в соответствии с 
+                                a(href="/").feedback__doc политикой конфиденциальности
+                        +button('Узнать стоимость','button_red_2 button_high button_wide','submit')
