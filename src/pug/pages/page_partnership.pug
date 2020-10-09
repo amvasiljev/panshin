@@ -31,4 +31,13 @@ block content
     section.section.section_blue_invert
         .section__inner.section__inner_call
             +make()
+    section.section
+        .section__inner
+            +title('Часто-задаваемые вопросы','','','h2')
+            
+            +faq()
+
+    section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
+        .section__inner.section__inner_feedback
+            +feedback('','','feedback_order','','short')
         

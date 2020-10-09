@@ -387,6 +387,29 @@ $('.make__number').on('click',function(){
 })
 
 
+// faq
+$('.faq__answer').eq(0).show()
+$('.faq').on('click',function(){
+  var $this = $(this)
+  var question = $this.find('.faq__question')
+  var answer = $this.find('.faq__answer')
+
+  $this.toggleClass('faq_open')
+  // $('.faq').not($this).removeClass('faq_open')
+
+  answer.slideToggle(300)
+
+
+})
+
+
+
+
+
+
+// media-query function
+
+
 
 const mediaQuery_767 = window.matchMedia('(max-width: 767px)')
 const mediaQuery_1023 = window.matchMedia('(max-width: 1023px)')
