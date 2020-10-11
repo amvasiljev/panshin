@@ -14,6 +14,11 @@
     box-shadow: @box_services;
     margin-bottom: 30px;
 
+    @media @320{
+        padding: 30px 16px 30px 30px;
+        align-items: flex-end;
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -23,9 +28,13 @@
         height: 100%;
         background-image: @action;
         border-radius: 10px;
+
+        @media @320{
+            background-image: @action_mobile;
+        }
     }
 
-    &__title {
+    .action__title {
         font-style: normal;
         font-weight: 600;
         .rem(20);
@@ -34,8 +43,17 @@
         z-index: 10;
         max-width: 320px;
         width: 100%;
+
+        @media  @320{
+            .rem(18);
+        }
         span{
             color: @red;
+            .rem(20);
+
+            @media  @320{
+                .rem(18);
+            }
         }
     }
 }
