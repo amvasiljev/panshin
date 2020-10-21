@@ -1,104 +1,104 @@
-//- extends ../layout/main
+extends ../layout/main
 
 
 
 
-//- block variables
-//-     -var title = 'lead generation'
-//-     -var description = 'lead generation'
-//-     -var pageClass = ''
+block variables
+    -var title = 'lead generation'
+    -var description = 'lead generation'
+    -var pageClass = ''
 
-//- block content
-//-         section.section.section_slider.lazy(data-src="/assets/img/banners/banner.png")
-//-             .section__inner.section__inner_slider
-//-                 +slider_0('','','lead')
-//-                 +order('order','','','','Продвинуть сайт')
-//-                 .section__arrows
-//-                 .section__dots
+block content
+        section.section.section_slider.lazy(data-src="/assets/img/banners/banner.png")
+            .section__inner.section__inner_slider
+                +slider_0('','','lead')
+                +order('order','','','','Продвинуть сайт')
+                .section__arrows
+                .section__dots
             
         
-//-         section.section
-//-             +breadcrumbs('','Лидогенерация')
-//-             .section__inner.section__inner_text
-//-                 +title('Лидогенерация','','h1','')
-//-                 .section__text
-//-                     p Наша компания готова предоставить большой поток реальных сообщений, обращений и конкретных заявок к Вашей фирме. Для привлечения потенциальных клиентов мы осуществляем качественную лидогенерацию под ключ. Удобный и эффективный механизм включает комплекс действенных приемов: от создания лендингов до запуска контекстной рекламы и SEO.
+        section.section
+            +breadcrumbs('','Лидогенерация')
+            .section__inner.section__inner_text
+                +title('Лидогенерация','','h1','')
+                .section__text
+                    p Наша компания готова предоставить большой поток реальных сообщений, обращений и конкретных заявок к Вашей фирме. Для привлечения потенциальных клиентов мы осуществляем качественную лидогенерацию под ключ. Удобный и эффективный механизм включает комплекс действенных приемов: от создания лендингов до запуска контекстной рекламы и SEO.
 
-//-                     p Мы осуществляем продажу лидов по тематике ремонт квартир стоимостью от 350 руб. за лид. Надежная технология отсеивания некачественных запросов гарантирует большое количество лидов. Воспользовавшись нашим предложением, вы получите постоянный поток целевых клиентов, которые выведут строительный бизнес на конкурентный уровень.
-//-                     p &nbsp;
-//-                     h2 Стоимость услуг
+                    p Мы осуществляем продажу лидов по тематике ремонт квартир стоимостью от 350 руб. за лид. Надежная технология отсеивания некачественных запросов гарантирует большое количество лидов. Воспользовавшись нашим предложением, вы получите постоянный поток целевых клиентов, которые выведут строительный бизнес на конкурентный уровень.
+                    p &nbsp;
+                    h2 Стоимость услуг
 
-//-                     +table()
-//-                 .section__box.section__box_feedback
-//-                     +feedback('','lead','feedback_blue','formLeadBlue','','','blue')
+                    +table()
+                .section__box.section__box_feedback
+                    +feedback('','lead','feedback_blue','formLeadBlue','','','blue')
                 
-//-         section.section
-//-             .section__inner
-//-                 +title('Преимущества','','','h2')
-//-                 .section__box.section__box_services
-//-                     +service('show','service_10','service__icon_srv','services','main','Выделенный менеджер','service_advantage')
-//-                     +service('show','service_11','service__icon_srv','services','main','Гибкий арбитраж и собственная система контроля качества','service_advantage')
-//-                     +service('show','service_12','service__icon_srv','services','main','Анализ обратной связи и постоянная работа над качеством лидов','service_advantage')
+        section.section
+            .section__inner
+                +title('Преимущества','','','h2')
+                .section__box.section__box_services
+                    +service('show','service_10','service__icon_srv','services','main','Выделенный менеджер','service_advantage')
+                    +service('show','service_11','service__icon_srv','services','main','Гибкий арбитраж и собственная система контроля качества','service_advantage')
+                    +service('show','service_12','service__icon_srv','services','main','Анализ обратной связи и постоянная работа над качеством лидов','service_advantage')
 
-//-         section.section.section_blue_invert
-//-             .section__inner
-//-                 +title('Условия сотрудничества','','','h2')
-//-                 .section__box.section__box_services
-//-                     +service('show','condition_2','service__icon_blue','solutions/condition','condition','Оплачиваются лиды (звонки и заявки), а не продажи','service_white')
-//-                     +service('show','condition_1','service__icon_blue','solutions/condition','condition','Источник трафика: поисковый трафик и контекстная реклама','service_white')
-//-                     +service('show','condition_3','service__icon_blue','solutions/condition','condition','Предоплата за 30 лидов','service_white')
+        section.section.section_blue_invert
+            .section__inner
+                +title('Условия сотрудничества','','','h2')
+                .section__box.section__box_services
+                    +service('show','condition_2','service__icon_blue','solutions/condition','condition','Оплачиваются лиды (звонки и заявки), а не продажи','service_white')
+                    +service('show','condition_1','service__icon_blue','solutions/condition','condition','Источник трафика: поисковый трафик и контекстная реклама','service_white')
+                    +service('show','condition_3','service__icon_blue','solutions/condition','condition','Предоплата за 30 лидов','service_white')
 
-//-         section.section.section_deepblue.section_city.lazy(data-src="/assets/img/map.png")
-//-             .section__inner
-//-                 +title('Работаем в городах','title_white','','')
-//-                 .section__box.section__box_city
-//-                     ul
-//-                         li Москва
-//-                         li Санкт-Петербург
-//-                         li Новосибирск
-//-                         li Екатеринбург
-//-                         li Нижний Новгород
-//-                         li Казань
-//-                         li Челябинск
-//-                         li Омск
-//-                         li Самара
-//-                         li Ростов-на-Дону 
+        section.section.section_deepblue.section_city.lazy(data-src="/assets/img/map.png")
+            .section__inner
+                +title('Работаем в городах','title_white','','')
+                .section__box.section__box_city
+                    ul
+                        li Москва
+                        li Санкт-Петербург
+                        li Новосибирск
+                        li Екатеринбург
+                        li Нижний Новгород
+                        li Казань
+                        li Челябинск
+                        li Омск
+                        li Самара
+                        li Ростов-на-Дону 
 
-//-                         li Уфа
-//-                         li Красноярск
-//-                         li Пермь
-//-                         li Воронеж
-//-                         li Волгоград
-//-                         li Краснодар
-//-                         li Саратов
-//-                         li Тюмень
-//-                         li Тольятти
+                        li Уфа
+                        li Красноярск
+                        li Пермь
+                        li Воронеж
+                        li Волгоград
+                        li Краснодар
+                        li Саратов
+                        li Тюмень
+                        li Тольятти
 
-//-                         li Ижевск
-//-                         li Барнаул
-//-                         li Ульяновск
-//-                         li Иркутск
-//-                         li Хабаровск
-//-                         li Ярославль
-//-                         li Владивосток
-//-                         li Махачкала
-//-                         li Томск
+                        li Ижевск
+                        li Барнаул
+                        li Ульяновск
+                        li Иркутск
+                        li Хабаровск
+                        li Ярославль
+                        li Владивосток
+                        li Махачкала
+                        li Томск
 
-//-                         li Оренбург
-//-                         li Кемерово
-//-                         li Новокузнецк
-//-                         li Рязань
-//-                         li Астрахань
-//-                         li Набережные Челны
-//-                         li Пенза
-//-                         li Липецк
-//-                         li Киров
+                        li Оренбург
+                        li Кемерово
+                        li Новокузнецк
+                        li Рязань
+                        li Астрахань
+                        li Набережные Челны
+                        li Пенза
+                        li Липецк
+                        li Киров
 
-//-         section.section
-//-             .section__inner
-//-                 +title('Отзывы клиентов','','','h2')
-//-                 +slider_reviews()
+        section.section
+            .section__inner
+                +title('Отзывы клиентов','','','h2')
+                +slider_reviews()
 
-//-         section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
-//-             .section__inner.section__inner_feedback
-//-                 +feedback('','lead','','formLead','','','')
+        section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
+            .section__inner.section__inner_feedback
+                +feedback('','lead','','formLead','','','')

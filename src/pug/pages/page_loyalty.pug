@@ -1,42 +1,42 @@
-//- extends ../layout/main
+extends ../layout/main
 
 
 
 
-//- block variables
-//-     -var title = 'loyalty'
-//-     -var description = 'loyalty'
-//-     -var pageClass = ''
+block variables
+    -var title = 'loyalty'
+    -var description = 'loyalty'
+    -var pageClass = ''
 
-//- block content
+block content
     
 
-//-     section.section
-//-         +breadcrumbs('','Программа привелегий')
-//-         .section__inner
+    section.section
+        +breadcrumbs('','Программа привелегий')
+        .section__inner
             
-//-             .section__box.section__box_sidebar
-//-                 .section__text
-//-                     +title('Программа привелегий','','h1','')
-//-                     p Программы привилегий и лояльности от Паньшин Групп – отличная возможность сэкономить ваш бюджет на продвижение и получить скидку!
-//-                     +title('На данный момент действуют следующие акции:','','','','h3')
-//-                     .section__box.section__box_actions
+            .section__box.section__box_sidebar
+                .section__text
+                    +title('Программа привелегий','','h1','')
+                    p Программы привилегий и лояльности от Паньшин Групп – отличная возможность сэкономить ваш бюджет на продвижение и получить скидку!
+                    +title('На данный момент действуют следующие акции:','','','','h3')
+                    .section__box.section__box_actions
                        
-//-                         +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
-//-                         +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
-//-                         +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
-//-                         +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
-//-                         +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
-//-                         +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
-//-                         +pagination()
+                        +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
+                        +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
+                        +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
+                        +action('/assets/img/actions/action_1.jpg','Подарок всем клиентам по разработке сайта – <span>внутренняя оптимизация бесплатно!</span>')
+                        +action('/assets/img/actions/action_2.jpg','Бесплатный <span>аудит контекстной рекламы</span> – для клиентов из РФ.')
+                        +action('/assets/img/actions/action_3.jpg','При подписании договора на <span>поисковое продвижение</span> и одновременной оплате 3 месяцев 10% скидка')
+                        +pagination()
 
-//-                 .section__sidebar.section__sidebar_blog
+                .section__sidebar.section__sidebar_blog
                    
-//-                     +banner()
+                    +banner()
                     
-//-                     +order('form_sidebar','','','order_blue','','sidebar')
-//-                     +social('sidebar')  
+                    +order('form_sidebar','','','order_blue','','sidebar')
+                    +social('sidebar')  
 
-//-         section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
-//-             .section__inner.section__inner_feedback
-//-                 +feedback('feedback')
+        section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
+            .section__inner.section__inner_feedback
+                +feedback('feedback')

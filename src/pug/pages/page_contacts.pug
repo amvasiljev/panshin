@@ -1,18 +1,18 @@
-//- extends ../layout/main
+extends ../layout/main
 
 
 
 
-//- block variables
-//-     -var title = 'contacts'
-//-     -var description = 'contacts'
-//-     -var pageClass = ''
+block variables
+    -var title = 'contacts'
+    -var description = 'contacts'
+    -var pageClass = ''
 
-//- block content
-//-     section.section
-//-         +breadcrumbs('','Контакты')
-//-         .section__inner
-//-             +title('Контакты','','h1','')
-//-             .section__box.section__box_contacts
-//-                 +contacts()
-//-             +feedback('','','feedback_noshadow','','short')
+block content
+    section.section
+        +breadcrumbs('','Контакты')
+        .section__inner
+            +title('Контакты','','h1','')
+            .section__box.section__box_contacts
+                +contacts()
+            +feedback('','','feedback_noshadow','','short')
