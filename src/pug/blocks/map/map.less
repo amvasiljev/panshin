@@ -1,16 +1,18 @@
 .map-mo {
     position: relative;
-    @media @320{
+
+    @media @320 {
         display: flex;
         flex-flow: wrap;
         padding: 30px 0 0 0;
     }
 
-    &__img{
-        @media @320{
+    &__img {
+        @media @320 {
             display: none;
         }
     }
+
     &__link {
         position: absolute;
         font-style: normal;
@@ -22,7 +24,8 @@
         @media @768 {
             .rem(10);
         }
-        @media @320{
+
+        @media @320 {
             .rem(14);
             position: unset;
             width: calc(50% - 15px);
@@ -437,6 +440,14 @@
         &_losin {
             top: 37.2842348%;
             left: 65.7236126%
+        }
+
+        &_msk {
+            top: 44%;
+            left: 46%;
+            font-weight: bold;
+            font-size: 16px;
+            color: @bk_light;
         }
     }
 }
