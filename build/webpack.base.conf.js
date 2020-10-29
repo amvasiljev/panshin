@@ -12,7 +12,7 @@ const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
 const PATHS = {
   src: path.join(__dirname, '../src'),
-  dist: path.join(__dirname, '../dist'),
+  docs: path.join(__dirname, '../docs'),
   assets: 'assets/'
 }
 
@@ -33,7 +33,7 @@ module.exports = {
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
-    path: PATHS.dist,
+    path: PATHS.docs,
     publicPath: '/'
   },
   optimization: {
@@ -128,7 +128,7 @@ module.exports = {
   // resolve: {
   //   alias: {
   //     '~': PATHS.src,
-  //     'vue$': 'vue/dist/vue.js',
+  //     'vue$': 'vue/docs/vue.js',
   //   }
   // },
   plugins: [
