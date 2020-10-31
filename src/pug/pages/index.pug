@@ -1,96 +1,96 @@
-extends ../layout/main
+//- extends ../layout/main
 
 
 
 
-block variables
-    -var title = 'index'
-    -var description = 'index'
-    -var pageClass = ''
+//- block variables
+//-     -var title = 'index'
+//-     -var description = 'index'
+//-     -var pageClass = ''
  
-block content
-    section.section.section_slider.lazy(data-src="/assets/img/banners/banner.png")
-            .section__inner.section__inner_slider
-                +slider_0('main')
-                +order('order','','','','Продвинуть сайт')
-                .section__arrows
-                .section__dots
+//- block content
+//-     section.section.section_slider.lazy(data-src="/assets/img/banners/banner.png")
+//-             .section__inner.section__inner_slider
+//-                 +slider_0('main')
+//-                 +order('order','','','','Продвинуть сайт')
+//-                 .section__arrows
+//-                 .section__dots
 
-    section.section
-        .section__inner 
-            +title('Услуги интернет-маркетинга','','h1')
-            .section__box.section__box_services
-                +service('show','service_1','service__icon_srv','services','main','Поисковое продвижение (SEO)')
-                +service('show','service_2','service__icon_srv','services','main','Контекстная реклама')
-                +service('show','service_3','service__icon_srv','services','main','Разработка сайтов')
-                +service('show','service_4','service__icon_srv','services','main','Управление репутацией (SERM)')
-                +service('show','service_5','service__icon_srv','services','main','Аудиты сайтов и РК')
-                +service('show','service_6','service__icon_srv','services','main','Техническая поддержка')
-                +service('show','service_7','service__icon_srv','services','main','Продвижение в социальных сетях (SMM)')
-                +service('show','service_8','service__icon_srv','services','main','Обучение и консалтинг')
-                +service('show','service_9','service__icon_srv','services','main','Автоматизация')
+//-     section.section
+//-         .section__inner 
+//-             +title('Услуги интернет-маркетинга','','h1')
+//-             .section__box.section__box_services
+//-                 +service('show','service_1','service__icon_srv','services','main','Поисковое продвижение (SEO)')
+//-                 +service('show','service_2','service__icon_srv','services','main','Контекстная реклама')
+//-                 +service('show','service_3','service__icon_srv','services','main','Разработка сайтов')
+//-                 +service('show','service_4','service__icon_srv','services','main','Управление репутацией (SERM)')
+//-                 +service('show','service_5','service__icon_srv','services','main','Аудиты сайтов и РК')
+//-                 +service('show','service_6','service__icon_srv','services','main','Техническая поддержка')
+//-                 +service('show','service_7','service__icon_srv','services','main','Продвижение в социальных сетях (SMM)')
+//-                 +service('show','service_8','service__icon_srv','services','main','Обучение и консалтинг')
+//-                 +service('show','service_9','service__icon_srv','services','main','Автоматизация')
 
-    section.section.section_deepblue
-        .section__inner
-            +title('Компетентность агентства в цифрах','title_white title_42','','')
-            .section__box.section__box_numbers
-                +digit('10 лет опыта','Компания успешно работает для вас с 2010 года')
-                +digit('3 офиса','Москва, Краснодар, Харьков')
-                +digit('42 специалиста','В штате компании')
-                +digit('57','Проверенных стратегий продвижения')
-                +digit('Из 118','Ниш бизнеса наши клиенты')
-                +digit('86 отзывов','О нашей работе на сайте и в интернете')
-                +digit('42 дня','До ТОПа с момента старта работ. Наш рекорд по SEO')
-                +digit('32','Фильтров ПС снято. Гастролируем по Минусинскам и Баден-Баденам')
-                +digit('0','Фильтров получено от ПС. Мы работаем над этим :)')
+//-     section.section.section_deepblue
+//-         .section__inner
+//-             +title('Компетентность агентства в цифрах','title_white title_42','','')
+//-             .section__box.section__box_numbers
+//-                 +digit('10 лет опыта','Компания успешно работает для вас с 2010 года')
+//-                 +digit('3 офиса','Москва, Краснодар, Харьков')
+//-                 +digit('42 специалиста','В штате компании')
+//-                 +digit('57','Проверенных стратегий продвижения')
+//-                 +digit('Из 118','Ниш бизнеса наши клиенты')
+//-                 +digit('86 отзывов','О нашей работе на сайте и в интернете')
+//-                 +digit('42 дня','До ТОПа с момента старта работ. Наш рекорд по SEO')
+//-                 +digit('32','Фильтров ПС снято. Гастролируем по Минусинскам и Баден-Баденам')
+//-                 +digit('0','Фильтров получено от ПС. Мы работаем над этим :)')
 
-    section.section
-        .section__inner
-            +title('Наши клиенты','','','h2')
-            .section__box.section__box_client
-                +client('/assets/img/clients/client_1.png','SEO-продвижение','Cemtec','client_page')
-                +client('/assets/img/clients/client_2.png','Управление репутацией','Quaker','client_page')
-                +client('/assets/img/clients/client_3.png','Продвижение в социальных сетях','TeleAdapt','client_page')
-                +client('/assets/img/clients/client_4.png','SEO-продвижение','ASK','client_page')
-                +client('/assets/img/clients/client_5.png','Разработка сайта','Zimmatic','client_page')
-                +client('/assets/img/clients/client_1.png','SEO-продвижение','Cemtec','client_page')
-                +client('/assets/img/clients/client_2.png','Управление репутацией','Quaker','client_page')
-                +client('/assets/img/clients/client_3.png','Продвижение в социальных сетях','TeleAdapt','client_page')
-                +client('/assets/img/clients/client_4.png','SEO-продвижение','ASK','client_page')
-                +client('/assets/img/clients/client_5.png','Разработка сайта','Zimmatic','client_page')
-                +client('','','','client_hidden')
-                +client('','','','client_hidden')
-                +client('','','','client_hidden')
-                +client('','','','client_hidden')
-            //- .section__buttons
-                +button('Отзывы клиентов','button_blue')
-                +button('Портфолио','button_blue')
-
-
-
-    section.section.section_blue_invert
-        .section__inner
-            +title('Как начать работать','','','h2')
-            +tabs()
-            .section__box.section__box_steps
-                +case('','case_step','step_1')
-                +case('','case_step','step_2')
-                +case('','case_step','step_3')
-                +case('','case_step','step_4')
-                +case('','case_step','step_5')
-
-    section.section
-        .section__inner
-            +title('Новости и публикации блога','','','h2')
-            .section__box.section__box_news
-                +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
-                +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
-                +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
-            .section__buttons
-                +button('Больше публикаций','button_blue')
+//-     section.section
+//-         .section__inner
+//-             +title('Наши клиенты','','','h2')
+//-             .section__box.section__box_client
+//-                 +client('/assets/img/clients/client_1.png','SEO-продвижение','Cemtec','client_page')
+//-                 +client('/assets/img/clients/client_2.png','Управление репутацией','Quaker','client_page')
+//-                 +client('/assets/img/clients/client_3.png','Продвижение в социальных сетях','TeleAdapt','client_page')
+//-                 +client('/assets/img/clients/client_4.png','SEO-продвижение','ASK','client_page')
+//-                 +client('/assets/img/clients/client_5.png','Разработка сайта','Zimmatic','client_page')
+//-                 +client('/assets/img/clients/client_1.png','SEO-продвижение','Cemtec','client_page')
+//-                 +client('/assets/img/clients/client_2.png','Управление репутацией','Quaker','client_page')
+//-                 +client('/assets/img/clients/client_3.png','Продвижение в социальных сетях','TeleAdapt','client_page')
+//-                 +client('/assets/img/clients/client_4.png','SEO-продвижение','ASK','client_page')
+//-                 +client('/assets/img/clients/client_5.png','Разработка сайта','Zimmatic','client_page')
+//-                 +client('','','','client_hidden')
+//-                 +client('','','','client_hidden')
+//-                 +client('','','','client_hidden')
+//-                 +client('','','','client_hidden')
+//-             //- .section__buttons
+//-                 +button('Отзывы клиентов','button_blue')
+//-                 +button('Портфолио','button_blue')
 
 
 
-    section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
-        .section__inner.section__inner_feedback
-            +feedback('feedback')
+//-     section.section.section_blue_invert
+//-         .section__inner
+//-             +title('Как начать работать','','','h2')
+//-             +tabs()
+//-             .section__box.section__box_steps
+//-                 +case('','case_step','step_1')
+//-                 +case('','case_step','step_2')
+//-                 +case('','case_step','step_3')
+//-                 +case('','case_step','step_4')
+//-                 +case('','case_step','step_5')
+
+//-     section.section
+//-         .section__inner
+//-             +title('Новости и публикации блога','','','h2')
+//-             .section__box.section__box_news
+//-                 +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
+//-                 +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
+//-                 +news('','/assets/img/news/news_2.png','Заголовок публикации','И нет сомнений, что тщательные исследования конкурентов неоднозначны и будут объективно рассмотрены соответствующими инстанциями.','','')
+//-             .section__buttons
+//-                 +button('Больше публикаций','button_blue')
+
+
+
+//-     section.section.section_deepblue.section_feedback.lazy(data-src="/assets/img/feedback.png")
+//-         .section__inner.section__inner_feedback
+//-             +feedback('feedback')

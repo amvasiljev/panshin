@@ -1,0 +1,27 @@
+.top{
+
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 60px;
+    right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: @top_grad;
+    border-radius: 50%;
+    box-shadow: @top_shadow;
+    cursor: pointer;
+    z-index: 400;
+    display: none;
+    @media @320{
+        height: 44px;
+        width: 44px;
+        bottom: 30px;
+        right: 10px;
+        svg{
+            width: 13px;
+
+        }
+    }
+}

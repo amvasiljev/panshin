@@ -30,11 +30,20 @@
             padding: 12px 15px;
 
         }
-        &_scroll{
-            @media @320{
-                height: 99px;
+
+        &_scroll {
+            @media @320 {
+                height: 100px;
+                justify-content: space-between;
+                box-shadow: 0px 4px 10px #CCD7EC;
+            }
+
+            .button{
+                order: 1;
             }
         }
+
+        
     }
 
     &__logo {
@@ -55,6 +64,15 @@
             height: 69px;
             order: 1;
             flex: 1;
+        }
+
+        &_scroll {
+            @media @320 {
+                width: 52px;
+                height: 52px;
+                flex: unset;
+                background-image: url(/assets/img/logo_mobile.svg) !important;
+            }
         }
     }
 
@@ -80,11 +98,13 @@
         }
 
         &_mobile {
-            @media @768,@320 {
+
+            @media @768,
+            @320 {
                 display: block;
                 width: 200px;
                 height: unset;
-                
+
                 margin: 0;
                 padding: 0 0 0 20px;
             }
@@ -97,9 +117,10 @@
         font-weight: normal;
         .rem(14);
 
-        @media @768,@320{
+        @media @768,
+        @320 {
             margin-right: 0;
-            
+
             margin-bottom: 20px;
             display: block;
         }
@@ -139,9 +160,11 @@
             padding: 0;
         }
 
-        &_hide{
-            @media @320{
-                display: none;
+        &_scroll {
+            @media @320 {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
             }
         }
     }
@@ -150,6 +173,14 @@
 
         @media @768 {
             padding: 0 15px 0 0;
+        }
+
+        &_scroll{
+            @media @320{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            }
         }
     }
 
@@ -168,7 +199,7 @@
         background-color: @wt;
         border-radius: 5px;
 
-        @media @320{
+        @media @320 {
             right: unset;
             left: 0;
             padding: 0 20px 0 0;
@@ -183,6 +214,11 @@
         &_wrapper {
             position: relative;
             min-height: 20px;
+            &_scroll{
+                @media @320{
+                    width: 100px;
+                }
+            }
         }
 
         &_arrow {
@@ -212,7 +248,7 @@
         .rem(14);
         color: @bl_middle;
 
-        @media @320{
+        @media @320 {
             align-items: flex-start;
         }
 
@@ -246,10 +282,12 @@
         @media @768 {
             .rem(24);
         }
-        @media @320{
+
+        @media @320 {
             .rem(18);
         }
-        @media @300{
+
+        @media @300 {
             .rem(14);
         }
     }
