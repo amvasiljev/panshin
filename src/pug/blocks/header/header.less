@@ -31,6 +31,9 @@
 
         }
 
+        &_short{
+            height: 80px;
+        }
         &_scroll {
             @media @320 {
                 height: 100px;
@@ -38,12 +41,13 @@
                 box-shadow: 0px 4px 10px #CCD7EC;
             }
 
-            .button{
+            .button {
                 order: 1;
             }
         }
 
-        
+
+
     }
 
     &__logo {
@@ -74,6 +78,11 @@
                 background-image: url(/assets/img/logo_mobile.svg) !important;
             }
         }
+
+        &_short{
+            width: 170px;
+            height: 58px;
+        }
     }
 
     &__links {
@@ -83,7 +92,8 @@
         justify-content: space-between;
         height: 49px;
         margin-left: 140px;
-        width: 300px;
+        // width: 300px;
+        flex: 1;
 
         @media @1024 {
             margin-left: 100px;
@@ -132,6 +142,21 @@
         &:focus {
             color: @bk_light;
         }
+
+        &_button {
+            color: @red;
+            font-weight: 600;
+            font-size: 14px;
+            background-image: url(/assets/img/feedback.svg);
+            background-repeat: no-repeat;
+            background-size: 26px;
+            background-position: 0 center;
+            padding: 0 115px 0 35px;
+            display: flex;
+            align-items: center;
+            height: 45px;
+
+        }
     }
 
     &__contacts {
@@ -175,11 +200,11 @@
             padding: 0 15px 0 0;
         }
 
-        &_scroll{
-            @media @320{
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+        &_scroll {
+            @media @320 {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
             }
         }
     }
@@ -214,8 +239,9 @@
         &_wrapper {
             position: relative;
             min-height: 20px;
-            &_scroll{
-                @media @320{
+
+            &_scroll {
+                @media @320 {
                     width: 100px;
                 }
             }
@@ -289,6 +315,10 @@
 
         @media @300 {
             .rem(14);
+        }
+
+        &_short{
+            .rem(22);
         }
     }
 }
