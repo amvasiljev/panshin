@@ -105,6 +105,8 @@
 
         @media @320 {
             display: none;
+            order: 1;
+            margin-left: 0;
         }
 
         &_mobile {
@@ -127,12 +129,14 @@
         font-weight: normal;
         .rem(14);
 
-        @media @768,
-        @320 {
+        @media @768{
             margin-right: 0;
 
             margin-bottom: 20px;
             display: block;
+        }
+        @media @320{
+            display: none;
         }
 
         color: @bk;
@@ -155,6 +159,13 @@
             display: flex;
             align-items: center;
             height: 45px;
+            @media @320{
+                display: none;
+
+            }
+            &_scroll{
+                display: block;
+            }
 
         }
     }

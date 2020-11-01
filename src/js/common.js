@@ -580,21 +580,25 @@ function headerScroll(e) {
   if (e.matches) {
     document.addEventListener('scroll', documentScrollMobile, false)
     document.removeEventListener('scroll', documentScrollDt, false)
-    $('.header__contacts .button').removeClass('button_callback')
-    $('.header__links').find($('.button')).remove()
+    // $('.header__contacts .button').removeClass('button_callback')
+    // $('.header__links').find($('.button')).remove()
+    
     $('.header__inner').removeClass('header__inner_short')
     $('.header__logo').removeClass('header__logo_short')
     $('.header__phone').removeClass('header__phone_short')
   } else {
+    $('.top').trigger('click')
     document.removeEventListener('scroll', documentScrollMobile, false)
+    
     $('.header__contacts').removeClass('header__contacts_scroll');
     $('.header__inner').removeClass('header__inner_scroll');
-    $('.header__inner .button').appendTo('.header__contacts')
+    // $('.header__inner .button').appendTo('.header__contacts')
     $('.header__logo').removeClass('header__logo_scroll')
     $('.header__callback').removeClass('header__callback_scroll')
     $('.header__cities_wrapper').removeClass('header__cities_wrapper_scroll')
+    document.addEventListener('scroll', documentScrollDt, false)
   }
-  document.addEventListener('scroll', documentScrollDt, false)
+
 }
 
 mediaQuery_1023.addListener(tableTransform)
@@ -614,31 +618,32 @@ stepsMobile(mediaQuery_1023)
 
 
 
+var callbackButton = $('.header__contacts .button')
+var headerLinks = $('.header__links')
+var callbackClone = callbackButton.clone().addClass('button_callback').appendTo(headerLinks).hide()
+var feedbackLink = $('.header__link_feedback')
 
 
 function documentScrollDt() {
   var scrollTop = $(this).scrollTop();
-  var feedbackLink = $('.header__link_feedback')
-  var headerLinks = $('.header__links')
-  var callbackButton = $('.header__contacts .button')
-  var callbackClone = callbackButton.clone().addClass('button_callback')
- 
+
 
   if (scrollTop > 0) {
-    
+
     $('.header__link').not(feedbackLink).hide()
-    callbackClone.appendTo(headerLinks)
+    callbackClone.show()
     callbackButton.hide()
     feedbackLink.addClass('header__link_button')
 
     $('.header__inner').addClass('header__inner_short')
     $('.header__logo').addClass('header__logo_short')
     $('.header__phone').addClass('header__phone_short')
-    
+
   } else {
-    $('.header__links .button').removeClass('button_callback')
+    
     callbackButton.show()
-    headerLinks.find($('.button')).remove()
+    callbackClone.hide()
+
     $('.header__link').show()
     feedbackLink.removeClass('header__link_button')
     $('.header__inner').removeClass('header__inner_short')
@@ -650,20 +655,23 @@ function documentScrollDt() {
 
 function documentScrollMobile() {
   var scrollTop = $(this).scrollTop();
-  if (scrollTop > 0) {
 
+  if (scrollTop > 0) {
+    callbackClone.show()
+    callbackButton.hide()
     $('.header__contacts').addClass('header__contacts_scroll');
     $('.header__inner').addClass('header__inner_scroll');
-    $('.header__contacts .button').appendTo('.header__inner')
+    headerLinks.show().css('display','flex')
     $('.header__logo').addClass('header__logo_scroll')
     $('.header__callback').addClass('header__callback_scroll')
     $('.header__cities_wrapper').addClass('header__cities_wrapper_scroll')
-    
-  } else {
 
+  } else {
+    callbackClone.hide()
+    callbackButton.show()
     $('.header__contacts').removeClass('header__contacts_scroll');
     $('.header__inner').removeClass('header__inner_scroll');
-    $('.header__inner .button').appendTo('.header__contacts')
+    headerLinks.hide()
     $('.header__logo').removeClass('header__logo_scroll')
     $('.header__callback').removeClass('header__callback_scroll')
     $('.header__cities_wrapper').removeClass('header__cities_wrapper_scroll')

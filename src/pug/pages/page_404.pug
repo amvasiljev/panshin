@@ -1,21 +1,21 @@
-//- extends ../layout/main
+extends ../layout/main
 
 
 
 
-//- block variables
-//-     -var title = '404'
-//-     -var description = '404'
-//-     -var pageClass = ''
+block variables
+    -var title = '404'
+    -var description = '404'
+    -var pageClass = ''
 
-//- block content
-//-     section.section.section_blue_invert
+block content
+    section.section.section_blue_invert
             
-//-             .section__inner.section__inner_404
-//-                 .section__404
-//-                     img.lazy(data-src="/assets/img/404.png")
-//-                     +title('Ой! Такой страницы нет','title_404','h1','')
-//-                     +title('Кажется, ее похитили инопланетяне','title_404','','','h3')
-//-                     +button('Вернуться на главную','button_red','','/')
-//-                 .section__box
-//-                     +feedback('','','feedback_noshadow feedback_blue','','','page_404')
+            .section__inner.section__inner_404
+                .section__404
+                    img.lazy(data-src="/assets/img/404.png")
+                    +title('Ой! Такой страницы нет','title_404','h1','')
+                    +title('Кажется, ее похитили инопланетяне','title_404','','','h3')
+                    +button('Вернуться на главную','button_red','','/')
+                .section__box
+                    +feedback('','','feedback_noshadow feedback_blue','','','page_404')
